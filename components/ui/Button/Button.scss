@@ -1,11 +1,11 @@
 .btn-custom {
-  height: 55px;
+  height: calculateRem(55);
   padding: 0 1rem;
   width: fit-content;
   appearance: none;
   border: none;
   outline: none;
-  border-radius: 50px;
+  border-radius: calculateRem(50);
   font-weight: 500;
   transition: all 0.2s;
   display: flex;
@@ -19,8 +19,8 @@
   }
 
   &.btn-circle {
-    height: 55px;
-    width: 55px;
+    height: calculateRem(55);
+    width: calculateRem(55);
     padding: 0;
   }
 
@@ -188,6 +188,6 @@
 }
 
 .icon-size {
-  width: 16px;
-  height: 16px;
+  width: calculateRem(16);
+  height: calculateRem(16);
 }

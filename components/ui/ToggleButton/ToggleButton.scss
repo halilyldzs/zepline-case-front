@@ -1,7 +1,7 @@
 .toggle-button {
-  height: 45px;
-  padding: 0 18px;
-  border-radius: 10px;
+  height: calculateRem(45);
+  padding: 0 calculateRem(18);
+  border-radius: calculateRem(10);
   font-weight: 500;
   transition: all 0.2s;
   border: 1px solid transparent;

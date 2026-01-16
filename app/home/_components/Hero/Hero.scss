@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   position: relative;
-  height: 750px;
+  height: calculateRem(750);
   aspect-ratio: 1728 / 750;
   background-image: url('/images/hero.png');
   background-size: cover;
@@ -10,7 +10,7 @@
 
   &__content-wrapper {
     position: absolute;
-    top: 265px;
-    left: 144px;
+    top: calculateRem(265);
+    left: calculateRem(144);
   }
 }

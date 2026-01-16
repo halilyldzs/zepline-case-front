@@ -1,4 +1,8 @@
+// Base Font Size
+$base-font-size: 16px;
+
 // Brand Colors
+
 $color-primary: #273d89;
 $color-primary-dark: #0a1742;
 $color-danger: #db0d15;
@@ -49,4 +53,4 @@ $color-white: #ffffff;
 $color-black: #000000;
 
 // Container
-$container-max-width: 1440px;
+$container-max-width: 90rem; // 1440px / 16px = 90rem

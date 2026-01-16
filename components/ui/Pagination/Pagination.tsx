@@ -18,7 +18,7 @@ function Pagination({ currentPage, totalPages, onPageChange, className }: Pagina
   return (
     <div className={containerClasses} style={{ gap: '0.5rem' }}>
       <button onClick={handlePrevious} disabled={isPreviousDisabled} className={buttonBaseClasses}>
-        <Icon name="left" style={{ width: '20px', height: '20px' }} />
+        <Icon name="left" style={{ width: '1.25rem', height: '1.25rem' }} />
       </button>
 
       {pageNumbers.map((page, index) => {
@@ -45,7 +45,7 @@ function Pagination({ currentPage, totalPages, onPageChange, className }: Pagina
       })}
 
       <button onClick={handleNext} disabled={isNextDisabled} className={buttonBaseClasses}>
-        <Icon name="right" style={{ width: '20px', height: '20px' }} />
+        <Icon name="right" style={{ width: '1.25rem', height: '1.25rem' }} />
       </button>
     </div>
   );

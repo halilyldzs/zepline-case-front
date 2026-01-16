@@ -26,33 +26,33 @@ button {
 }
 
 h1 {
-  font-size: 32px;
-  line-height: 38px;
+  font-size: calculateRem(32);
+  line-height: calculateRem(38);
 }
 
 h2 {
-  font-size: 28px;
-  line-height: 36px;
+  font-size: calculateRem(28);
+  line-height: calculateRem(36);
 }
 
 h3 {
-  font-size: 26px;
-  line-height: 32px;
+  font-size: calculateRem(26);
+  line-height: calculateRem(32);
 }
 
 h4 {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: calculateRem(24);
+  line-height: calculateRem(30);
 }
 
 h5 {
-  font-size: 22px;
-  line-height: 28px;
+  font-size: calculateRem(22);
+  line-height: calculateRem(28);
 }
 
 h6 {
-  font-size: 20px;
-  line-height: 26px;
+  font-size: calculateRem(20);
+  line-height: calculateRem(26);
 }
 
 .container {
@@ -63,42 +63,42 @@ h6 {
   padding-right: 1rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: calculateRem(640)) {
   .container {
-    max-width: 640px;
+    max-width: calculateRem(640);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: calculateRem(768)) {
   .container {
-    max-width: 768px;
+    max-width: calculateRem(768);
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: calculateRem(1024)) {
   .container {
-    max-width: 1024px;
+    max-width: calculateRem(1024);
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: calculateRem(1280)) {
   .container {
-    max-width: 1280px;
+    max-width: calculateRem(1280);
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: calculateRem(1440)) {
   .container {
-    max-width: 1440px;
+    max-width: calculateRem(1440);
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: calculateRem(1536)) {
   .container {
-    max-width: 1440px;
+    max-width: calculateRem(1440);
   }
 }

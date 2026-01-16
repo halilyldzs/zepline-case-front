@@ -5,7 +5,7 @@ export default function HeaderLogo() {
     <div
       className="d-flex align-items-center justify-content-center"
       style={{
-        height: '135px',
+        height: '8.4375rem',
         aspectRatio: '381 / 135',
         backgroundImage: "url('/svg/header-reactangle.svg')",
         backgroundSize: 'contain',

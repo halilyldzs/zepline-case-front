@@ -1,5 +1,5 @@
 .header-nav-link {
-  font-size: 17px;
+  font-size: calculateRem(17);
   text-decoration: none;
   color: $color-black;
   transition: opacity 0.2s;
@@ -10,7 +10,7 @@
 }
 
 .home-icon {
-  width: 24px;
-  height: 24px;
+  width: calculateRem(24);
+  height: calculateRem(24);
   color: $color-success;
 }

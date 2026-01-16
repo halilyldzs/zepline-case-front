@@ -1,7 +1,7 @@
 .pagination-button {
-  height: 40px;
-  width: 40px;
-  border-radius: 15px;
+  height: calculateRem(40);
+  width: calculateRem(40);
+  border-radius: calculateRem(15);
   font-weight: 500;
   transition: all 0.2s;
   display: flex;

@@ -5,7 +5,7 @@ export default function HeaderTop() {
     <div
       className="d-flex align-items-center justify-content-between px-4 text-white"
       style={{
-        fontSize: '17px',
+        fontSize: '1.0625rem',
         marginLeft: '-2rem',
         aspectRatio: '1380.84 / 44',
         backgroundImage: "url('/svg/header-subtract.svg')",
@@ -14,7 +14,7 @@ export default function HeaderTop() {
       }}
     >
       <div className="d-flex align-items-center px-4" style={{ gap: '0.75rem' }}>
-        <Icon name="email" className="text-white" style={{ width: '20px', height: '20px' }} />
+        <Icon name="email" className="text-white" style={{ width: '1.25rem', height: '1.25rem' }} />
         <span>profuture@gmail.com</span>
       </div>
 
