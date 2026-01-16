@@ -5,11 +5,13 @@
   --foreground: #171717;
 }
 
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
   
   /* Brand Colors */
   --color-primary: #273D89;
@@ -29,6 +31,10 @@
   /* Light Colors */
   --color-light-blue: #C6ECFF;
   --color-light-yellow: #FBF6E3;
+
+  --color-toggle-active: #EBEFFF;
+  --color-toggle-disabled: #F2F2F2;
+  --color-toggle-disabled-text: #B3B3B3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,8 +44,13 @@
   }
 }
 
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
