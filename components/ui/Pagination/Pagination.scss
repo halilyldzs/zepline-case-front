@@ -10,17 +10,17 @@
   border: none;
   
   &.selected {
-    background-color: var(--color-primary);
-    color: white;
+    background-color: $color-primary;
+    color: $background;
   }
   
   &.unselected {
-    background-color: #F5F7FF;
-    color: #666E8B;
+    background-color: $color-pagination-bg;
+    color: $color-pagination-text;
     
     &:hover:not(:disabled) {
-      background-color: var(--color-primary);
-      color: white;
+      background-color: $color-primary;
+      color: $background;
     }
   }
   

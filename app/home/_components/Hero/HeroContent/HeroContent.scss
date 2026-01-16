@@ -1,0 +1,61 @@
+.hero-content {
+  width: 397px;
+  height: 316px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+
+  &__title {
+    color: $color-hero-title;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+
+  &__description {
+    color: $color-white;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+  }
+
+  &__info-group {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__icon {
+    width: 17px;
+    height: 17px;
+    color: $color-white;
+  }
+
+  &__info-text {
+    color: $color-white;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  &__date-text {
+    color: $color-white;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+  }
+
+  &__button {
+    margin-top: auto;
+  }
+}

@@ -1,47 +1,4 @@
-@import 'bootstrap/scss/bootstrap';
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  
-  /* Brand Colors */
-  --color-primary: #273d89;
-  --color-primary-dark: #0a1742;
-  --color-danger: #db0d15;
-  --color-danger-dark: #9d0006;
-  --color-success: #a8b95e;
-  --color-success-dark: #2b3016;
-  --color-warning: #de8536;
-  --color-info: #00c3d0;
-
-  /* Neutral Colors */
-  --color-gray: #676a73;
-  --color-dark: #2a2c31;
-  --color-dark-blue: #081542;
-
-  /* Stroke/Border */
-  --color-stroke: #acb1c6;
-
-  /* Light Colors */
-  --color-light-blue: #c6ecff;
-  --color-light-yellow: #fbf6e3;
-
-  --color-toggle-active: #ebefff;
-  --color-toggle-disabled: #f2f2f2;
-  --color-toggle-disabled-text: #b3b3b3;
-
-  --color-hero-title: #daefff;
-
-  /* Container */
-  --container-max-width: 1440px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@use 'bootstrap/dist/css/bootstrap.css';
 
 html {
   font-size: 16px;
@@ -53,11 +10,15 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: $background;
+  color: $foreground;
   font-family: var(--font-inter), sans-serif;
   width: 100%;
   height: 100%;
+}
+
+p {
+  margin: 0;
 }
 
 button {

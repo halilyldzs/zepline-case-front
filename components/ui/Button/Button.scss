@@ -26,97 +26,97 @@
 
   // Outline variants
   &.btn-outline-primary {
-    background-color: white;
-    border: 1px solid var(--color-stroke);
-    color: var(--color-primary);
+    background-color: $background;
+    border: 1px solid $color-stroke;
+    color: $color-primary;
 
     &:hover {
-      background-color: var(--color-primary);
-      color: white;
+      background-color: $color-primary;
+      color: $background;
     }
   }
 
   &.btn-outline-primary-dark {
-    background-color: white;
-    border: 1px solid var(--color-primary-dark);
-    color: var(--color-primary-dark);
+    background-color: $background;
+    border: 1px solid $color-primary-dark;
+    color: $color-primary-dark;
 
     &:hover {
-      background-color: var(--color-primary-dark);
-      color: white;
+      background-color: $color-primary-dark;
+      color: $background;
     }
   }
 
   &.btn-outline-success {
-    background-color: white;
-    border: 1px solid var(--color-success);
-    color: var(--color-success);
+    background-color: $background;
+    border: 1px solid $color-success;
+    color: $color-success;
 
     &:hover {
-      background-color: var(--color-success);
-      color: white;
+      background-color: $color-success;
+      color: $background;
     }
   }
 
   &.btn-outline-success-dark {
-    background-color: white;
-    border: 1px solid var(--color-success-dark);
-    color: var(--color-success-dark);
+    background-color: $background;
+    border: 1px solid $color-success-dark;
+    color: $color-success-dark;
 
     &:hover {
-      background-color: var(--color-success-dark);
-      color: white;
+      background-color: $color-success-dark;
+      color: $background;
     }
   }
 
   &.btn-outline-danger {
-    background-color: white;
-    border: 1px solid var(--color-danger);
-    color: var(--color-danger);
+    background-color: $background;
+    border: 1px solid $color-danger;
+    color: $color-danger;
 
     &:hover {
-      background-color: var(--color-danger);
-      color: white;
+      background-color: $color-danger;
+      color: $background;
     }
   }
 
   &.btn-outline-danger-dark {
-    background-color: white;
-    border: 1px solid var(--color-danger-dark);
-    color: var(--color-danger-dark);
+    background-color: $background;
+    border: 1px solid $color-danger-dark;
+    color: $color-danger-dark;
 
     &:hover {
-      background-color: var(--color-danger-dark);
-      color: white;
+      background-color: $color-danger-dark;
+      color: $background;
     }
   }
 
   &.btn-outline-warning {
-    background-color: white;
-    border: 1px solid var(--color-warning);
-    color: var(--color-warning);
+    background-color: $background;
+    border: 1px solid $color-warning;
+    color: $color-warning;
 
     &:hover {
-      background-color: var(--color-warning);
-      color: white;
+      background-color: $color-warning;
+      color: $background;
     }
   }
 
   &.btn-outline-info {
-    background-color: white;
-    border: 1px solid var(--color-info);
-    color: var(--color-info);
+    background-color: $background;
+    border: 1px solid $color-info;
+    color: $color-info;
 
     &:hover {
-      background-color: var(--color-info);
-      color: white;
+      background-color: $color-info;
+      color: $background;
     }
   }
 
   // Filled variants
   &.btn-filled-primary {
-    background-color: var(--color-primary);
-    color: white;
+    background-color: $color-primary;
+    color: $background;
 
     &:hover {
       opacity: 0.9;
@@ -124,8 +124,8 @@
   }
 
   &.btn-filled-primary-dark {
-    background-color: var(--color-primary-dark);
-    color: white;
+    background-color: $color-primary-dark;
+    color: $background;
 
     &:hover {
       opacity: 0.9;
@@ -133,8 +133,8 @@
   }
 
   &.btn-filled-success {
-    background-color: var(--color-success);
-    color: white;
+    background-color: $color-success;
+    color: $background;
 
     &:hover {
       opacity: 0.9;
@@ -142,8 +142,8 @@
   }
 
   &.btn-filled-success-dark {
-    background-color: var(--color-success-dark);
-    color: white;
+    background-color: $color-success-dark;
+    color: $background;
 
     &:hover {
       opacity: 0.9;
@@ -151,8 +151,8 @@
   }
 
   &.btn-filled-danger {
-    background-color: var(--color-danger);
-    color: white;
+    background-color: $color-danger;
+    color: $background;
 
     &:hover {
       opacity: 0.9;
@@ -160,8 +160,8 @@
   }
 
   &.btn-filled-danger-dark {
-    background-color: var(--color-danger-dark);
-    color: white;
+    background-color: $color-danger-dark;
+    color: $background;
 
     &:hover {
       opacity: 0.9;
@@ -169,8 +169,8 @@
   }
 
   &.btn-filled-warning {
-    background-color: var(--color-warning);
-    color: white;
+    background-color: $color-warning;
+    color: $background;
 
     &:hover {
       opacity: 0.9;
@@ -178,8 +178,8 @@
   }
 
   &.btn-filled-info {
-    background-color: var(--color-info);
-    color: white;
+    background-color: $color-info;
+    color: $background;
 
     &:hover {
       opacity: 0.9;

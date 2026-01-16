@@ -7,30 +7,30 @@
   border: 1px solid transparent;
   
   &.selected {
-    background-color: var(--color-toggle-active);
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    background-color: $color-toggle-active;
+    border-color: $color-primary;
+    color: $color-primary;
   }
   
   &.unselected {
-    background-color: white;
-    color: var(--color-primary);
+    background-color: $background;
+    color: $color-primary;
   }
   
   &:hover:not(:disabled) {
-    background-color: var(--color-primary);
-    color: white;
+    background-color: $color-primary;
+    color: $background;
   }
   
   &:active:not(:disabled) {
-    background-color: var(--color-toggle-active);
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    background-color: $color-toggle-active;
+    border-color: $color-primary;
+    color: $color-primary;
   }
   
   &:disabled {
-    background-color: var(--color-toggle-disabled);
-    color: var(--color-toggle-disabled-text);
+    background-color: $color-toggle-disabled;
+    color: $color-toggle-disabled-text;
     border: 0;
     cursor: not-allowed;
   }
