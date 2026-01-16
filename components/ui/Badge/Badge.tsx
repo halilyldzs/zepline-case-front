@@ -1,11 +1,11 @@
-import { CategoryBadgeProps } from './CategoryBadge.types';
+import { BadgeProps } from './Badge.types';
 import { cn } from '@/lib/utils';
 
-function CategoryBadge({ 
+function Badge({ 
     children,
     variant = 'primary',
     className
-}: CategoryBadgeProps) {
+}: BadgeProps) {
     const baseClasses = "px-3 py-1.5 rounded-full font-medium text-sm";
     
     const variantClasses = {
@@ -23,4 +23,4 @@ function CategoryBadge({
     );
 }
 
-export default CategoryBadge;
+export default Badge;

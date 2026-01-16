@@ -15,8 +15,11 @@
   
   /* Brand Colors */
   --color-primary: #273D89;
+  --color-primary-dark: #0A1742;
   --color-danger: #DB0D15;
+  --color-danger-dark: #9D0006;
   --color-success: #A8B95E;
+  --color-success-dark: #2B3016;
   --color-warning: #DE8536;
   --color-info: #00C3D0;
   
