@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import CategoryBadge from "@/components/ui/CategoryBadge";
 import Pagination from "@/components/ui/Pagination";
+import Icon from "@/components/ui/Icon";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,6 +33,18 @@ export default function Home() {
           totalPages={99}
           onPageChange={setCurrentPage}
         />
+      </div>
+
+      <div className="flex flex-col gap-4">
+        <h1>Icons</h1>
+        <div className="flex gap-4 flex-wrap">
+          <Icon name="arrow-left" className="text-primary" />
+          <Icon name="arrow-right" className="text-primary" />
+          <Icon name="search" className="text-primary" />
+          <Icon name="check" className="text-success" />
+          <Icon name="home" className="text-primary w-6 h-6" />
+          <Icon name="menu" className="text-gray" />
+        </div>
       </div>
     </div>
   );

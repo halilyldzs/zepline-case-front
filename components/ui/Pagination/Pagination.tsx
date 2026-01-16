@@ -1,6 +1,7 @@
 import { PaginationProps } from './Pagination.types';
 import { cn } from '@/lib/utils';
 import { usePagination } from './hooks/usePagination';
+import Icon from '../Icon';
 
 const baseClasses = "h-10 w-10 rounded-[15px] font-medium transition-colors duration-200 flex items-center justify-center";
 const selectedClasses = "bg-primary text-white";
@@ -33,7 +34,7 @@ function Pagination({
                     "disabled:opacity-50 disabled:cursor-not-allowed"
                 )}
             >
-                ←
+                <Icon name="left" className="w-5 h-5" />
             </button>
 
             {pageNumbers.map((page, index) => {
@@ -73,7 +74,7 @@ function Pagination({
                     "disabled:opacity-50 disabled:cursor-not-allowed"
                 )}
             >
-                →
+                <Icon name="right" className="w-5 h-5" />
             </button>
         </div>
     );
