@@ -1,0 +1,81 @@
+.hero-journal {
+  background-color: $background;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__image-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    transform: translateY(-300px);
+  }
+
+  &__image {
+    aspect-ratio: 739 / 696;
+    rotate: 8deg;
+    transform: rotate(8deg);
+    transition: transform 0.3s ease;
+  }
+
+  &__content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 600px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $color-dark;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    color: $color-primary;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $foreground;
+    margin: 0;
+  }
+
+  &__button {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-journal {
+    &__container {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__content {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &__button {
+      align-self: center;
+    }
+  }
+}
