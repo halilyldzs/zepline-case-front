@@ -1,8 +1,7 @@
 import { IconProps } from './Icon.types';
 import { iconRegistry } from './iconRegistry';
-import { cn } from '@/lib/utils';
 
-function Icon({ name, className }: IconProps) {
+function Icon({ name, className, style }: IconProps) {
   const IconComponent = iconRegistry[name];
 
   if (!IconComponent) {
@@ -10,7 +9,7 @@ function Icon({ name, className }: IconProps) {
     return null;
   }
 
-  return <IconComponent className={cn(className)} />;
+  return <IconComponent className={className || ''} style={style} />;
 }
 
 export default Icon;

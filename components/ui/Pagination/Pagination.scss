@@ -1,0 +1,31 @@
+.pagination-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 15px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  
+  &.selected {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  &.unselected {
+    background-color: #F5F7FF;
+    color: #666E8B;
+    
+    &:hover:not(:disabled) {
+      background-color: var(--color-primary);
+      color: white;
+    }
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

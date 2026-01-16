@@ -71,4 +71,5 @@ export type IconName =
 export interface IconProps {
   name: IconName;
   className?: string;
+  style?: React.CSSProperties;
 }

@@ -11,21 +11,20 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "clsx": "^2.1.1",
+    "bootstrap": "^5.3.3",
     "next": "16.1.2",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "tailwind-merge": "^3.4.0"
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.2",
     "prettier": "^3.4.2",
-    "tailwindcss": "^4",
+    "sass": "^1.97.2",
     "typescript": "^5"
   }
 }

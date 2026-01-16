@@ -1,35 +1,34 @@
 import { ButtonProps } from './Button.types';
-import { cn } from '@/lib/utils';
 import Icon from '../Icon';
+import './Button.scss';
 
-const baseClasses = "h-[55px] px-4 rounded-full font-medium transition-colors duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed";
-const circleClasses = "h-[55px] w-[55px] p-0";
+const baseClasses = 'btn-custom';
+const circleClasses = 'btn-circle';
 
 const variantClasses = {
   outline: {
-    primary: "bg-white border border-stroke text-primary hover:bg-primary hover:text-white",
-    'primary-dark': "bg-white border border-primary-dark text-primary-dark hover:bg-primary-dark hover:text-white",
-    success: "bg-white border border-success text-success hover:bg-success hover:text-white",
-    'success-dark': "bg-white border border-success-dark text-success-dark hover:bg-success-dark hover:text-white",
-    danger: "bg-white border border-danger text-danger hover:bg-danger hover:text-white",
-    'danger-dark': "bg-white border border-danger-dark text-danger-dark hover:bg-danger-dark hover:text-white",
-    warning: "bg-white border border-warning text-warning hover:bg-warning hover:text-white",
-    info: "bg-white border border-info text-info hover:bg-info hover:text-white",
+    primary: 'btn-outline-primary',
+    'primary-dark': 'btn-outline-primary-dark',
+    success: 'btn-outline-success',
+    'success-dark': 'btn-outline-success-dark',
+    danger: 'btn-outline-danger',
+    'danger-dark': 'btn-outline-danger-dark',
+    warning: 'btn-outline-warning',
+    info: 'btn-outline-info',
   },
   filled: {
-    primary: "bg-primary text-white hover:opacity-90",
-    'primary-dark': "bg-primary-dark text-white hover:opacity-90",
-    success: "bg-success text-white hover:opacity-90",
-    'success-dark': "bg-success-dark text-white hover:opacity-90",
-    danger: "bg-danger text-white hover:opacity-90",
-    'danger-dark': "bg-danger-dark text-white hover:opacity-90",
-    warning: "bg-warning text-white hover:opacity-90",
-    info: "bg-info text-white hover:opacity-90",
+    primary: 'btn-filled-primary',
+    'primary-dark': 'btn-filled-primary-dark',
+    success: 'btn-filled-success',
+    'success-dark': 'btn-filled-success-dark',
+    danger: 'btn-filled-danger',
+    'danger-dark': 'btn-filled-danger-dark',
+    warning: 'btn-filled-warning',
+    info: 'btn-filled-info',
   },
 };
 
-const iconSizeClass = 'w-4 h-4';
-
+const iconSizeClass = 'icon-size';
 
 function Button({
   children,
@@ -49,11 +48,11 @@ function Button({
   const iconColorClass = variant === 'filled' ? 'text-white' : '';
 
   const leftIconElement = leftIcon ? (
-    <Icon name={leftIcon} className={cn(iconSizeClass, iconColorClass)} />
+    <Icon name={leftIcon} className={`${iconSizeClass} ${iconColorClass}`.trim()} />
   ) : null;
 
   const rightIconElement = rightIcon ? (
-    <Icon name={rightIcon} className={cn(iconSizeClass, iconColorClass)} />
+    <Icon name={rightIcon} className={`${iconSizeClass} ${iconColorClass}`.trim()} />
   ) : null;
 
   const content = isCircle ? (
@@ -66,17 +65,12 @@ function Button({
     </>
   );
 
+  const buttonClasses = [baseClasses, shapeClass, variantClass, className]
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <button
-      className={cn(
-        baseClasses,
-        shapeClass,
-        variantClass,
-        className
-      )}
-      disabled={disabled}
-      onClick={onClick}
-    >
+    <button className={buttonClasses} disabled={disabled} onClick={onClick}>
       {content}
     </button>
   );

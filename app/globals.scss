@@ -1,0 +1,143 @@
+@import 'bootstrap/scss/bootstrap';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Brand Colors */
+  --color-primary: #273d89;
+  --color-primary-dark: #0a1742;
+  --color-danger: #db0d15;
+  --color-danger-dark: #9d0006;
+  --color-success: #a8b95e;
+  --color-success-dark: #2b3016;
+  --color-warning: #de8536;
+  --color-info: #00c3d0;
+
+  /* Neutral Colors */
+  --color-gray: #676a73;
+  --color-dark: #2a2c31;
+  --color-dark-blue: #081542;
+
+  /* Stroke/Border */
+  --color-stroke: #acb1c6;
+
+  /* Light Colors */
+  --color-light-blue: #c6ecff;
+  --color-light-yellow: #fbf6e3;
+
+  --color-toggle-active: #ebefff;
+  --color-toggle-disabled: #f2f2f2;
+  --color-toggle-disabled-text: #b3b3b3;
+
+  --color-hero-title: #daefff;
+
+  /* Container */
+  --container-max-width: 1440px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  font-size: 16px;
+  min-width: 100vw;
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1440px;
+  }
+}

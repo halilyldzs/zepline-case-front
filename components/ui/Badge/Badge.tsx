@@ -1,26 +1,20 @@
 import { BadgeProps } from './Badge.types';
-import { cn } from '@/lib/utils';
+import './Badge.scss';
 
-function Badge({ 
-    children,
-    variant = 'primary',
-    className
-}: BadgeProps) {
-    const baseClasses = "px-3 py-1.5 rounded-full font-medium text-sm";
-    
-    const variantClasses = {
-        'info': 'bg-info text-white',
-        'primary': 'bg-primary text-white',
-        'warning': 'bg-warning text-white',
-        'success': 'bg-success text-white',
-        "soft": "bg-[#F6F8FF] text-[#112053]"
-    };
+function Badge({ children, variant = 'primary', className }: BadgeProps) {
+  const baseClasses = 'badge-custom';
 
-    return (
-        <span className={cn(baseClasses, variantClasses[variant], className)}>
-            {children}
-        </span>
-    );
+  const variantClasses = {
+    info: 'badge-info',
+    primary: 'badge-primary',
+    warning: 'badge-warning',
+    success: 'badge-success',
+    soft: 'badge-soft',
+  };
+
+  const badgeClasses = [baseClasses, variantClasses[variant], className].filter(Boolean).join(' ');
+
+  return <span className={badgeClasses}>{children}</span>;
 }
 
 export default Badge;

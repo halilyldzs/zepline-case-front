@@ -1,83 +1,54 @@
 import { PaginationProps } from './Pagination.types';
-import { cn } from '@/lib/utils';
 import { usePagination } from './hooks/usePagination';
 import Icon from '../Icon';
+import './Pagination.scss';
 
-const baseClasses = "h-10 w-10 rounded-[15px] font-medium transition-colors duration-200 flex items-center justify-center";
-const selectedClasses = "bg-primary text-white";
-const unselectedClasses = "bg-[#F5F7FF] text-[#666E8B]";
-const hoverClasses = "hover:bg-primary hover:text-white";
+const baseClasses = 'pagination-button';
+const selectedClasses = 'selected';
+const unselectedClasses = 'unselected';
 
-function Pagination({ 
-    currentPage,
-    totalPages,
-    onPageChange,
-    className
-}: PaginationProps) {
-    const {
-        handlePrevious,
-        handleNext,
-        pageNumbers,
-        isPreviousDisabled,
-        isNextDisabled,
-    } = usePagination({ currentPage, totalPages, onPageChange });
+function Pagination({ currentPage, totalPages, onPageChange, className }: PaginationProps) {
+  const { handlePrevious, handleNext, pageNumbers, isPreviousDisabled, isNextDisabled } =
+    usePagination({ currentPage, totalPages, onPageChange });
 
-    return (
-        <div className={cn("flex gap-2 items-center", className)}>
-            <button
-                onClick={handlePrevious}
-                disabled={isPreviousDisabled}
-                className={cn(
-                    baseClasses,
-                    unselectedClasses,
-                    hoverClasses,
-                    "disabled:opacity-50 disabled:cursor-not-allowed"
-                )}
-            >
-                <Icon name="left" className="w-5 h-5" />
-            </button>
+  const containerClasses = ['d-flex', 'align-items-center', className].filter(Boolean).join(' ');
 
-            {pageNumbers.map((page, index) => {
-                if (page === 'ellipsis') {
-                    return (
-                        <span key={`ellipsis-${index}`} className="text-primary px-2">
-                            ...
-                        </span>
-                    );
-                }
+  const buttonBaseClasses = [baseClasses, unselectedClasses].filter(Boolean).join(' ');
 
-                const pageNum = page as number;
-                const isSelected = pageNum === currentPage;
+  return (
+    <div className={containerClasses} style={{ gap: '0.5rem' }}>
+      <button onClick={handlePrevious} disabled={isPreviousDisabled} className={buttonBaseClasses}>
+        <Icon name="left" style={{ width: '20px', height: '20px' }} />
+      </button>
 
-                return (
-                    <button
-                        key={pageNum}
-                        onClick={() => onPageChange(pageNum)}
-                        className={cn(
-                            baseClasses,
-                            isSelected ? selectedClasses : unselectedClasses,
-                            !isSelected && hoverClasses
-                        )}
-                    >
-                        {pageNum}
-                    </button>
-                );
-            })}
+      {pageNumbers.map((page, index) => {
+        if (page === 'ellipsis') {
+          return (
+            <span key={`ellipsis-${index}`} className="text-primary px-2">
+              ...
+            </span>
+          );
+        }
 
-            <button
-                onClick={handleNext}
-                disabled={isNextDisabled}
-                className={cn(
-                    baseClasses,
-                    unselectedClasses,
-                    hoverClasses,
-                    "disabled:opacity-50 disabled:cursor-not-allowed"
-                )}
-            >
-                <Icon name="right" className="w-5 h-5" />
-            </button>
-        </div>
-    );
+        const pageNum = page as number;
+        const isSelected = pageNum === currentPage;
+
+        const pageButtonClasses = [baseClasses, isSelected ? selectedClasses : unselectedClasses]
+          .filter(Boolean)
+          .join(' ');
+
+        return (
+          <button key={pageNum} onClick={() => onPageChange(pageNum)} className={pageButtonClasses}>
+            {pageNum}
+          </button>
+        );
+      })}
+
+      <button onClick={handleNext} disabled={isNextDisabled} className={buttonBaseClasses}>
+        <Icon name="right" style={{ width: '20px', height: '20px' }} />
+      </button>
+    </div>
+  );
 }
 
 export default Pagination;

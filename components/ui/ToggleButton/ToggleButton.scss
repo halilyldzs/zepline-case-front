@@ -1,0 +1,37 @@
+.toggle-button {
+  height: 45px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  
+  &.selected {
+    background-color: var(--color-toggle-active);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  &.unselected {
+    background-color: white;
+    color: var(--color-primary);
+  }
+  
+  &:hover:not(:disabled) {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  &:active:not(:disabled) {
+    background-color: var(--color-toggle-active);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  &:disabled {
+    background-color: var(--color-toggle-disabled);
+    color: var(--color-toggle-disabled-text);
+    border: 0;
+    cursor: not-allowed;
+  }
+}

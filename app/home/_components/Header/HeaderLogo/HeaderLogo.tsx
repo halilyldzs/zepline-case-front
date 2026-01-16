@@ -3,8 +3,9 @@ import Image from 'next/image';
 export default function HeaderLogo() {
   return (
     <div
-      className="flex items-center justify-center h-[135px]"
+      className="d-flex align-items-center justify-content-center"
       style={{
+        height: '135px',
         aspectRatio: '381 / 135',
         backgroundImage: "url('/svg/header-reactangle.svg')",
         backgroundSize: 'contain',
