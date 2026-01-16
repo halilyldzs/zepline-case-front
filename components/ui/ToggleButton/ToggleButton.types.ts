@@ -3,4 +3,5 @@ export interface ToggleButtonProps {
   disabled?: boolean;
   selected?: boolean;
   onClick?: () => void;
+  className?: string;
 }

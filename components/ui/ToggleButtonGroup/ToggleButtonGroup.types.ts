@@ -3,4 +3,5 @@ export interface ToggleButtonGroupProps {
   value?: string;
   onChange?: (value: string) => void;
   disabled?: boolean;
+  className?: string;
 }

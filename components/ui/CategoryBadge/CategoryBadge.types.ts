@@ -3,4 +3,5 @@ export type CategoryBadgeVariant = 'info' | 'primary' | 'warning' | 'success' | 
 export interface CategoryBadgeProps {
   children: React.ReactNode;
   variant?: CategoryBadgeVariant;
+  className?: string;
 }

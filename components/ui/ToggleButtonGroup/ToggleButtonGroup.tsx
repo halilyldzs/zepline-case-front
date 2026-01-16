@@ -1,14 +1,16 @@
 import { ToggleButtonGroupProps } from './ToggleButtonGroup.types';
 import ToggleButton from '../ToggleButton';
+import { cn } from '@/lib/utils';
 
 function ToggleButtonGroup({ 
     options,
     value,
     onChange,
-    disabled = false
+    disabled = false,
+    className
 }: ToggleButtonGroupProps) {
     return (
-        <div className="flex gap-2">
+        <div className={cn("flex gap-2", className)}>
             {options.map((option) => (
                 <ToggleButton
                     key={option}

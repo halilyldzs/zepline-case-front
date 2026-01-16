@@ -1,8 +1,10 @@
 import { CategoryBadgeProps } from './CategoryBadge.types';
+import { cn } from '@/lib/utils';
 
 function CategoryBadge({ 
     children,
-    variant = 'primary'
+    variant = 'primary',
+    className
 }: CategoryBadgeProps) {
     const baseClasses = "px-3 py-1.5 rounded-full font-medium text-sm";
     
@@ -15,7 +17,7 @@ function CategoryBadge({
     };
 
     return (
-        <span className={`${baseClasses} ${variantClasses[variant]}`}>
+        <span className={cn(baseClasses, variantClasses[variant], className)}>
             {children}
         </span>
     );
