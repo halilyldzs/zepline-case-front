@@ -1,0 +1,11 @@
+@import '../Button/Button.scss';
+
+.icon-button {
+  // IconButton inherits all styles from Button component
+  // Additional custom styles can be added here if needed
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+}

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Icon from '@/components/ui/Icon';
 import Button from '@/components/ui/Button';
+import IconButton from '@/components/ui/IconButton';
 import './HeaderNav.scss';
 
 export default function HeaderNav() {
@@ -35,7 +36,7 @@ export default function HeaderNav() {
         <Button variant="filled" color="success" leftIcon="author">
           Yazar Rehberi
         </Button>
-        <Button variant="outline" color="primary" shape="circle" leftIcon="search" />
+        <IconButton icon="search" variant="outline" color="primary" />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Badge from '@/components/ui/Badge';
 import './JournalIssueCard.scss';
 import Icon from '@/components/ui/Icon';
-import Button from '@/components/ui/Button';
+import IconButton from '@/components/ui/IconButton';
 
 export default function JournalIssueCard() {
   return (
@@ -47,9 +47,9 @@ export default function JournalIssueCard() {
           </div>
 
           <div className="journal-issue-card__buttons">
-            <Button variant="filled" color="primary" shape="circle" rightIcon="eye" />
-            <Button variant="outline" color="default" shape="circle" rightIcon="download" />
-            <Button variant="outline" color="default" shape="circle" rightIcon="arrow-right" />
+            <IconButton icon="eye" variant="filled" color="primary" />
+            <IconButton icon="download" variant="outline" color="default" />
+            <IconButton icon="right" variant="outline" color="default" />
           </div>
         </div>
       </div>

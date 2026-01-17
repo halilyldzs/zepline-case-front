@@ -1,8 +1,6 @@
-import { ButtonProps } from './Button.types';
+import { IconButtonProps } from './IconButton.types';
 import Icon from '../Icon';
-import './Button.scss';
-
-const baseClasses = 'btn-custom';
+import './IconButton.scss';
 
 const variantClasses = {
   outline: {
@@ -29,45 +27,27 @@ const variantClasses = {
   },
 };
 
-const iconSizeClass = 'icon-size';
-
-function Button({
-  children,
+function IconButton({
+  icon,
   variant = 'filled',
   color = 'primary',
-  leftIcon,
-  rightIcon,
   disabled = false,
   className,
   onClick,
-}: ButtonProps) {
+}: IconButtonProps) {
+  const baseClasses = 'btn-custom btn-circle icon-button';
   const variantClass = variantClasses[variant][color];
-
   const iconColorClass = variant === 'filled' ? 'text-white' : '';
 
-  const leftIconElement = leftIcon ? (
-    <Icon name={leftIcon} className={`${iconSizeClass} ${iconColorClass}`.trim()} />
-  ) : null;
-
-  const rightIconElement = rightIcon ? (
-    <Icon name={rightIcon} className={`${iconSizeClass} ${iconColorClass}`.trim()} />
-  ) : null;
-
-  const content = (
-    <>
-      {leftIconElement}
-      {children}
-      {rightIconElement}
-    </>
-  );
+  const iconElement = <Icon name={icon} className={`icon-button__icon ${iconColorClass}`.trim()} />;
 
   const buttonClasses = [baseClasses, variantClass, className].filter(Boolean).join(' ');
 
   return (
     <button className={buttonClasses} disabled={disabled} onClick={onClick}>
-      {content}
+      {iconElement}
     </button>
   );
 }
 
-export default Button;
+export default IconButton;

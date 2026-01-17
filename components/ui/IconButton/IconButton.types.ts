@@ -1,7 +1,7 @@
 import { IconName } from '../Icon/Icon.types';
 
-export type ButtonVariant = 'outline' | 'filled';
-export type ButtonColor =
+export type IconButtonVariant = 'outline' | 'filled';
+export type IconButtonColor =
   | 'primary'
   | 'primary-dark'
   | 'success'
@@ -12,12 +12,10 @@ export type ButtonColor =
   | 'info'
   | 'default';
 
-export interface ButtonProps {
-  children?: React.ReactNode;
-  variant?: ButtonVariant;
-  color?: ButtonColor;
-  leftIcon?: IconName;
-  rightIcon?: IconName;
+export interface IconButtonProps {
+  icon: IconName;
+  variant?: IconButtonVariant;
+  color?: IconButtonColor;
   disabled?: boolean;
   className?: string;
   onClick?: () => void;
