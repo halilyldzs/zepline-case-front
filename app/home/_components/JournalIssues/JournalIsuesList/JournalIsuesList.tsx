@@ -1,18 +1,15 @@
 import JournalIssueCard from './JournalIssueCard';
 import './JournalIsuesList.scss';
+import { journalIssuesData } from './_mocks/journalIssuesData';
 
 export default function JournalIsuesList() {
   return (
     <section className="row journal-issues-list">
-      <div className="col-12 col-md-6 col-lg-4">
-        <JournalIssueCard />
-      </div>
-      <div className="col-12 col-md-6 col-lg-4">
-        <JournalIssueCard />
-      </div>
-      <div className="col-12 col-md-6 col-lg-4">
-        <JournalIssueCard />
-      </div>
+      {journalIssuesData.map((data, index) => (
+        <div key={index} className="col-12 col-md-6 col-lg-4">
+          <JournalIssueCard data={data} />
+        </div>
+      ))}
     </section>
   );
 }

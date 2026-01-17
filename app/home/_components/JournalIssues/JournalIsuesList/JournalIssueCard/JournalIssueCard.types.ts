@@ -1,9 +1,13 @@
-export interface JournalIssueCardProps {
+export interface JournalIssueCardData {
   image?: string;
   badge?: string;
   title: string;
-  description?: string;
+  volume?: number;
+  issue?: number;
   date?: string;
-  issueNumber?: string;
-  className?: string;
+  isLast?: boolean;
+}
+
+export interface JournalIssueCardProps {
+  data: JournalIssueCardData;
 }
