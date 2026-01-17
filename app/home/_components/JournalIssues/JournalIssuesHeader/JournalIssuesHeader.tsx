@@ -2,6 +2,7 @@
 import './JournalIssuesHeader.scss';
 import PrevButton from '@/components/ui/Pagination/PrevButton';
 import NextButton from '@/components/ui/Pagination/NextButton';
+import Button from '@/components/ui/Button';
 
 export default function JournalIssuesHeader() {
   const handlePrevious = () => {
@@ -24,6 +25,15 @@ export default function JournalIssuesHeader() {
           <NextButton onClick={handleNext} />
         </div>
       </div>
+
+      <Button
+        variant="outline"
+        color="default"
+        rightIcon="right"
+        className="journal-issues-header__button"
+      >
+        Tümünü Görüntüle
+      </Button>
     </div>
   );
 }

@@ -24,6 +24,18 @@
     padding: 0;
   }
 
+  &.btn-outline-default {
+    background-color: $background;
+    border: 1px solid $color-stroke;
+    color: $color-dark;
+
+    &:hover {
+      background-color: $color-stroke;
+      border-color: $color-stroke;
+      color: $color-dark;
+    }
+  }
+
   // Outline variants
   &.btn-outline-primary {
     background-color: $background;
@@ -180,6 +192,15 @@
   &.btn-filled-info {
     background-color: $color-info;
     color: $background;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &.btn-filled-default {
+    background-color: $background;
+    color: $color-dark;
 
     &:hover {
       opacity: 0.9;

@@ -7,6 +7,7 @@ const circleClasses = 'btn-circle';
 
 const variantClasses = {
   outline: {
+    default: 'btn-outline-default',
     primary: 'btn-outline-primary',
     'primary-dark': 'btn-outline-primary-dark',
     success: 'btn-outline-success',
@@ -17,6 +18,7 @@ const variantClasses = {
     info: 'btn-outline-info',
   },
   filled: {
+    default: 'btn-filled-default',
     primary: 'btn-filled-primary',
     'primary-dark': 'btn-filled-primary-dark',
     success: 'btn-filled-success',
