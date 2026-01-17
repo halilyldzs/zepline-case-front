@@ -8,22 +8,22 @@
   align-items: center;
   justify-content: center;
   border: none;
-  
+
   &.selected {
     background-color: $color-primary;
     color: $background;
   }
-  
+
   &.unselected {
     background-color: $color-pagination-bg;
     color: $color-pagination-text;
-    
+
     &:hover:not(:disabled) {
       background-color: $color-primary;
       color: $background;
     }
   }
-  
+
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;

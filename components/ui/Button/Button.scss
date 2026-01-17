@@ -1,3 +1,4 @@
+// Base button styles
 .btn-custom {
   height: calculateRem(55);
   padding: 0 1rem;
@@ -23,7 +24,10 @@
     width: calculateRem(55);
     padding: 0;
   }
+}
 
+// Outline button variants
+.btn-custom {
   &.btn-outline-default {
     background-color: $background;
     border: 1px solid $color-stroke;
@@ -36,7 +40,6 @@
     }
   }
 
-  // Outline variants
   &.btn-outline-primary {
     background-color: $background;
     border: 1px solid $color-stroke;
@@ -125,7 +128,7 @@
     }
   }
 
-  // Filled variants
+  // Filled button variants
   &.btn-filled-primary {
     background-color: $color-primary;
     color: $background;
@@ -208,6 +211,7 @@
   }
 }
 
+// Icon size utility
 .icon-size {
   width: calculateRem(16);
   height: calculateRem(16);
