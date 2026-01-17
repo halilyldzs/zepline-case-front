@@ -1,0 +1,18 @@
+.journal-issue-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $background;
+  padding: calculateRem(16);
+  border-radius: calculateRem(20);
+  border: 1px solid #e9f4f8;
+  overflow: hidden;
+
+  &__image {
+    aspect-ratio: 191.32 / 285;
+    width: 191.32px;
+    height: 285px;
+    object-fit: contain;
+    border-radius: calculateRem(16);
+  }
+}
