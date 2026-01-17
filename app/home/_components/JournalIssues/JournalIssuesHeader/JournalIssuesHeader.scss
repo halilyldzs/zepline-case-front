@@ -1,0 +1,38 @@
+.journal-issues-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title-container {
+    display: flex;
+    flex-direction: row;
+    gap: calculateRem(19);
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: calculateRem(12);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: calculateRem(22);
+    font-weight: 400;
+    color: $color-gray;
+  }
+
+  &__subtitle {
+    font-size: calculateRem(28);
+    margin: 0;
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  &__pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: calculateRem(8);
+    align-self: flex-end;
+  }
+}

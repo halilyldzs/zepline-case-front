@@ -1,0 +1,17 @@
+import React from 'react';
+import { PrevButtonProps } from './PrevButton.types';
+import Icon from '../../Icon';
+import './PrevButton.scss';
+
+const baseClasses = 'pagination-button';
+const unselectedClasses = 'unselected';
+
+export default function PrevButton({ onClick, disabled = false, className }: PrevButtonProps) {
+  const buttonClasses = [baseClasses, unselectedClasses, className].filter(Boolean).join(' ');
+
+  return (
+    <button onClick={onClick} disabled={disabled} className={buttonClasses} aria-label="Previous">
+      <Icon name="left" className="pagination-button__icon" />
+    </button>
+  );
+}
