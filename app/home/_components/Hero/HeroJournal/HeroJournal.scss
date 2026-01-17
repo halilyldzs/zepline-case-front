@@ -24,7 +24,9 @@
   }
 
   &__content {
-    padding: calculateRem(20);
+    padding-top: calculateRem(99);
+    padding-bottom: calculateRem(74);
+    margin-right: calculateRem(56);
     flex: 1;
     display: flex;
     flex-direction: column;
