@@ -1,18 +1,35 @@
 .journal-issue-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: calculateRem(465);
+  height: calculateRem(320);
   background-color: $background;
   padding: calculateRem(16);
   border-radius: calculateRem(20);
   border: 1px solid #e9f4f8;
   overflow: hidden;
 
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: calculateRem(15);
+    height: 100%;
+    width: 100%;
+  }
+
   &__image {
     aspect-ratio: 191.32 / 285;
-    width: 191.32px;
-    height: 285px;
+    width: 100%;
+    max-width: calculateRem(191.32);
+    height: auto;
     object-fit: contain;
     border-radius: calculateRem(16);
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    width: calculateRem(24);
+    height: calculateRem(24);
+    color: $color-primary;
   }
 }
