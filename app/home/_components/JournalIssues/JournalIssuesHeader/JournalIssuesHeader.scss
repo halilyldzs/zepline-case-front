@@ -35,4 +35,8 @@
     gap: calculateRem(8);
     align-self: flex-end;
   }
+
+  &__button {
+    align-self: flex-end;
+  }
 }
