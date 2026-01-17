@@ -1,0 +1,17 @@
+.send-article {
+  width: 100%;
+  padding: 0;
+  background-image: url('/images/send-article-bg.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 514 / 439;
+    object-fit: contain;
+  }
+}

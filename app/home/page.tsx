@@ -1,6 +1,7 @@
 import Header from './_components/Header';
 import Hero from './_components/Hero';
 import JournalIssues from './_components/JournalIssues';
+import SendArticle from './_components/SendArticle';
 import './Home.scss';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <main className="main-content">
         <Hero />
         <JournalIssues />
+        <SendArticle />
       </main>
     </>
   );
