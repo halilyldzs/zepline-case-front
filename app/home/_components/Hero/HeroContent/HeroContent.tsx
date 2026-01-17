@@ -19,7 +19,7 @@ export default function HeroContent() {
           </p>
         </div>
         <div className="hero-content__info-item">
-          <Icon name="cilt" className="hero-content__icon" />
+          <Icon name="number" className="hero-content__icon" />
           <p className="hero-content__info-text">
             Sayı: <strong>7</strong>
           </p>

@@ -27,9 +27,30 @@
     flex-shrink: 0;
   }
 
-  &__icon {
-    width: calculateRem(24);
+  &__pdf-icon {
+    width: calculateRem(22);
     height: calculateRem(24);
+    color: $color-gray;
+  }
+
+  &__title {
+    font-size: calculateRem(20);
+    line-height: calculateRem(25);
+    font-weight: bold;
     color: $color-primary;
+    margin: 0;
+  }
+
+  §__icon {
+    width: calculateRem(17);
+    height: calculateRem(17);
+    color: $color-black;
+  }
+
+  &__info-text {
+    font-size: calculateRem(16);
+    line-height: calculateRem(18);
+    color: $color-black;
+    margin: 0;
   }
 }

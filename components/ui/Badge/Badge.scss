@@ -2,6 +2,7 @@
   padding: calculateRem(6) calculateRem(12);
   border-radius: calculateRem(50);
   font-weight: 500;
+  width: fit-content;
   font-size: calculateRem(14);
 
   &.badge-info {
