@@ -46,7 +46,7 @@ export default function JournalIssueCard() {
             <p className="journal-issue-card__info-text">Haziran 2025</p>
           </div>
 
-          <div className="d-flex align-items-center justify-content-end gap-2 mt-auto">
+          <div className="journal-issue-card__buttons">
             <Button variant="filled" color="primary" shape="circle" rightIcon="eye" />
             <Button variant="outline" color="default" shape="circle" rightIcon="download" />
             <Button variant="outline" color="default" shape="circle" rightIcon="arrow-right" />

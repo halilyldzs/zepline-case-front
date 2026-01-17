@@ -1,30 +1,124 @@
 .journal-issue-card {
   display: flex;
   flex-direction: column;
-  width: calculateRem(465);
-  height: calculateRem(320);
   background-color: $background;
-  padding: calculateRem(16);
+  padding: calculateRem(12);
   border-radius: calculateRem(20);
   border: 1px solid #e9f4f8;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calculateRem(12);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: calculateRem(8);
+  }
+
+  &__logo-text {
+    font-size: calculateRem(12);
+    font-weight: 500;
+    color: $color-gray;
+    text-transform: lowercase;
+  }
+
+  &__issue-number {
+    font-size: calculateRem(12);
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  &__header-right {
+    display: flex;
+    align-items: center;
+    gap: calculateRem(8);
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: row;
-    gap: calculateRem(15);
+    gap: calculateRem(10);
     height: 100%;
     width: 100%;
   }
 
+  &__image-container {
+    position: relative;
+    flex-shrink: 0;
+  }
+
   &__image {
     aspect-ratio: 191.32 / 285;
-    width: 100%;
-    max-width: calculateRem(191.32);
-    height: auto;
+    width: calculateRem(180);
     object-fit: contain;
     border-radius: calculateRem(16);
+  }
+
+  &__image-text {
+    position: absolute;
+    bottom: calculateRem(8);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: calculateRem(10);
+    font-weight: 700;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: calculateRem(1);
+    text-align: center;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: calculateRem(12);
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__badge {
+    align-self: flex-start;
+  }
+
+  &__title {
+    font-size: calculateRem(18);
+    line-height: calculateRem(24);
+    font-weight: 700;
+    color: $color-primary;
+    margin: 0;
+  }
+
+  &__info-group {
+    display: flex;
+    align-items: center;
+    gap: calculateRem(16);
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: center;
+    gap: calculateRem(8);
+  }
+
+  &__icon {
+    width: calculateRem(17);
+    height: calculateRem(17);
+    color: $color-black;
     flex-shrink: 0;
+  }
+
+  &__info-text {
+    font-size: calculateRem(14);
+    line-height: calculateRem(18);
+    color: $color-black;
+    margin: 0;
   }
 
   &__pdf-icon {
@@ -33,24 +127,11 @@
     color: $color-gray;
   }
 
-  &__title {
-    font-size: calculateRem(20);
-    line-height: calculateRem(25);
-    font-weight: bold;
-    color: $color-primary;
-    margin: 0;
-  }
-
-  §__icon {
-    width: calculateRem(17);
-    height: calculateRem(17);
-    color: $color-black;
-  }
-
-  &__info-text {
-    font-size: calculateRem(16);
-    line-height: calculateRem(18);
-    color: $color-black;
-    margin: 0;
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: calculateRem(31);
+    gap: calculateRem(11);
   }
 }
