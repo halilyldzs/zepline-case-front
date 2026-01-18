@@ -16,6 +16,14 @@ export default function SendArticle() {
       <div className="send-article__content-wrapper">
         <SendArticleContent />
       </div>
+
+      <Image
+        src="/images/send-article2.png"
+        alt="Send Article 2"
+        width={306}
+        height={465}
+        className="send-article__image2"
+      />
     </section>
   );
 }

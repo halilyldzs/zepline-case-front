@@ -30,4 +30,13 @@
     align-items: center;
     justify-content: center;
   }
+
+  &__image2 {
+    position: absolute;
+    bottom: calculateRem(25);
+    right: calculateRem(74);
+    aspect-ratio: 306 / 465;
+    object-fit: contain;
+    z-index: 2;
+  }
 }
