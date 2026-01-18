@@ -44,7 +44,7 @@ export default function Header() {
       </header>
 
       {!showDesktopHeader && (
-        <Drawer isOpen={isDrawerOpen} onClose={handleDrawerClose}>
+        <Drawer isOpen={isDrawerOpen} onClose={handleDrawerClose} title="Menü">
           <HeaderNavMobile />
         </Drawer>
       )}
