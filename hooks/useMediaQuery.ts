@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 
 export const BREAKPOINTS = {
-  mobile: 768,
-  tablet: 1024,
-  desktop: 1025,
-  desktopLg: 1280,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400,
 } as const;
 
 interface UseMediaQueryReturn {
@@ -15,21 +16,23 @@ interface UseMediaQueryReturn {
 }
 
 export function useMediaQuery(): UseMediaQueryReturn {
+  const [mounted, setMounted] = useState(false);
   const [breakpoints, setBreakpoints] = useState<UseMediaQueryReturn>({
-    isMobile: false,
+    isMobile: true,
     isTablet: false,
     isDesktop: false,
     isDesktopLg: false,
   });
 
   useEffect(() => {
+    setMounted(true);
     const updateMatches = () => {
       const width = window.innerWidth;
       setBreakpoints({
-        isMobile: width <= BREAKPOINTS.mobile,
-        isTablet: width > BREAKPOINTS.mobile && width <= BREAKPOINTS.tablet,
-        isDesktop: width >= BREAKPOINTS.desktop,
-        isDesktopLg: width >= BREAKPOINTS.desktopLg,
+        isMobile: width < BREAKPOINTS.md,
+        isTablet: width >= BREAKPOINTS.md && width < BREAKPOINTS.lg,
+        isDesktop: width >= BREAKPOINTS.xl,
+        isDesktopLg: width >= BREAKPOINTS.xxl,
       });
     };
 
@@ -41,6 +44,15 @@ export function useMediaQuery(): UseMediaQueryReturn {
       window.removeEventListener('resize', updateMatches);
     };
   }, []);
+
+  if (!mounted) {
+    return {
+      isMobile: true,
+      isTablet: false,
+      isDesktop: false,
+      isDesktopLg: false,
+    };
+  }
 
   return breakpoints;
 }
