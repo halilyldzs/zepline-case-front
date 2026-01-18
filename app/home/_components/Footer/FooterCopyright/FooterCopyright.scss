@@ -13,5 +13,22 @@
     text-align: center;
     color: $color-white;
     margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 calculateRem(16);
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .footer-copyright {
+    height: auto;
+    min-height: calculateRem(39);
+    padding: calculateRem(12) 0;
+
+    &__text {
+      font-size: calculateRem(13);
+      line-height: calculateRem(16);
+      padding: 0 calculateRem(12);
+    }
   }
 }

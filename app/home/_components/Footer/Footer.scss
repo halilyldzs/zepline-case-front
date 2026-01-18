@@ -29,7 +29,7 @@ $footer-bg: #161f3c;
   }
 }
 
-@media (max-width: calculateRem(1440)) {
+@media (max-width: $breakpoint-tablet) {
   .footer {
     &__content {
       padding: 0 calculateRem(20);
@@ -37,15 +37,17 @@ $footer-bg: #161f3c;
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (max-width: $breakpoint-mobile) {
   .footer {
     &__background {
       padding: calculateRem(40) 0 calculateRem(30);
+      height: auto;
+      min-height: calculateRem(279);
     }
 
     &__content {
       gap: calculateRem(30);
-      padding: 0 calculateRem(20);
+      padding: 0 calculateRem(16);
     }
   }
 }

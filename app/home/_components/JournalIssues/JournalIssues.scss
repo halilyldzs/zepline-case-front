@@ -10,9 +10,11 @@
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (max-width: $breakpoint-mobile) {
   .journal-issues {
     padding-bottom: calculateRem(40);
+    padding-left: calculateRem(16);
+    padding-right: calculateRem(16);
 
     &__container {
       gap: calculateRem(24);

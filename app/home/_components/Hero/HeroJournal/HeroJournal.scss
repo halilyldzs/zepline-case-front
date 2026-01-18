@@ -127,8 +127,11 @@
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (max-width: $breakpoint-mobile) {
   .hero-journal {
+    padding-left: calculateRem(16);
+    padding-right: calculateRem(16);
+
     &__container {
       gap: calculateRem(30);
     }

@@ -48,7 +48,7 @@
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (max-width: $breakpoint-mobile) {
   .hero-wrapper {
     padding-top: calculateRem(70);
   }

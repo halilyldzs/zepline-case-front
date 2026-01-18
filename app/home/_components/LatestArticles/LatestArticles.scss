@@ -24,6 +24,8 @@
 @media (max-width: $breakpoint-mobile) {
   .latest-articles {
     padding-bottom: calculateRem(120);
+    padding-left: calculateRem(16);
+    padding-right: calculateRem(16);
 
     &__content-wrapper {
       flex-direction: column;
