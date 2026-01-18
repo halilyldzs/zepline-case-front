@@ -3,17 +3,7 @@ import './HeaderLogo.scss';
 
 export default function HeaderLogo() {
   return (
-    <div
-      className="header-logo d-flex align-items-center justify-content-center"
-      style={{
-        height: '8.4375rem',
-        aspectRatio: '381 / 135',
-        backgroundImage: "url('/svg/header-reactangle.svg')",
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'left top',
-      }}
-    >
+    <div className="header-logo d-flex align-items-center justify-content-center">
       <Image
         src="/images/header-logo.png"
         alt="Profuture Logo"

@@ -1,11 +1,15 @@
 .header-logo {
-  background-image: none !important;
-  aspect-ratio: auto !important;
+  background-image: none;
+  aspect-ratio: auto;
 }
 
 @media (min-width: $breakpoint-xxl) {
   .header-logo {
-    background-image: initial !important;
-    aspect-ratio: initial !important;
+    height: calculateRem(135);
+    aspect-ratio: 381 / 135;
+    background-image: url('/svg/header-reactangle.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
   }
 }

@@ -22,7 +22,6 @@ export default function Header() {
     setIsDrawerOpen(false);
   };
 
-  const isMobileOrTablet = isMobile || isTablet;
   const showDesktopHeader = isDesktopLg;
 
   return (
