@@ -30,12 +30,10 @@ $stroke-color: #ffd9da;
 @media (min-width: calc($breakpoint-mobile + 1px)) and (max-width: $breakpoint-tablet) {
   .latest-journal-card {
     width: 100%;
-    max-width: calculateRem(400);
     padding: calculateRem(12) calculateRem(16);
 
     &__image {
       width: 100%;
-      max-width: calculateRem(428);
       height: auto;
     }
 
@@ -57,7 +55,6 @@ $stroke-color: #ffd9da;
 
     &__image {
       width: 100%;
-      max-width: calculateRem(428);
       height: auto;
     }
 
