@@ -6,6 +6,11 @@ $stroke-color: #ffd9da;
   border-radius: calculateRem(25);
   width: fit-content;
 
+  &__image {
+    aspect-ratio: 428 / 641;
+    object-fit: contain;
+  }
+
   &__content-wrapper {
     display: flex;
     flex-direction: column;
