@@ -18,9 +18,6 @@ $footer-bg: #161f3c;
   }
 
   &__content {
-    max-width: calculateRem(1443);
-    width: 100%;
-    margin: 0 auto;
     padding: 0 calculateRem(16);
     display: flex;
     flex-direction: column;
