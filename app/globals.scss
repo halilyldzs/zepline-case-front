@@ -66,32 +66,32 @@ h6 {
   padding: 0;
 }
 
-@media (min-width: $breakpoint-mobile) {
+@media (min-width: $breakpoint-sm) {
   .container {
-    max-width: $breakpoint-mobile;
+    max-width: $breakpoint-sm;
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-md) {
   .container {
-    max-width: $breakpoint-tablet;
+    max-width: $breakpoint-md;
   }
 }
 
-@media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-lg) {
   .container {
-    max-width: $breakpoint-desktop-lg;
+    max-width: $breakpoint-lg;
   }
 }
 
-@media (min-width: $breakpoint-desktop-xl) {
+@media (min-width: $breakpoint-xl) {
   .container {
-    max-width: $breakpoint-desktop-xl;
+    max-width: $breakpoint-xl;
   }
 }
 
-@media (min-width: $breakpoint-desktop-2xl) {
+@media (min-width: $breakpoint-xxl) {
   .container {
-    max-width: $breakpoint-desktop-xl;
+    max-width: $breakpoint-xxl;
   }
 }

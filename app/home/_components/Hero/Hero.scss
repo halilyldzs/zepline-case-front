@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .hero {
     height: calculateRem(650);
     aspect-ratio: 1024 / 650;
@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .hero-wrapper {
     padding-top: 0;
   }
@@ -55,7 +55,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-xxl) {
   .hero {
     height: calculateRem(750);
     aspect-ratio: 1728 / 750;

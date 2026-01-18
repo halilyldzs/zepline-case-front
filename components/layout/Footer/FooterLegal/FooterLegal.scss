@@ -24,7 +24,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .footer-legal {
     gap: calculateRem(16);
 
@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .footer-legal {
     gap: calculateRem(20);
 

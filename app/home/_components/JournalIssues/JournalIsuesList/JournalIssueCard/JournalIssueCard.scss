@@ -145,7 +145,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .journal-issue-card {
     padding: calculateRem(12);
 
@@ -194,7 +194,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .journal-issue-card {
     &__wrapper {
       gap: calculateRem(10);

@@ -62,7 +62,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .hero-content {
     max-width: calculateRem(550);
     gap: calculateRem(16);
@@ -106,7 +106,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .hero-content {
     width: 100%;
     max-width: calculateRem(500);
@@ -130,7 +130,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-xxl) {
   .hero-content {
     width: calculateRem(397);
     height: calculateRem(316);

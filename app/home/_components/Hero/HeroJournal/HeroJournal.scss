@@ -71,7 +71,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .hero-journal {
     padding-left: 0;
     padding-right: 0;
@@ -97,7 +97,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .hero-journal {
     &__container {
       flex-direction: column;
@@ -118,7 +118,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-xxl) {
   .hero-journal {
     &__container {
       flex-direction: row;

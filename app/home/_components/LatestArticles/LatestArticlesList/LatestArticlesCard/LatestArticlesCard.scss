@@ -110,7 +110,7 @@ $shadow-color: rgba(188, 188, 188, 0.25);
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .latest-articles-card {
     padding: calculateRem(12) calculateRem(18);
     height: 138px;
@@ -172,7 +172,7 @@ $shadow-color: rgba(188, 188, 188, 0.25);
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .latest-articles-card {
     padding: calculateRem(12) calculateRem(16);
     height: 136px;
@@ -200,7 +200,7 @@ $shadow-color: rgba(188, 188, 188, 0.25);
   }
 }
 
-@media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-xxl) {
   .latest-articles-card {
     padding: calculateRem(12) calculateRem(18);
     height: 138px;
@@ -229,7 +229,7 @@ $shadow-color: rgba(188, 188, 188, 0.25);
   }
 }
 
-@media (min-width: $breakpoint-desktop-xl) {
+@media (min-width: $breakpoint-xxl) {
   .latest-articles-card {
     padding: calculateRem(14) calculateRem(20);
     height: 142px;

@@ -5,7 +5,7 @@
   margin-left: calc(var(--bs-gutter-x) * -0.5);
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .journal-issues-list {
     --bs-gutter-x: #{calculateRem(20)};
     --bs-gutter-y: #{calculateRem(20)};

@@ -21,7 +21,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .footer-copyright {
     height: calculateRem(39);
     padding: 0;

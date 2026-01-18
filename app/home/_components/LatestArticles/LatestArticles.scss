@@ -12,7 +12,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .latest-articles {
     padding-left: 0;
     padding-right: 0;
@@ -24,7 +24,17 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-lg) {
+  .latest-articles {
+    &__content-wrapper {
+      flex-direction: row;
+      gap: calculateRem(16);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
   .latest-articles {
     padding-bottom: calculateRem(130);
 
@@ -36,7 +46,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-xxl) {
   .latest-articles {
     padding-bottom: calculateRem(140);
 
@@ -46,7 +56,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-xl) {
+@media (min-width: $breakpoint-xxl) {
   .latest-articles {
     padding-bottom: calculateRem(160);
 

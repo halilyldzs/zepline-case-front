@@ -45,7 +45,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .journal-issues-header {
     flex-direction: row;
     justify-content: space-between;

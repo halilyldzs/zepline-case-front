@@ -30,7 +30,7 @@ $footer-bg: #161f3c;
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .footer {
     &__content {
       padding: 0 calculateRem(20);
@@ -38,7 +38,7 @@ $footer-bg: #161f3c;
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .footer {
     &__background {
       height: calculateRem(279);

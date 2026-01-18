@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .footer-contact {
     flex-direction: row;
     align-items: center;
@@ -162,7 +162,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .footer-contact {
     gap: calculateRem(177);
     height: calculateRem(67);

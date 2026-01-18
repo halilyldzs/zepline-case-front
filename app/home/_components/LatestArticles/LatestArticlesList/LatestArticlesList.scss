@@ -42,7 +42,7 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: $breakpoint-md) {
   .latest-articles-list {
     padding-top: calculateRem(20);
     gap: calculateRem(36);
@@ -75,7 +75,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-xl) {
   .latest-articles-list {
     gap: calculateRem(32);
 
@@ -90,7 +90,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-xxl) {
   .latest-articles-list {
     gap: calculateRem(36);
 
@@ -105,7 +105,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-xl) {
+@media (min-width: $breakpoint-xxl) {
   .latest-articles-list {
     padding-top: calculateRem(25);
     gap: calculateRem(44);

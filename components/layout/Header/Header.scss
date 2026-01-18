@@ -14,7 +14,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-xxl) {
   .header {
     background-color: $background;
     height: calculateRem(135);

@@ -40,7 +40,7 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop-xl) and (max-width: 1500px) {
+@media (min-width: $breakpoint-xxl) and (max-width: 1500px) {
   .send-article-content {
     max-width: calculateRem(520);
 
@@ -63,7 +63,7 @@
   }
 }
 
-@media (min-width: 1286px) and (max-width: #{$breakpoint-desktop-xl - 1px}) {
+@media (min-width: 1286px) and (max-width: #{$breakpoint-xxl - 1px}) {
   .send-article-content {
     max-width: calculateRem(510);
 
