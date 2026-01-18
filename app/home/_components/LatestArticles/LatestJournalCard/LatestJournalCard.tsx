@@ -3,10 +3,12 @@ import Image from 'next/image';
 import './LatestJournal.scss';
 import IconButton from '@/components/ui/IconButton';
 import Button from '@/components/ui/Button';
+import LastIssueBadge from '@/components/shared/LastIssueBadge';
 
 export default function LatestJournalCard() {
   return (
     <article className="latest-journal-card">
+      <LastIssueBadge />
       <div className="latest-journal-card__content-wrapper">
         <Image
           src="/images/last-journal-image.png"

@@ -1,0 +1,26 @@
+.last-issue-badge {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $color-danger;
+  padding: calculateRem(27) calculateRem(15);
+  border-top-right-radius: calculateRem(25);
+  border-bottom-right-radius: calculateRem(25);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    font-size: calculateRem(12);
+    font-weight: bold;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: calculateRem(1);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-orientation: mixed;
+    margin: 0;
+  }
+}

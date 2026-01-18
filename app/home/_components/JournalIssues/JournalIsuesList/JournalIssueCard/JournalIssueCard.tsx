@@ -4,15 +4,12 @@ import './JournalIssueCard.scss';
 import Icon from '@/components/ui/Icon';
 import IconButton from '@/components/ui/IconButton';
 import { JournalIssueCardProps } from './JournalIssueCard.types';
+import LastIssueBadge from '@/components/shared/LastIssueBadge';
 
 export default function JournalIssueCard({ data }: JournalIssueCardProps) {
   return (
     <article className="journal-issue-card">
-      {data.isLast && (
-        <div className="journal-issue-card__last-item">
-          <p className="journal-issue-card__last-item-text">Son Sayı</p>
-        </div>
-      )}
+      {data.isLast && <LastIssueBadge />}
       <div className="journal-issue-card__wrapper">
         <Image
           src={data.image || '/images/journal-image.png'}

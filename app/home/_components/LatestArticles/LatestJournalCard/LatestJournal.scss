@@ -1,6 +1,7 @@
 $stroke-color: #ffd9da;
 
 .latest-journal-card {
+  position: relative;
   padding: calculateRem(14) calculateRem(19);
   border: 5px solid $stroke-color;
   border-radius: calculateRem(25);
