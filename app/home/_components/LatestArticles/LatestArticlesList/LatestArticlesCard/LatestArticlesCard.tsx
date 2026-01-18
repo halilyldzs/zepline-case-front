@@ -31,7 +31,10 @@ export default function LatestArticlesCard({ data }: LatestArticlesCardProps) {
             <div className="latest-articles-card__info-item">
               <Icon name="number" className="latest-articles-card__info-icon" />
               <span className="latest-articles-card__info-text">
-                Sayfa: {data.pageRange.start}-{data.pageRange.end}
+                Sayfa:{' '}
+                <strong>
+                  {data.pageRange.start}-{data.pageRange.end}
+                </strong>
               </span>
             </div>
 
