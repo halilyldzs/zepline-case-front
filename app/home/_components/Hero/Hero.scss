@@ -20,3 +20,35 @@
     left: calculateRem(144);
   }
 }
+
+@media (max-width: calculateRem(1024)) {
+  .hero {
+    height: calculateRem(600);
+    aspect-ratio: 1024 / 600;
+    background-position: center center;
+
+    &__content-wrapper {
+      top: calculateRem(180);
+      left: calculateRem(40);
+      right: calculateRem(40);
+    }
+  }
+}
+
+@media (max-width: calculateRem(768)) {
+  .hero-wrapper {
+    padding-top: calculateRem(135); // Header height (8.4375rem)
+  }
+
+  .hero {
+    height: calculateRem(500);
+    aspect-ratio: 768 / 500;
+    background-position: center center;
+
+    &__content-wrapper {
+      top: calculateRem(120);
+      left: calculateRem(20);
+      right: calculateRem(20);
+    }
+  }
+}
