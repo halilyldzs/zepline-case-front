@@ -97,10 +97,12 @@ $shadow-color: rgba(188, 188, 188, 0.25);
   &__actions {
     display: flex;
     flex-direction: row;
+    gap: calculateRem(8);
     width: 100%;
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
+    align-self: flex-end;
   }
 
   &__view-button {
