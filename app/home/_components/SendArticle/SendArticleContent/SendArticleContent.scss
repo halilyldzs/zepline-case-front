@@ -40,30 +40,56 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
+// Desktop XL (1440px - 1500px)
+@media (min-width: $breakpoint-desktop-xl) and (max-width: 1500px) {
   .send-article-content {
-    max-width: calculateRem(500);
+    max-width: calculateRem(520);
 
     &__title {
-      font-size: calculateRem(20);
-      line-height: calculateRem(23);
+      font-size: calculateRem(21);
+      line-height: calculateRem(24);
     }
 
     &__subtitle {
-      font-size: calculateRem(24);
-      line-height: calculateRem(28);
-      margin-bottom: calculateRem(24);
+      font-size: calculateRem(27);
+      line-height: calculateRem(30);
+      margin-bottom: calculateRem(28);
     }
 
     &__description {
-      font-size: calculateRem(16);
-      line-height: calculateRem(22);
-      margin-bottom: calculateRem(24);
+      font-size: calculateRem(17);
+      line-height: calculateRem(24);
+      margin-bottom: calculateRem(28);
     }
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
+// Desktop LG (1286px - 1439px)
+@media (min-width: 1286px) and (max-width: #{$breakpoint-desktop-xl - 1px}) {
+  .send-article-content {
+    max-width: calculateRem(510);
+
+    &__title {
+      font-size: calculateRem(21);
+      line-height: calculateRem(24);
+    }
+
+    &__subtitle {
+      font-size: calculateRem(26);
+      line-height: calculateRem(29);
+      margin-bottom: calculateRem(26);
+    }
+
+    &__description {
+      font-size: calculateRem(17);
+      line-height: calculateRem(23);
+      margin-bottom: calculateRem(26);
+    }
+  }
+}
+
+// Mobile view up to 1285px (includes tablet and small desktop)
+@media (max-width: 1285px) {
   .send-article-content {
     max-width: 100%;
     width: 100%;

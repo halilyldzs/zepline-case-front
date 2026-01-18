@@ -22,8 +22,20 @@
   }
 }
 
-// Tablet (769px - 1024px)
-@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
+// Desktop small (1025px - 1200px)
+@media (min-width: $breakpoint-desktop) and (max-width: 1200px) {
+  .latest-articles {
+    padding-bottom: calculateRem(130);
+
+    &__content-wrapper {
+      gap: calculateRem(16);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// Tablet (768px - 1024px)
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
   .latest-articles {
     padding-bottom: calculateRem(120);
 

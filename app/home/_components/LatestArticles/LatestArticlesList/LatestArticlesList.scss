@@ -63,8 +63,30 @@
   }
 }
 
-// Tablet (769px - 1024px)
-@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
+// Desktop small (1025px - 1200px)
+@media (min-width: $breakpoint-desktop) and (max-width: 1200px) {
+  .latest-articles-list {
+    padding-top: calculateRem(20);
+    gap: calculateRem(32);
+
+    &__title {
+      font-size: calculateRem(20);
+      line-height: calculateRem(23);
+    }
+
+    &__subtitle {
+      font-size: calculateRem(24);
+      line-height: calculateRem(28);
+    }
+
+    &__content {
+      gap: calculateRem(16);
+    }
+  }
+}
+
+// Tablet (768px - 1024px)
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
   .latest-articles-list {
     padding-top: calculateRem(20);
     gap: calculateRem(36);
