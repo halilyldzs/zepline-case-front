@@ -1,6 +1,11 @@
 .header-logo {
   background-image: none;
   aspect-ratio: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: between;
+  width:100%;
 }
 
 @media (min-width: $breakpoint-xxl) {
@@ -11,5 +16,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left top;
+    display:block;
+    width: auto;
   }
 }
