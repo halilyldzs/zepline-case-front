@@ -5,9 +5,10 @@
   margin-bottom: calculateRem(60);
   background-image: url('/images/send-article-bg.png');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  aspect-ratio: 1440 / 439;
   min-height: calculateRem(350);
+  height: auto;
 
   &__image {
     display: none;
