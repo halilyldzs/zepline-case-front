@@ -24,7 +24,7 @@
     }
   }
 
-  @media (min-width: calculateRem(1025)) {
+  @media (min-width: $breakpoint-desktop) {
     display: none !important;
   }
 }

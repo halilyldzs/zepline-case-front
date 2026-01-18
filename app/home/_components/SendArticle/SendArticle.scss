@@ -42,7 +42,7 @@
   }
 }
 
-@media (min-width: calculateRem(769)) and (max-width: calculateRem(1024)) {
+@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
   .send-article {
     min-height: calculateRem(400);
     margin-bottom: calculateRem(80);
@@ -65,7 +65,7 @@
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (max-width: $breakpoint-mobile) {
   .send-article {
     min-height: calculateRem(350);
     margin-bottom: calculateRem(60);

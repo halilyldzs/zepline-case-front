@@ -1,5 +1,5 @@
 .header-logo {
-  @media (max-width: calculateRem(768)) {
+  @media (max-width: $breakpoint-mobile) {
     background-image: none !important;
     aspect-ratio: auto !important;
   }

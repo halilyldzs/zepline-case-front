@@ -41,7 +41,7 @@
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (max-width: $breakpoint-mobile) {
   .journal-issues-header {
     flex-direction: column;
     align-items: flex-start;

@@ -137,7 +137,7 @@
   }
 }
 
-@media (max-width: calculateRem(1024)) and (min-width: calculateRem(769)) {
+@media (max-width: $breakpoint-tablet) and (min-width: #{$breakpoint-mobile + 1px}) {
   .journal-issue-card {
     &__image {
       width: calculateRem(150);
@@ -149,7 +149,7 @@
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (max-width: $breakpoint-mobile) {
   .journal-issue-card {
     padding: calculateRem(10);
 

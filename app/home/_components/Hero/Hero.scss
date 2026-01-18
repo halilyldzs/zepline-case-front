@@ -21,7 +21,7 @@
   }
 }
 
-@media (max-width: calculateRem(1024)) {
+@media (max-width: $breakpoint-tablet) {
   .hero {
     height: calculateRem(600);
     aspect-ratio: 1024 / 600;
@@ -35,7 +35,7 @@
   }
 }
 
-@media (min-width: calculateRem(769)) and (max-width: calculateRem(1024)) {
+@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
   .hero {
     height: calculateRem(650);
     aspect-ratio: 1024 / 650;

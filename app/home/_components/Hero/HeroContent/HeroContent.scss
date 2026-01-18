@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: calculateRem(1024)) {
+@media (max-width: $breakpoint-tablet) {
   .hero-content {
     width: 100%;
     max-width: calculateRem(500);
@@ -84,7 +84,7 @@
   }
 }
 
-@media (min-width: calculateRem(769)) and (max-width: calculateRem(1024)) {
+@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
   .hero-content {
     width: 100%;
     max-width: calculateRem(550);
@@ -107,7 +107,7 @@
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (max-width: $breakpoint-mobile) {
   .hero-content {
     width: 100%;
     max-width: 100%;

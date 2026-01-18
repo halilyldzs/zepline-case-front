@@ -1,5 +1,5 @@
 .header-top {
-  @media (max-width: calculateRem(1024)) {
+  @media (max-width: $breakpoint-tablet) {
     display: none;
   }
 }

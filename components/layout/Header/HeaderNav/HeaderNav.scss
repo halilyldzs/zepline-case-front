@@ -15,7 +15,7 @@
   color: $color-success;
 }
 
-@media (max-width: calculateRem(1024)) {
+@media (max-width: $breakpoint-tablet) {
   .header-nav {
     display: none;
   }
