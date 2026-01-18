@@ -41,20 +41,54 @@
   }
 }
 
-@media (max-width: calculateRem(768)) {
+@media (min-width: calc($breakpoint-mobile + 1px)) and (max-width: $breakpoint-tablet) {
   .latest-articles-list {
+    padding-top: calculateRem(20);
+    gap: calculateRem(36);
+
+    &__title {
+      font-size: calculateRem(20);
+      line-height: calculateRem(23);
+    }
+
+    &__subtitle {
+      font-size: calculateRem(26);
+      line-height: calculateRem(30);
+    }
+
+    &__content {
+      gap: calculateRem(18);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .latest-articles-list {
+    padding-top: calculateRem(16);
+    gap: calculateRem(28);
+
     &__header {
       flex-direction: column;
       align-items: flex-start;
       gap: calculateRem(16);
     }
 
+    &__title-wrapper {
+      gap: calculateRem(10);
+    }
+
     &__title {
       font-size: calculateRem(18);
+      line-height: calculateRem(22);
     }
 
     &__subtitle {
       font-size: calculateRem(24);
+      line-height: calculateRem(28);
+    }
+
+    &__content {
+      gap: calculateRem(16);
     }
   }
 }

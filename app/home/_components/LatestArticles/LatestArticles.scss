@@ -10,11 +10,24 @@
   }
 }
 
-@media (max-width: calculateRem(1024)) {
+@media (min-width: calc($breakpoint-mobile + 1px)) and (max-width: $breakpoint-tablet) {
   .latest-articles {
+    padding-bottom: calculateRem(120);
+
     &__content-wrapper {
       flex-direction: column;
       gap: calculateRem(40);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .latest-articles {
+    padding-bottom: calculateRem(80);
+
+    &__content-wrapper {
+      flex-direction: column;
+      gap: calculateRem(32);
     }
   }
 }
