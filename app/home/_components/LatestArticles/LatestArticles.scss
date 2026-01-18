@@ -1,4 +1,10 @@
 .latest-articles {
   width: 100%;
   padding-bottom: calculateRem(160);
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: calculateRem(23);
+  }
 }
