@@ -1,0 +1,6 @@
+.latest-journal-card {
+  display: flex;
+  flex-direction: column;
+  gap: calculateRem(12);
+  padding: calculateRem(19) calculateRem(14);
+}

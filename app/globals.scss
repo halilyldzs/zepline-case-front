@@ -63,16 +63,13 @@ h6 {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0;
 }
 
 // Container responsive breakpoints
 @media (min-width: calculateRem(640)) {
   .container {
     max-width: calculateRem(640);
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 }
 
@@ -85,8 +82,6 @@ h6 {
 @media (min-width: calculateRem(1024)) {
   .container {
     max-width: calculateRem(1024);
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 
