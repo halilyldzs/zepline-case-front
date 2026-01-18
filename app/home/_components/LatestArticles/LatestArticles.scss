@@ -10,7 +10,20 @@
   }
 }
 
-@media (min-width: calc($breakpoint-mobile + 1px)) and (max-width: $breakpoint-tablet) {
+// Desktop medium (1025px - 1279px)
+@media (min-width: $breakpoint-desktop) and (max-width: #{$breakpoint-desktop-lg - 1px}) {
+  .latest-articles {
+    padding-bottom: calculateRem(140);
+
+    &__content-wrapper {
+      gap: calculateRem(18);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// Tablet (769px - 1024px)
+@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
   .latest-articles {
     padding-bottom: calculateRem(120);
 
@@ -21,6 +34,7 @@
   }
 }
 
+// Mobile (max 768px)
 @media (max-width: $breakpoint-mobile) {
   .latest-articles {
     padding-bottom: calculateRem(120);

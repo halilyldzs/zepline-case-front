@@ -27,7 +27,25 @@ $stroke-color: #ffd9da;
   }
 }
 
-@media (min-width: calc($breakpoint-mobile + 1px)) and (max-width: $breakpoint-tablet) {
+// Desktop medium (1025px - 1279px)
+@media (min-width: $breakpoint-desktop) and (max-width: #{$breakpoint-desktop-lg - 1px}) {
+  .latest-journal-card {
+    padding: calculateRem(12) calculateRem(16);
+    max-width: 100%;
+
+    &__image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__content-wrapper {
+      gap: calculateRem(20);
+    }
+  }
+}
+
+// Tablet (769px - 1024px)
+@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
   .latest-journal-card {
     width: 100%;
     padding: calculateRem(12) calculateRem(16);

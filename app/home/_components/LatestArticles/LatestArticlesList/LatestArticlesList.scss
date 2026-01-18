@@ -41,7 +41,30 @@
   }
 }
 
-@media (min-width: calc($breakpoint-mobile + 1px)) and (max-width: $breakpoint-tablet) {
+// Desktop medium (1025px - 1279px)
+@media (min-width: $breakpoint-desktop) and (max-width: #{$breakpoint-desktop-lg - 1px}) {
+  .latest-articles-list {
+    padding-top: calculateRem(20);
+    gap: calculateRem(36);
+
+    &__title {
+      font-size: calculateRem(20);
+      line-height: calculateRem(23);
+    }
+
+    &__subtitle {
+      font-size: calculateRem(26);
+      line-height: calculateRem(30);
+    }
+
+    &__content {
+      gap: calculateRem(18);
+    }
+  }
+}
+
+// Tablet (769px - 1024px)
+@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
   .latest-articles-list {
     padding-top: calculateRem(20);
     gap: calculateRem(36);

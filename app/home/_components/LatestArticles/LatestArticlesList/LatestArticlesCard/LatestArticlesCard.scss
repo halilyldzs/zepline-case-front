@@ -104,7 +104,39 @@ $shadow-color: rgba(188, 188, 188, 0.25);
   }
 }
 
-@media (min-width: calc($breakpoint-mobile + 1px)) and (max-width: $breakpoint-tablet) {
+// Desktop medium (1025px - 1279px)
+@media (min-width: $breakpoint-desktop) and (max-width: #{$breakpoint-desktop-lg - 1px}) {
+  .latest-articles-card {
+    padding: calculateRem(12) calculateRem(18);
+    height: 138px;
+
+    &__content {
+      gap: calculateRem(18);
+      padding: calculateRem(4);
+    }
+
+    &__left {
+      gap: calculateRem(10);
+    }
+
+    &__title {
+      font-size: calculateRem(19);
+      line-height: calculateRem(25);
+    }
+
+    &__info {
+      gap: calculateRem(20);
+    }
+
+    &__info-text {
+      font-size: calculateRem(13);
+      line-height: calculateRem(19);
+    }
+  }
+}
+
+// Tablet (769px - 1024px)
+@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
   .latest-articles-card {
     padding: calculateRem(12) calculateRem(18);
     height: 138px;
