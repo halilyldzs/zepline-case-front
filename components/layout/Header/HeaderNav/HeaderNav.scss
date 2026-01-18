@@ -7,6 +7,7 @@
   text-decoration: none;
   color: $color-black;
   transition: opacity 0.2s;
+  white-space: nowrap;
 
   &:hover {
     opacity: 0.8;
@@ -21,6 +22,64 @@
 
 @media (min-width: $breakpoint-xxl) {
   .header-nav {
-    display: block;
+    display: flex;
+    padding-left: calculateRem(16);
+    padding-right: calculateRem(16);
+  }
+
+  .header-nav__links {
+    gap: calculateRem(12);
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .header-nav__actions {
+    gap: calculateRem(6);
+    flex-shrink: 0;
+  }
+
+  .header-nav-link {
+    font-size: calculateRem(14);
+  }
+}
+
+@media (min-width: 1500px) {
+  .header-nav {
+    padding-left: calculateRem(16);
+    padding-right: calculateRem(16);
+  }
+
+  .header-nav__links {
+    gap: calculateRem(18);
+    flex-wrap: wrap;
+  }
+
+  .header-nav__actions {
+    gap: calculateRem(8);
+  }
+
+  .header-nav-link {
+    font-size: calculateRem(16);
+  }
+}
+
+@media (min-width: 1600px) {
+  .header-nav {
+    padding-left: calculateRem(16);
+    padding-right: calculateRem(16);
+  }
+
+  .header-nav__links {
+    gap: calculateRem(24);
+    flex-wrap: nowrap;
+  }
+
+  .header-nav__actions {
+    gap: calculateRem(8);
+  }
+
+  .header-nav-link {
+    font-size: calculateRem(17);
   }
 }

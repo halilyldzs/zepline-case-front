@@ -11,7 +11,7 @@ export default function HeaderNav() {
         <Icon name="home" className="home-icon" />
       </Link>
 
-      <nav className="d-flex align-items-center" style={{ gap: '1.5rem' }}>
+      <nav className="header-nav__links d-flex align-items-center">
         <Link href="#" className="header-nav-link">
           Amaç ve Kapsam
         </Link>
@@ -29,7 +29,7 @@ export default function HeaderNav() {
         </Link>
       </nav>
 
-      <div className="d-flex align-items-center" style={{ gap: '0.5rem' }}>
+      <div className="header-nav__actions d-flex align-items-center">
         <Button variant="filled" color="primary" leftIcon="kurul">
           Dergi Kurulu
         </Button>
