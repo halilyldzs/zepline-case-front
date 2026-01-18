@@ -85,20 +85,20 @@ h6 {
   }
 }
 
-@media (min-width: calculateRem(1280)) {
+@media (min-width: $breakpoint-desktop-lg) {
   .container {
-    max-width: calculateRem(1280);
+    max-width: $breakpoint-desktop-lg;
   }
 }
 
-@media (min-width: calculateRem(1440)) {
+@media (min-width: $breakpoint-desktop-xl) {
   .container {
-    max-width: calculateRem(1440);
+    max-width: $breakpoint-desktop-xl;
   }
 }
 
-@media (min-width: calculateRem(1536)) {
+@media (min-width: $breakpoint-desktop-2xl) {
   .container {
-    max-width: calculateRem(1440);
+    max-width: $breakpoint-desktop-xl;
   }
 }

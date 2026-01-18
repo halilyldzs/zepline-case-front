@@ -1,5 +1,5 @@
 .header-logo {
-  @media (max-width: $breakpoint-mobile) {
+  @media (max-width: $breakpoint-tablet) {
     background-image: none !important;
     aspect-ratio: auto !important;
   }

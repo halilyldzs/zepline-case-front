@@ -1,3 +1,5 @@
+@use '../../../styles/variables' as *;
+
 .header {
   width: 100%;
   background-color: $background;
@@ -8,12 +10,12 @@
   height: calculateRem(135);
 
   &__desktop-content {
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: #{$breakpoint-desktop-lg - 1px}) {
       display: none !important;
     }
   }
 
-  @media (max-width: $breakpoint-mobile) {
+  @media (max-width: #{$breakpoint-desktop-lg - 1px}) {
     height: calculateRem(70);
     background-color: $color-primary;
   }

@@ -11,7 +11,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import './Header.scss';
 
 export default function Header() {
-  const { isMobile, isTablet } = useMediaQuery();
+  const { isMobile, isTablet, isDesktopLg } = useMediaQuery();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleMenuClick = () => {
@@ -23,16 +23,15 @@ export default function Header() {
   };
 
   const isMobileOrTablet = isMobile || isTablet;
+  const showDesktopHeader = isDesktopLg;
 
   return (
     <>
       <header
-        className={`header ${isMobileOrTablet ? 'header--mobile' : 'header--desktop'}`}
+        className={`header ${showDesktopHeader ? 'header--desktop' : 'header--mobile'}`}
         style={{ zIndex: 50 }}
       >
-        {isMobileOrTablet ? (
-          <HeaderMobile onMenuClick={handleMenuClick} />
-        ) : (
+        {showDesktopHeader ? (
           <div className="header__desktop-content d-flex flex-row h-100">
             <HeaderLogo />
             <div className="d-flex flex-column w-100 h-100">
@@ -40,10 +39,12 @@ export default function Header() {
               <HeaderNav />
             </div>
           </div>
+        ) : (
+          <HeaderMobile onMenuClick={handleMenuClick} />
         )}
       </header>
 
-      {isMobileOrTablet && (
+      {!showDesktopHeader && (
         <Drawer isOpen={isDrawerOpen} onClose={handleDrawerClose}>
           <HeaderNavMobile />
         </Drawer>
