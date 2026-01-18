@@ -1,0 +1,33 @@
+.latest-articles-list {
+  padding-top: calculateRem(15);
+  width: 100%;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: calculateRem(12);
+  }
+
+  &__title {
+    font-size: calculateRem(22);
+    font-weight: 400;
+    line-height: calculateRem(25);
+    color: $color-gray;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: calculateRem(28);
+    font-weight: bold;
+    color: $color-danger;
+    line-height: calculateRem(25);
+    margin: 0;
+  }
+}
