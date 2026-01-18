@@ -1,4 +1,4 @@
-# Zepline Case Frontend
+# Profuture
 
 Next.js tabanlı modern bir dergi/makale platformu frontend uygulaması.
 
@@ -123,6 +123,7 @@ Proje SCSS kullanmaktadır. Global değişkenler ve fonksiyonlar `styles/` klas�
 ## 🧩 Bileşen Yapısı
 
 Her bileşen kendi klasöründe organize edilmiştir:
+
 - Ana implementasyon dosyası (`.tsx`)
 - Stil dosyası (`.scss`)
 - Tip tanımları (`.types.ts`)
