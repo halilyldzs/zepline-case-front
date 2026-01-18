@@ -40,3 +40,39 @@
     align-self: flex-end;
   }
 }
+
+@media (max-width: calculateRem(768)) {
+  .journal-issues-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calculateRem(20);
+
+    &__title-container {
+      flex-direction: column;
+      gap: calculateRem(16);
+      width: 100%;
+    }
+
+    &__title-wrapper {
+      gap: calculateRem(8);
+    }
+
+    &__title {
+      font-size: calculateRem(18);
+    }
+
+    &__subtitle {
+      font-size: calculateRem(22);
+    }
+
+    &__pagination-buttons {
+      align-self: flex-start;
+      margin-top: calculateRem(4);
+    }
+
+    &__button {
+      align-self: stretch;
+      width: 100%;
+    }
+  }
+}

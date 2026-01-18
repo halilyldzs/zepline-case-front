@@ -4,3 +4,10 @@
   width: 100%;
   margin-left: calc(var(--bs-gutter-x) * -0.5);
 }
+
+@media (max-width: calculateRem(768)) {
+  .journal-issues-list {
+    --bs-gutter-x: #{calculateRem(12)};
+    --bs-gutter-y: #{calculateRem(16)};
+  }
+}

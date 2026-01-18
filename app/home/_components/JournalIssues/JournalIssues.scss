@@ -9,3 +9,13 @@
     gap: calculateRem(35);
   }
 }
+
+@media (max-width: calculateRem(768)) {
+  .journal-issues {
+    padding-bottom: calculateRem(40);
+
+    &__container {
+      gap: calculateRem(24);
+    }
+  }
+}
