@@ -9,7 +9,7 @@ export default function LatestJournalCard() {
     <article className="latest-journal-card">
       <div className="latest-journal-card__content-wrapper">
         <Image
-          src="/images/latest-journal-image.png"
+          src="/images/last-journal-image.png"
           alt="Latest Journal Card"
           width={428}
           height={641}

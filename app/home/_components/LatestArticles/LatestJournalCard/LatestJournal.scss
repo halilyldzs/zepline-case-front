@@ -9,9 +9,6 @@ $stroke-color: #ffd9da;
   &__image {
     aspect-ratio: 428 / 641;
     object-fit: contain;
-    width: 100%;
-    max-width: calculateRem(428);
-    height: auto;
   }
 
   &__content-wrapper {
@@ -36,7 +33,9 @@ $stroke-color: #ffd9da;
     padding: calculateRem(12) calculateRem(16);
 
     &__image {
-      max-width: 100%;
+      width: 100%;
+      max-width: calculateRem(428);
+      height: auto;
     }
 
     &__content-wrapper {
@@ -56,7 +55,9 @@ $stroke-color: #ffd9da;
     border-width: 3px;
 
     &__image {
-      max-width: 100%;
+      width: 100%;
+      max-width: calculateRem(428);
+      height: auto;
     }
 
     &__content-wrapper {
