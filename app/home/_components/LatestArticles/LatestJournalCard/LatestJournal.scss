@@ -1,8 +1,8 @@
 $stroke-color: #ffd9da;
 
 .latest-journal-card {
-  padding: calculateRem(19) calculateRem(14);
-  border: 1px solid $stroke-color;
+  padding: calculateRem(14) calculateRem(19);
+  border: 5px solid $stroke-color;
   border-radius: calculateRem(25);
   width: fit-content;
 
