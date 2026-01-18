@@ -1,0 +1,17 @@
+.footer-copyright {
+  width: 100%;
+  height: calculateRem(39);
+  background-color: $color-danger;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    font-size: calculateRem(15.5);
+    line-height: calculateRem(19);
+    font-weight: 400;
+    text-align: center;
+    color: $color-white;
+    margin: 0;
+  }
+}

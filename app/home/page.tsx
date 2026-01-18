@@ -3,6 +3,7 @@ import Hero from './_components/Hero';
 import JournalIssues from './_components/JournalIssues';
 import LatestArticles from './_components/LatestArticles';
 import SendArticle from './_components/SendArticle';
+import Footer from './_components/Footer';
 import './Home.scss';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <SendArticle />
         <LatestArticles />
       </main>
+      <Footer />
     </>
   );
 }
