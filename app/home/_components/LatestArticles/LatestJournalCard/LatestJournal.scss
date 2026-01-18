@@ -1,6 +1,22 @@
+$stroke-color: #ffd9da;
+
 .latest-journal-card {
-  display: flex;
-  flex-direction: column;
-  gap: calculateRem(12);
   padding: calculateRem(19) calculateRem(14);
+  border: 1px solid $stroke-color;
+  border-radius: calculateRem(25);
+  width: fit-content;
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: calculateRem(25);
+  }
+
+  &__buttons {
+    display: flex;
+    gap: calculateRem(7);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
