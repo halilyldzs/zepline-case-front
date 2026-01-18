@@ -11,3 +11,24 @@
     --bs-gutter-y: #{calculateRem(20)};
   }
 }
+
+@media (min-width: $breakpoint-lg) {
+  .journal-issues-list {
+    --bs-gutter-x: #{calculateRem(18)};
+    --bs-gutter-y: #{calculateRem(20)};
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .journal-issues-list {
+    --bs-gutter-x: #{calculateRem(20)};
+    --bs-gutter-y: #{calculateRem(20)};
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  .journal-issues-list {
+    --bs-gutter-x: #{calculateRem(24)};
+    --bs-gutter-y: #{calculateRem(24)};
+  }
+}
