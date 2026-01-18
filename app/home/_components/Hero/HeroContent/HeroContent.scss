@@ -84,6 +84,29 @@
   }
 }
 
+@media (min-width: calculateRem(769)) and (max-width: calculateRem(1024)) {
+  .hero-content {
+    width: 100%;
+    max-width: calculateRem(550);
+    gap: calculateRem(16);
+
+    &__title {
+      font-size: calculateRem(30);
+      line-height: calculateRem(38);
+    }
+
+    &__description {
+      font-size: calculateRem(17);
+      line-height: calculateRem(24);
+    }
+
+    &__info-group {
+      gap: calculateRem(32);
+      flex-wrap: nowrap;
+    }
+  }
+}
+
 @media (max-width: calculateRem(768)) {
   .hero-content {
     width: 100%;

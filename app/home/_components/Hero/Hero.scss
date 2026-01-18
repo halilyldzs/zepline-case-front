@@ -35,15 +35,29 @@
   }
 }
 
+@media (min-width: calculateRem(769)) and (max-width: calculateRem(1024)) {
+  .hero {
+    height: calculateRem(650);
+    aspect-ratio: 1024 / 650;
+
+    &__content-wrapper {
+      top: calculateRem(200);
+      left: calculateRem(60);
+      right: calculateRem(60);
+    }
+  }
+}
+
 @media (max-width: calculateRem(768)) {
   .hero-wrapper {
-    padding-top: calculateRem(135); // Header height (8.4375rem)
+    padding-top: calculateRem(70);
   }
 
   .hero {
     height: calculateRem(500);
     aspect-ratio: 768 / 500;
-    background-position: center center;
+    background-position: left center;
+    background-size: cover;
 
     &__content-wrapper {
       top: calculateRem(120);

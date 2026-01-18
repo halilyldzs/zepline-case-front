@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import './HeaderLogo.scss';
 
 export default function HeaderLogo() {
   return (
     <div
-      className="d-flex align-items-center justify-content-center"
+      className="header-logo d-flex align-items-center justify-content-center"
       style={{
         height: '8.4375rem',
         aspectRatio: '381 / 135',

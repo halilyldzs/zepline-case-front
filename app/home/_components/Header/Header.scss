@@ -5,10 +5,16 @@
   top: 0;
   left: 0;
   right: 0;
+  height: calculateRem(135);
 
   &__desktop-content {
     @media (max-width: calculateRem(1024)) {
       display: none !important;
     }
+  }
+
+  @media (max-width: calculateRem(768)) {
+    height: calculateRem(70);
+    background-color: $color-primary;
   }
 }

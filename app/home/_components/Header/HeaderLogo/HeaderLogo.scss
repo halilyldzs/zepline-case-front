@@ -1,0 +1,6 @@
+.header-logo {
+  @media (max-width: calculateRem(768)) {
+    background-image: none !important;
+    aspect-ratio: auto !important;
+  }
+}

@@ -100,6 +100,33 @@
   }
 }
 
+@media (min-width: calculateRem(769)) and (max-width: calculateRem(1024)) {
+  .hero-journal {
+    &__container {
+      gap: calculateRem(50);
+    }
+
+    &__content {
+      padding-top: calculateRem(80);
+      padding-bottom: calculateRem(60);
+      gap: calculateRem(20);
+    }
+
+    &__title {
+      font-size: calculateRem(28);
+      line-height: calculateRem(36);
+    }
+
+    &__image-wrapper {
+      margin-top: calculateRem(-250);
+    }
+
+    &__image {
+      max-width: calculateRem(600);
+    }
+  }
+}
+
 @media (max-width: calculateRem(768)) {
   .hero-journal {
     &__container {
