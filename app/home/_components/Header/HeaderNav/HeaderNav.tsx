@@ -6,7 +6,7 @@ import './HeaderNav.scss';
 
 export default function HeaderNav() {
   return (
-    <div className="flex-grow-1 d-flex align-items-center justify-content-between h-100 px-4">
+    <div className="header-nav flex-grow-1 d-flex align-items-center justify-content-between h-100 px-4">
       <Link href="/" className="d-flex align-items-center justify-content-center">
         <Icon name="home" className="home-icon" />
       </Link>

@@ -1,0 +1,58 @@
+.header-nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: calculateRem(24);
+  width: 100%;
+
+  &__home-link {
+    display: flex;
+    align-items: center;
+    gap: calculateRem(12);
+    text-decoration: none;
+    color: $color-dark;
+    font-size: calculateRem(18);
+    font-weight: 500;
+    padding: calculateRem(12) 0;
+    border-bottom: 1px solid $color-stroke;
+  }
+
+  &__home-icon {
+    width: calculateRem(24);
+    height: calculateRem(24);
+    color: $color-success;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: calculateRem(16);
+  }
+
+  &__link {
+    font-size: calculateRem(17);
+    text-decoration: none;
+    color: $color-dark;
+    padding: calculateRem(12) 0;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: calculateRem(12);
+    padding-top: calculateRem(24);
+    border-top: 1px solid $color-stroke;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__search-button {
+    align-self: flex-start;
+  }
+}

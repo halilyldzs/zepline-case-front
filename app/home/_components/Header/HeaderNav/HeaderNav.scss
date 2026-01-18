@@ -14,3 +14,9 @@
   height: calculateRem(24);
   color: $color-success;
 }
+
+@media (max-width: calculateRem(1024)) {
+  .header-nav {
+    display: none;
+  }
+}

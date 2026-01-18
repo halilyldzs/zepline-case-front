@@ -1,0 +1,17 @@
+.header-mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: calculateRem(16);
+  width: 100%;
+  height: 100%;
+  padding: 0 calculateRem(16);
+
+  &__menu-button {
+    flex-shrink: 0;
+  }
+
+  @media (min-width: calculateRem(1025)) {
+    display: none !important;
+  }
+}

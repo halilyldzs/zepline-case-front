@@ -1,0 +1,5 @@
+.header-top {
+  @media (max-width: calculateRem(1024)) {
+    display: none;
+  }
+}

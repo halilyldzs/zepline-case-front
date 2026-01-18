@@ -1,9 +1,10 @@
 import Icon from '@/components/ui/Icon';
+import './HeaderTop.scss';
 
 export default function HeaderTop() {
   return (
     <div
-      className="d-flex align-items-center justify-content-between px-4 text-white"
+      className="header-top d-flex align-items-center justify-content-between px-4 text-white"
       style={{
         fontSize: '1.0625rem',
         marginLeft: '-2rem',

@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  background-color: $background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &__desktop-content {
+    @media (max-width: calculateRem(1024)) {
+      display: none !important;
+    }
+  }
+}
