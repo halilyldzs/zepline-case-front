@@ -1,4 +1,6 @@
 import Button from '@/components/ui/Button';
+import LatestArticlesCard from './LatestArticlesCard';
+import { latestArticlesMockData } from './mocks/data';
 import './LatestArticlesList.scss';
 
 export default function LatestArticlesList() {
@@ -12,6 +14,11 @@ export default function LatestArticlesList() {
         <Button variant="outline" color="default" rightIcon="right">
           Tümünü Görüntüle
         </Button>
+      </div>
+      <div className="latest-articles-list__content">
+        {latestArticlesMockData.map((article) => (
+          <LatestArticlesCard key={article.id} data={article} />
+        ))}
       </div>
     </div>
   );
