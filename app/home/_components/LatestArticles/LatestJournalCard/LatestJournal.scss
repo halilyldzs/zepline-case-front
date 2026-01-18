@@ -79,6 +79,12 @@ $stroke-color: #ffd9da;
   .latest-journal-card {
     padding: calculateRem(14) calculateRem(19);
 
+    &__image {
+      width: 428px;
+      height: 641px;
+      object-fit: contain;
+    }
+
     &__content-wrapper {
       gap: calculateRem(25);
     }
