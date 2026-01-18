@@ -41,7 +41,7 @@
     &__content-wrapper {
       flex-direction: row;
       gap: calculateRem(16);
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
   }
 }

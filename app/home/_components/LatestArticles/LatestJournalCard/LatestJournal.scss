@@ -7,6 +7,10 @@ $stroke-color: #ffd9da;
   border: 3px solid $stroke-color;
   border-radius: calculateRem(25);
 
+  &__last-issue-badge {
+    left: -3px;
+  }
+
   &__image {
     width: 100%;
     aspect-ratio: 428 / 641;
@@ -41,6 +45,10 @@ $stroke-color: #ffd9da;
     padding: calculateRem(12) calculateRem(16);
     border-width: 5px;
 
+    &__last-issue-badge {
+      left: -5px;
+    }
+
     &__content-wrapper {
       gap: calculateRem(20);
     }
@@ -63,6 +71,12 @@ $stroke-color: #ffd9da;
 
     &__content-wrapper {
       gap: calculateRem(18);
+    }
+
+    &__image {
+      width: 350px;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }

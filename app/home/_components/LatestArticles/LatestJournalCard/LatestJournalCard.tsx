@@ -8,7 +8,7 @@ import LastIssueBadge from '@/components/shared/LastIssueBadge';
 export default function LatestJournalCard() {
   return (
     <article className="latest-journal-card">
-      <LastIssueBadge />
+      <LastIssueBadge className="latest-journal-card__last-issue-badge" />
       <div className="latest-journal-card__content-wrapper">
         <Image
           src="/images/last-journal-image.png"
