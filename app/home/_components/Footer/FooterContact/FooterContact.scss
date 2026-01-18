@@ -13,9 +13,33 @@
     gap: calculateRem(17);
   }
 
-  &__icon {
+  &__icon-wrapper {
+    width: calculateRem(55);
+    height: calculateRem(55);
+    border: 1px solid $color-stroke;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-shrink: 0;
-    background-color: transparent;
+  }
+
+  &__icon {
+    width: calculateRem(17);
+    height: calculateRem(24);
+    color: $color-white;
+    flex-shrink: 0;
+
+    .footer-contact__item:nth-child(2) & {
+      width: calculateRem(21);
+      height: calculateRem(21);
+    }
+
+    .footer-contact__item:nth-child(3) & {
+      width: calculateRem(21);
+      height: calculateRem(21);
+    }
   }
 
   &__content {
