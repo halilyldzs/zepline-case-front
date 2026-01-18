@@ -2,26 +2,46 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-top: calculateRem(70);
 }
 
 .hero {
   width: 100%;
   position: relative;
-  height: calculateRem(750);
-  aspect-ratio: 1728 / 750;
+  height: calculateRem(500);
+  aspect-ratio: 768 / 500;
   background-image: url('/images/hero.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom top;
+  background-position: left center;
 
   &__content-wrapper {
     position: absolute;
-    top: calculateRem(265);
-    left: calculateRem(144);
+    top: calculateRem(120);
+    left: calculateRem(20);
+    right: calculateRem(20);
   }
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
+  .hero {
+    height: calculateRem(650);
+    aspect-ratio: 1024 / 650;
+    background-position: center center;
+
+    &__content-wrapper {
+      top: calculateRem(200);
+      left: calculateRem(60);
+      right: calculateRem(60);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .hero-wrapper {
+    padding-top: 0;
+  }
+
   .hero {
     height: calculateRem(600);
     aspect-ratio: 1024 / 600;
@@ -35,34 +55,16 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-desktop-lg) {
   .hero {
-    height: calculateRem(650);
-    aspect-ratio: 1024 / 650;
+    height: calculateRem(750);
+    aspect-ratio: 1728 / 750;
+    background-position: bottom top;
 
     &__content-wrapper {
-      top: calculateRem(200);
-      left: calculateRem(60);
-      right: calculateRem(60);
-    }
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .hero-wrapper {
-    padding-top: calculateRem(70);
-  }
-
-  .hero {
-    height: calculateRem(500);
-    aspect-ratio: 768 / 500;
-    background-position: left center;
-    background-size: cover;
-
-    &__content-wrapper {
-      top: calculateRem(120);
-      left: calculateRem(20);
-      right: calculateRem(20);
+      top: calculateRem(265);
+      left: calculateRem(144);
+      right: auto;
     }
   }
 }

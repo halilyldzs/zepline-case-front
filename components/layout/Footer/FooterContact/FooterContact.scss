@@ -1,21 +1,22 @@
 .footer-contact {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: calculateRem(177);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calculateRem(30);
   width: 100%;
-  height: calculateRem(67);
+  height: auto;
 
   &__item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: calculateRem(17);
+    gap: calculateRem(12);
+    width: 100%;
   }
 
   &__icon-wrapper {
-    width: calculateRem(55);
-    height: calculateRem(55);
+    width: calculateRem(45);
+    height: calculateRem(45);
     border: 1px solid $color-stroke;
     border-radius: 100px;
     display: flex;
@@ -26,19 +27,19 @@
   }
 
   &__icon {
-    width: calculateRem(17);
-    height: calculateRem(24);
+    width: calculateRem(14);
+    height: calculateRem(20);
     color: $color-white;
     flex-shrink: 0;
 
     .footer-contact__item:nth-child(2) & {
-      width: calculateRem(21);
-      height: calculateRem(21);
+      width: calculateRem(18);
+      height: calculateRem(18);
     }
 
     .footer-contact__item:nth-child(3) & {
-      width: calculateRem(21);
-      height: calculateRem(21);
+      width: calculateRem(18);
+      height: calculateRem(18);
     }
   }
 
@@ -52,8 +53,8 @@
   }
 
   &__label {
-    font-size: calculateRem(16.5);
-    line-height: calculateRem(20);
+    font-size: calculateRem(14);
+    line-height: calculateRem(18);
     font-weight: 300;
     color: $color-white;
     margin: 0;
@@ -62,8 +63,8 @@
   }
 
   &__title {
-    font-size: calculateRem(18);
-    line-height: calculateRem(22);
+    font-size: calculateRem(16);
+    line-height: calculateRem(20);
     font-weight: 700;
     color: $color-white;
     margin: 0;
@@ -87,8 +88,8 @@
   }
 
   &__email-text {
-    font-size: calculateRem(16);
-    line-height: calculateRem(19);
+    font-size: calculateRem(14);
+    line-height: calculateRem(17);
     font-weight: 300;
     color: $color-white;
     word-wrap: break-word;
@@ -96,75 +97,74 @@
   }
 
   &__address-text {
-    font-size: calculateRem(17);
-    line-height: calculateRem(21);
+    font-size: calculateRem(15);
+    line-height: calculateRem(19);
     color: $color-white;
     margin: 0;
-    max-width: calculateRem(362);
+    max-width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .footer-contact {
+    flex-direction: row;
+    align-items: center;
     gap: calculateRem(80);
-    height: auto;
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .footer-contact {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: calculateRem(30);
     height: auto;
 
     &__item {
-      width: 100%;
-      gap: calculateRem(12);
+      width: auto;
+      gap: calculateRem(17);
     }
 
     &__icon-wrapper {
-      width: calculateRem(45);
-      height: calculateRem(45);
-      flex-shrink: 0;
+      width: calculateRem(55);
+      height: calculateRem(55);
     }
 
     &__icon {
-      width: calculateRem(14);
-      height: calculateRem(20);
+      width: calculateRem(17);
+      height: calculateRem(24);
 
       .footer-contact__item:nth-child(2) & {
-        width: calculateRem(18);
-        height: calculateRem(18);
+        width: calculateRem(21);
+        height: calculateRem(21);
       }
 
       .footer-contact__item:nth-child(3) & {
-        width: calculateRem(18);
-        height: calculateRem(18);
+        width: calculateRem(21);
+        height: calculateRem(21);
       }
     }
 
     &__label {
-      font-size: calculateRem(14);
-      line-height: calculateRem(18);
-    }
-
-    &__title {
-      font-size: calculateRem(16);
+      font-size: calculateRem(16.5);
       line-height: calculateRem(20);
     }
 
+    &__title {
+      font-size: calculateRem(18);
+      line-height: calculateRem(22);
+    }
+
     &__email-text {
-      font-size: calculateRem(14);
-      line-height: calculateRem(17);
+      font-size: calculateRem(16);
+      line-height: calculateRem(19);
     }
 
     &__address-text {
-      font-size: calculateRem(15);
-      line-height: calculateRem(19);
-      max-width: 100%;
+      font-size: calculateRem(17);
+      line-height: calculateRem(21);
+      max-width: calculateRem(362);
     }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .footer-contact {
+    gap: calculateRem(177);
+    height: calculateRem(67);
   }
 }

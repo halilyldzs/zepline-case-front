@@ -23,8 +23,10 @@
       max-width: 100%;
     }
   }
+}
 
-  @media (min-width: $breakpoint-desktop-lg) {
+@media (min-width: $breakpoint-desktop-lg) {
+  .header-mobile {
     display: none !important;
   }
 }

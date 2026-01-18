@@ -1,5 +1,9 @@
 .header-top {
-  @media (max-width: $breakpoint-tablet) {
-    display: none;
+  display: none;
+}
+
+@media (min-width: $breakpoint-desktop-lg) {
+  .header-top {
+    display: block;
   }
 }

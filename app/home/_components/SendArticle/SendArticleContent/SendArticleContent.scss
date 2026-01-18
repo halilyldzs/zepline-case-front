@@ -40,7 +40,6 @@
   }
 }
 
-// Desktop XL (1440px - 1500px)
 @media (min-width: $breakpoint-desktop-xl) and (max-width: 1500px) {
   .send-article-content {
     max-width: calculateRem(520);
@@ -64,7 +63,6 @@
   }
 }
 
-// Desktop LG (1286px - 1439px)
 @media (min-width: 1286px) and (max-width: #{$breakpoint-desktop-xl - 1px}) {
   .send-article-content {
     max-width: calculateRem(510);
@@ -88,7 +86,6 @@
   }
 }
 
-// Mobile view up to 1285px (includes tablet and small desktop)
 @media (max-width: 1285px) {
   .send-article-content {
     max-width: 100%;

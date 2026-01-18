@@ -1,3 +1,7 @@
+.header-nav {
+  display: none;
+}
+
 .header-nav-link {
   font-size: calculateRem(17);
   text-decoration: none;
@@ -15,8 +19,8 @@
   color: $color-success;
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-desktop-lg) {
   .header-nav {
-    display: none;
+    display: block;
   }
 }

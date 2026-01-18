@@ -1,6 +1,11 @@
 .header-logo {
-  @media (max-width: $breakpoint-tablet) {
-    background-image: none !important;
-    aspect-ratio: auto !important;
+  background-image: none !important;
+  aspect-ratio: auto !important;
+}
+
+@media (min-width: $breakpoint-desktop-lg) {
+  .header-logo {
+    background-image: initial !important;
+    aspect-ratio: initial !important;
   }
 }

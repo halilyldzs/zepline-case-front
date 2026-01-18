@@ -1,61 +1,58 @@
 .latest-articles {
   width: 100%;
-  padding-bottom: calculateRem(160);
+  padding-bottom: calculateRem(120);
+  padding-left: calculateRem(16);
+  padding-right: calculateRem(16);
 
   &__content-wrapper {
     display: flex;
-    flex-direction: row;
-    gap: calculateRem(23);
+    flex-direction: column;
+    gap: calculateRem(32);
     align-items: flex-start;
   }
 }
 
-// Desktop medium (1025px - 1279px)
-@media (min-width: $breakpoint-desktop) and (max-width: #{$breakpoint-desktop-lg - 1px}) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .latest-articles {
-    padding-bottom: calculateRem(140);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: calculateRem(120);
 
     &__content-wrapper {
-      gap: calculateRem(18);
-      flex-wrap: wrap;
+      gap: calculateRem(40);
     }
   }
 }
 
-// Desktop small (1025px - 1200px)
-@media (min-width: $breakpoint-desktop) and (max-width: 1200px) {
+@media (min-width: $breakpoint-desktop) {
   .latest-articles {
     padding-bottom: calculateRem(130);
 
     &__content-wrapper {
+      flex-direction: row;
       gap: calculateRem(16);
       flex-wrap: wrap;
     }
   }
 }
 
-// Tablet (768px - 1024px)
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-desktop-lg) {
   .latest-articles {
-    padding-bottom: calculateRem(120);
+    padding-bottom: calculateRem(140);
 
     &__content-wrapper {
-      flex-direction: column;
-      gap: calculateRem(40);
+      gap: calculateRem(18);
     }
   }
 }
 
-// Mobile (max 768px)
-@media (max-width: $breakpoint-mobile) {
+@media (min-width: $breakpoint-desktop-xl) {
   .latest-articles {
-    padding-bottom: calculateRem(120);
-    padding-left: calculateRem(16);
-    padding-right: calculateRem(16);
+    padding-bottom: calculateRem(160);
 
     &__content-wrapper {
-      flex-direction: column;
-      gap: calculateRem(32);
+      gap: calculateRem(23);
+      flex-wrap: nowrap;
     }
   }
 }

@@ -1,46 +1,47 @@
 .hero-content {
-  width: calculateRem(397);
-  height: calculateRem(316);
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: calculateRem(17);
+  gap: calculateRem(12);
 
   &__title {
     color: $color-hero-title;
-    font-size: calculateRem(32);
-    line-height: calculateRem(40);
+    font-size: calculateRem(24);
+    line-height: calculateRem(32);
     font-weight: bold;
   }
 
   &__description {
     color: $color-white;
-    font-size: calculateRem(18);
-    line-height: calculateRem(25);
+    font-size: calculateRem(14);
+    line-height: calculateRem(20);
     font-weight: 500;
   }
 
   &__info-group {
     display: flex;
-    align-items: center;
-    gap: calculateRem(40);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calculateRem(16);
   }
 
   &__info-item {
     display: flex;
     align-items: center;
-    gap: calculateRem(8);
+    gap: calculateRem(6);
   }
 
   &__icon {
-    width: calculateRem(17);
-    height: calculateRem(17);
+    width: calculateRem(15);
+    height: calculateRem(15);
     color: $color-white;
   }
 
   &__info-text {
     color: $color-white;
-    font-size: calculateRem(16);
-    line-height: calculateRem(18);
+    font-size: calculateRem(14);
+    line-height: calculateRem(16);
     font-weight: 500;
 
     strong {
@@ -50,17 +51,62 @@
 
   &__date-text {
     color: $color-white;
-    font-size: calculateRem(16);
-    line-height: calculateRem(18);
+    font-size: calculateRem(14);
+    line-height: calculateRem(16);
     font-weight: bold;
   }
 
   &__button {
-    margin-top: auto;
+    width: 100%;
+    margin-top: calculateRem(8);
   }
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
+  .hero-content {
+    max-width: calculateRem(550);
+    gap: calculateRem(16);
+
+    &__title {
+      font-size: calculateRem(30);
+      line-height: calculateRem(38);
+    }
+
+    &__description {
+      font-size: calculateRem(17);
+      line-height: calculateRem(24);
+    }
+
+    &__info-group {
+      flex-direction: row;
+      align-items: center;
+      gap: calculateRem(32);
+      flex-wrap: nowrap;
+    }
+
+    &__info-item {
+      gap: calculateRem(8);
+    }
+
+    &__icon {
+      width: calculateRem(17);
+      height: calculateRem(17);
+    }
+
+    &__info-text,
+    &__date-text {
+      font-size: calculateRem(16);
+      line-height: calculateRem(18);
+    }
+
+    &__button {
+      width: auto;
+      margin-top: auto;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
   .hero-content {
     width: 100%;
     max-width: calculateRem(500);
@@ -84,69 +130,25 @@
   }
 }
 
-@media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-desktop-lg) {
   .hero-content {
-    width: 100%;
-    max-width: calculateRem(550);
-    gap: calculateRem(16);
+    width: calculateRem(397);
+    height: calculateRem(316);
+    gap: calculateRem(17);
 
     &__title {
-      font-size: calculateRem(30);
-      line-height: calculateRem(38);
+      font-size: calculateRem(32);
+      line-height: calculateRem(40);
     }
 
     &__description {
-      font-size: calculateRem(17);
-      line-height: calculateRem(24);
+      font-size: calculateRem(18);
+      line-height: calculateRem(25);
     }
 
     &__info-group {
-      gap: calculateRem(32);
+      gap: calculateRem(40);
       flex-wrap: nowrap;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .hero-content {
-    width: 100%;
-    max-width: 100%;
-    gap: calculateRem(12);
-
-    &__title {
-      font-size: calculateRem(24);
-      line-height: calculateRem(32);
-    }
-
-    &__description {
-      font-size: calculateRem(14);
-      line-height: calculateRem(20);
-    }
-
-    &__info-group {
-      gap: calculateRem(16);
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    &__info-item {
-      gap: calculateRem(6);
-    }
-
-    &__icon {
-      width: calculateRem(15);
-      height: calculateRem(15);
-    }
-
-    &__info-text,
-    &__date-text {
-      font-size: calculateRem(14);
-      line-height: calculateRem(16);
-    }
-
-    &__button {
-      width: 100%;
-      margin-top: calculateRem(8);
     }
   }
 }

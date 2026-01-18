@@ -1,36 +1,36 @@
 .latest-articles-list {
-  padding-top: calculateRem(25);
+  padding-top: calculateRem(16);
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: calculateRem(44);
+  gap: calculateRem(28);
 
   &__header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calculateRem(16);
   }
 
   &__title-wrapper {
     display: flex;
     flex-direction: column;
-    gap: calculateRem(12);
+    gap: calculateRem(10);
   }
 
   &__title {
-    font-size: calculateRem(22);
+    font-size: calculateRem(18);
     font-weight: 400;
-    line-height: calculateRem(25);
+    line-height: calculateRem(22);
     color: $color-gray;
     margin: 0;
   }
 
   &__subtitle {
-    font-size: calculateRem(28);
+    font-size: calculateRem(24);
     font-weight: bold;
     color: $color-danger;
-    line-height: calculateRem(25);
+    line-height: calculateRem(28);
     margin: 0;
   }
 
@@ -38,103 +38,90 @@
     display: flex;
     flex-direction: column;
     gap: calculateRem(20);
+    padding-bottom: calculateRem(20);
   }
 }
 
-// Desktop medium (1025px - 1279px)
-@media (min-width: $breakpoint-desktop) and (max-width: #{$breakpoint-desktop-lg - 1px}) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .latest-articles-list {
     padding-top: calculateRem(20);
     gap: calculateRem(36);
-
-    &__title {
-      font-size: calculateRem(20);
-      line-height: calculateRem(23);
-    }
-
-    &__subtitle {
-      font-size: calculateRem(26);
-      line-height: calculateRem(30);
-    }
-
-    &__content {
-      gap: calculateRem(18);
-    }
-  }
-}
-
-// Desktop small (1025px - 1200px)
-@media (min-width: $breakpoint-desktop) and (max-width: 1200px) {
-  .latest-articles-list {
-    padding-top: calculateRem(20);
-    gap: calculateRem(32);
-
-    &__title {
-      font-size: calculateRem(20);
-      line-height: calculateRem(23);
-    }
-
-    &__subtitle {
-      font-size: calculateRem(24);
-      line-height: calculateRem(28);
-    }
-
-    &__content {
-      gap: calculateRem(16);
-    }
-  }
-}
-
-// Tablet (768px - 1024px)
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-  .latest-articles-list {
-    padding-top: calculateRem(20);
-    gap: calculateRem(36);
-
-    &__title {
-      font-size: calculateRem(20);
-      line-height: calculateRem(23);
-    }
-
-    &__subtitle {
-      font-size: calculateRem(26);
-      line-height: calculateRem(30);
-    }
-
-    &__content {
-      gap: calculateRem(18);
-    }
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .latest-articles-list {
-    padding-top: calculateRem(16);
-    gap: calculateRem(28);
 
     &__header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: calculateRem(16);
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0;
     }
 
     &__title-wrapper {
-      gap: calculateRem(10);
+      gap: calculateRem(12);
     }
 
     &__title {
-      font-size: calculateRem(18);
-      line-height: calculateRem(22);
+      font-size: calculateRem(20);
+      line-height: calculateRem(23);
     }
+
+    &__subtitle {
+      font-size: calculateRem(26);
+      line-height: calculateRem(30);
+    }
+
+    &__content {
+      gap: calculateRem(18);
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .latest-articles-list {
+    gap: calculateRem(32);
 
     &__subtitle {
       font-size: calculateRem(24);
       line-height: calculateRem(28);
+    }
+
+    &__content {
+      gap: calculateRem(16);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop-lg) {
+  .latest-articles-list {
+    gap: calculateRem(36);
+
+    &__subtitle {
+      font-size: calculateRem(26);
+      line-height: calculateRem(30);
+    }
+
+    &__content {
+      gap: calculateRem(18);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop-xl) {
+  .latest-articles-list {
+    padding-top: calculateRem(25);
+    gap: calculateRem(44);
+
+    &__title {
+      font-size: calculateRem(22);
+      line-height: calculateRem(25);
+    }
+
+    &__subtitle {
+      font-size: calculateRem(28);
+      line-height: calculateRem(25);
     }
 
     &__content {
       gap: calculateRem(20);
-      padding-bottom: calculateRem(20);
     }
   }
 }

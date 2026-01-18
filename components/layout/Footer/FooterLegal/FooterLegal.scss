@@ -1,7 +1,7 @@
 .footer-legal {
   display: flex;
   flex-direction: column;
-  gap: calculateRem(20);
+  gap: calculateRem(12);
   width: 100%;
 
   &__divider {
@@ -11,19 +11,20 @@
   }
 
   &__text {
-    font-size: calculateRem(15);
-    line-height: calculateRem(18);
+    font-size: calculateRem(13);
+    line-height: calculateRem(16);
     font-weight: 300;
     font-style: italic;
-    text-align: center;
+    text-align: left;
     color: $color-white;
     margin: 0;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    padding: 0 calculateRem(4);
   }
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .footer-legal {
     gap: calculateRem(16);
 
@@ -31,19 +32,18 @@
       font-size: calculateRem(14);
       line-height: calculateRem(17);
       text-align: center;
+      padding: 0;
     }
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (min-width: $breakpoint-desktop) {
   .footer-legal {
-    gap: calculateRem(12);
+    gap: calculateRem(20);
 
     &__text {
-      font-size: calculateRem(13);
-      line-height: calculateRem(16);
-      text-align: left;
-      padding: 0 calculateRem(4);
+      font-size: calculateRem(15);
+      line-height: calculateRem(18);
     }
   }
 }

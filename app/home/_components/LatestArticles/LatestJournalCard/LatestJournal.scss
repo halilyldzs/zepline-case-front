@@ -2,75 +2,44 @@ $stroke-color: #ffd9da;
 
 .latest-journal-card {
   position: relative;
-  padding: calculateRem(14) calculateRem(19);
-  border: 5px solid $stroke-color;
+  width: 100%;
+  padding: calculateRem(10) calculateRem(14);
+  border: 3px solid $stroke-color;
   border-radius: calculateRem(25);
-  width: fit-content;
 
   &__image {
+    width: 100%;
     aspect-ratio: 428 / 641;
     object-fit: contain;
+    height: auto;
   }
 
   &__content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: calculateRem(25);
+    gap: calculateRem(16);
   }
 
   &__buttons {
     display: flex;
-    gap: calculateRem(7);
+    flex-direction: row;
+    gap: calculateRem(8);
     justify-content: center;
     align-items: center;
     width: 100%;
-  }
-}
+    flex-wrap: wrap;
 
-// Desktop medium (1025px - 1279px)
-@media (min-width: $breakpoint-desktop) and (max-width: #{$breakpoint-desktop-lg - 1px}) {
-  .latest-journal-card {
-    padding: calculateRem(12) calculateRem(16);
-    max-width: 100%;
-
-    &__image {
-      max-width: 100%;
-      height: auto;
-    }
-
-    &__content-wrapper {
-      gap: calculateRem(20);
+    button {
+      flex: 1;
+      min-width: fit-content;
     }
   }
 }
 
-// Desktop small (1025px - 1200px)
-@media (min-width: $breakpoint-desktop) and (max-width: 1200px) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .latest-journal-card {
     padding: calculateRem(12) calculateRem(16);
-    max-width: 100%;
-
-    &__image {
-      max-width: 100%;
-      height: auto;
-    }
-
-    &__content-wrapper {
-      gap: calculateRem(18);
-    }
-  }
-}
-
-// Tablet (768px - 1024px)
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-  .latest-journal-card {
-    width: 100%;
-    padding: calculateRem(12) calculateRem(16);
-
-    &__image {
-      width: 100%;
-      height: auto;
-    }
+    border-width: 5px;
 
     &__content-wrapper {
       gap: calculateRem(20);
@@ -78,34 +47,44 @@ $stroke-color: #ffd9da;
 
     &__buttons {
       gap: calculateRem(6);
+      flex-wrap: nowrap;
+
+      button {
+        flex: none;
+      }
     }
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (min-width: $breakpoint-desktop) {
   .latest-journal-card {
-    width: 100%;
-    padding: calculateRem(10) calculateRem(14);
-    border-width: 3px;
-
-    &__image {
-      width: 100%;
-      height: auto;
-    }
+    width: fit-content;
+    max-width: 100%;
 
     &__content-wrapper {
-      gap: calculateRem(16);
+      gap: calculateRem(18);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop-lg) {
+  .latest-journal-card {
+    &__content-wrapper {
+      gap: calculateRem(20);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop-xl) {
+  .latest-journal-card {
+    padding: calculateRem(14) calculateRem(19);
+
+    &__content-wrapper {
+      gap: calculateRem(25);
     }
 
     &__buttons {
-      flex-direction: row;
-      gap: calculateRem(8);
-      flex-wrap: wrap;
-
-      button {
-        flex: 1;
-        min-width: fit-content;
-      }
+      gap: calculateRem(7);
     }
   }
 }

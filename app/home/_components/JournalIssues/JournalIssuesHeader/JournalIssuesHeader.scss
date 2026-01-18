@@ -1,29 +1,31 @@
 .journal-issues-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calculateRem(20);
 
   &__title-container {
     display: flex;
-    flex-direction: row;
-    gap: calculateRem(19);
+    flex-direction: column;
+    gap: calculateRem(16);
+    width: 100%;
   }
 
   &__title-wrapper {
     display: flex;
     flex-direction: column;
-    gap: calculateRem(12);
+    gap: calculateRem(8);
   }
 
   &__title {
     margin: 0;
-    font-size: calculateRem(22);
+    font-size: calculateRem(18);
     font-weight: 400;
     color: $color-gray;
   }
 
   &__subtitle {
-    font-size: calculateRem(28);
+    font-size: calculateRem(22);
     margin: 0;
     font-weight: 700;
     color: $color-primary;
@@ -33,46 +35,49 @@
     display: flex;
     align-items: center;
     gap: calculateRem(8);
-    align-self: flex-end;
+    align-self: flex-start;
+    margin-top: calculateRem(4);
   }
 
   &__button {
-    align-self: flex-end;
+    align-self: stretch;
+    width: 100%;
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .journal-issues-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: calculateRem(20);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
 
     &__title-container {
-      flex-direction: column;
-      gap: calculateRem(16);
-      width: 100%;
+      flex-direction: row;
+      gap: calculateRem(19);
+      width: auto;
     }
 
     &__title-wrapper {
-      gap: calculateRem(8);
+      gap: calculateRem(12);
     }
 
     &__title {
-      font-size: calculateRem(18);
-    }
-
-    &__subtitle {
       font-size: calculateRem(22);
     }
 
+    &__subtitle {
+      font-size: calculateRem(28);
+    }
+
     &__pagination-buttons {
-      align-self: flex-start;
-      margin-top: calculateRem(4);
+      align-self: flex-end;
+      margin-top: 0;
     }
 
     &__button {
-      align-self: stretch;
-      width: 100%;
+      align-self: flex-end;
+      width: auto;
     }
   }
 }

@@ -1,7 +1,4 @@
-// Base Font Size
 $base-font-size: 16px;
-
-// Brand Colors
 
 $color-primary: #273d89;
 $color-primary-dark: #0a1742;
@@ -12,50 +9,38 @@ $color-success-dark: #2b3016;
 $color-warning: #de8536;
 $color-info: #00c3d0;
 
-// Neutral Colors
 $color-gray: #676a73;
 $color-dark: #2a2c31;
 $color-dark-blue: #081542;
 
-// Stroke/Border
 $color-stroke: #acb1c6;
 
-// Light Colors
 $color-light-blue: #c6ecff;
 $color-light-yellow: #fbf6e3;
 
-// Pagination Colors
 $color-pagination-bg: #f5f7ff;
 $color-pagination-text: #666e8b;
 
-// Badge Soft Colors
 $color-badge-soft-bg: #f6f8ff;
 $color-badge-soft-text: #112053;
 
-// Toggle Colors
 $color-toggle-active: #ebefff;
 $color-toggle-disabled: #f2f2f2;
 $color-toggle-disabled-text: #b3b3b3;
 
-// Hero Colors
 $color-hero-title: #daefff;
 
-// Background & Foreground
 $background: #ffffff;
 $foreground: #171717;
 $background-dark: #0a0a0a;
 $foreground-dark: #ededed;
 
-// White Color
 $color-white: #ffffff;
 
-// Black Color
 $color-black: #000000;
 
-// Container
-$container-max-width: 90rem; // 1440px / 16px = 90rem
+$container-max-width: 90rem;
 
-// Responsive Breakpoints
 $breakpoint-mobile: 768px;
 $breakpoint-tablet: 1024px;
 $breakpoint-desktop: 1025px;

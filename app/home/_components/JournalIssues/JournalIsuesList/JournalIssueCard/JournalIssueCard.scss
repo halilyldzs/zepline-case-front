@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   background-color: $background;
-  padding: calculateRem(12);
+  padding: calculateRem(10);
   border-radius: calculateRem(20);
   border: 1px solid #e9f4f8;
   overflow: hidden;
@@ -44,10 +44,15 @@
 
   &__wrapper {
     display: flex;
-    flex-direction: row;
-    gap: calculateRem(10);
+    flex-direction: column;
+    gap: calculateRem(16);
     height: 100%;
     width: 100%;
+
+    .d-flex.align-items-center.gap-4 {
+      flex-wrap: wrap;
+      gap: calculateRem(12) !important;
+    }
   }
 
   &__image-container {
@@ -57,7 +62,9 @@
 
   &__image {
     aspect-ratio: 191.32 / 285;
-    width: calculateRem(180);
+    width: 100%;
+    max-width: calculateRem(200);
+    margin: 0 auto;
     object-fit: contain;
     border-radius: calculateRem(16);
   }
@@ -89,8 +96,8 @@
   }
 
   &__title {
-    font-size: calculateRem(18);
-    line-height: calculateRem(24);
+    font-size: calculateRem(16);
+    line-height: calculateRem(22);
     font-weight: 700;
     color: $color-primary;
     margin: 0;
@@ -109,94 +116,92 @@
   }
 
   &__icon {
-    width: calculateRem(17);
-    height: calculateRem(17);
+    width: calculateRem(15);
+    height: calculateRem(15);
     color: $color-black;
     flex-shrink: 0;
   }
 
   &__info-text {
-    font-size: calculateRem(14);
-    line-height: calculateRem(18);
+    font-size: calculateRem(13);
+    line-height: calculateRem(17);
     color: $color-black;
     margin: 0;
   }
 
   &__pdf-icon {
-    width: calculateRem(22);
-    height: calculateRem(24);
+    width: calculateRem(20);
+    height: calculateRem(22);
     color: $color-gray;
   }
 
   &__buttons {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-top: calculateRem(31);
-    gap: calculateRem(11);
+    justify-content: center;
+    padding-top: calculateRem(20);
+    gap: calculateRem(8);
+    flex-wrap: wrap;
   }
 }
 
-@media (max-width: $breakpoint-tablet) and (min-width: #{$breakpoint-mobile + 1px}) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .journal-issue-card {
+    padding: calculateRem(12);
+
+    &__wrapper {
+      flex-direction: row;
+      gap: calculateRem(12);
+
+      .d-flex.align-items-center.gap-4 {
+        flex-wrap: nowrap;
+        gap: calculateRem(16) !important;
+      }
+    }
+
     &__image {
       width: calculateRem(150);
-    }
-
-    &__wrapper {
-      gap: calculateRem(12);
-    }
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .journal-issue-card {
-    padding: calculateRem(10);
-
-    &__wrapper {
-      flex-direction: column;
-      gap: calculateRem(16);
-    }
-
-    &__image {
-      width: 100%;
-      max-width: calculateRem(200);
-      margin: 0 auto;
+      max-width: none;
+      margin: 0;
     }
 
     &__title {
-      font-size: calculateRem(16);
-      line-height: calculateRem(22);
+      font-size: calculateRem(18);
+      line-height: calculateRem(24);
     }
 
     &__info-text {
-      font-size: calculateRem(13);
-      line-height: calculateRem(17);
+      font-size: calculateRem(14);
+      line-height: calculateRem(18);
     }
 
     &__icon {
-      width: calculateRem(15);
-      height: calculateRem(15);
+      width: calculateRem(17);
+      height: calculateRem(17);
     }
 
     &__pdf-icon {
-      width: calculateRem(20);
-      height: calculateRem(22);
+      width: calculateRem(22);
+      height: calculateRem(24);
     }
 
     &__buttons {
-      padding-top: calculateRem(20);
-      gap: calculateRem(8);
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding-top: calculateRem(31);
+      gap: calculateRem(11);
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .journal-issue-card {
+    &__wrapper {
+      gap: calculateRem(10);
     }
 
-    // Info sections - Cilt/Sayı mobile'da wrap olabilir
-    &__wrapper {
-      .d-flex.align-items-center.gap-4 {
-        flex-wrap: wrap;
-        gap: calculateRem(12) !important;
-      }
+    &__image {
+      width: calculateRem(180);
     }
   }
 }

@@ -1,13 +1,13 @@
 .journal-issues-list {
-  --bs-gutter-x: #{calculateRem(20)};
-  --bs-gutter-y: #{calculateRem(20)};
+  --bs-gutter-x: #{calculateRem(12)};
+  --bs-gutter-y: #{calculateRem(16)};
   width: 100%;
   margin-left: calc(var(--bs-gutter-x) * -0.5);
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .journal-issues-list {
-    --bs-gutter-x: #{calculateRem(12)};
-    --bs-gutter-y: #{calculateRem(16)};
+    --bs-gutter-x: #{calculateRem(20)};
+    --bs-gutter-y: #{calculateRem(20)};
   }
 }

@@ -2,29 +2,31 @@ $stroke-color: #e9f4f8;
 $shadow-color: rgba(188, 188, 188, 0.25);
 
 .latest-articles-card {
-  padding: calculateRem(14) calculateRem(20);
+  padding: calculateRem(12) calculateRem(16);
   border: 2px solid $stroke-color;
   border-radius: calculateRem(20);
   background-color: $background;
   width: 100%;
-  height: 142px;
+  min-height: 142px;
+  height: auto;
   box-shadow: 0px calculateRem(5) calculateRem(15) 0px $shadow-color;
 
   &__content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: calculateRem(20);
-    padding: calculateRem(5);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calculateRem(16);
+    padding: 0;
     width: 100%;
   }
 
   &__left {
     display: flex;
     flex-direction: column;
-    gap: calculateRem(11);
+    gap: calculateRem(10);
     flex: 1;
     min-width: 0;
+    width: 100%;
   }
 
   &__badges {
@@ -44,20 +46,20 @@ $shadow-color: rgba(188, 188, 188, 0.25);
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: calculateRem(11);
+    gap: calculateRem(8);
   }
 
   &__pdf-icon {
-    width: calculateRem(24);
-    height: calculateRem(24);
+    width: calculateRem(20);
+    height: calculateRem(20);
     margin-left: calculateRem(-3);
     flex-shrink: 0;
     color: $color-gray;
   }
 
   &__title {
-    font-size: calculateRem(20);
-    line-height: calculateRem(26);
+    font-size: calculateRem(18);
+    line-height: calculateRem(24);
     font-weight: 700;
     color: $color-dark;
     margin: 0;
@@ -66,27 +68,28 @@ $shadow-color: rgba(188, 188, 188, 0.25);
 
   &__info {
     display: flex;
-    flex-direction: row;
-    gap: calculateRem(25);
+    flex-direction: column;
+    gap: calculateRem(8);
+    flex-wrap: wrap;
   }
 
   &__info-item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: calculateRem(8);
+    gap: calculateRem(6);
   }
 
   &__info-icon {
-    width: calculateRem(16);
-    height: calculateRem(16);
+    width: calculateRem(14);
+    height: calculateRem(14);
     color: $color-gray;
     flex-shrink: 0;
   }
 
   &__info-text {
-    font-size: calculateRem(14);
-    line-height: calculateRem(20);
+    font-size: calculateRem(13);
+    line-height: calculateRem(18);
     color: $color-dark;
     margin: 0;
   }
@@ -94,29 +97,43 @@ $shadow-color: rgba(188, 188, 188, 0.25);
   &__actions {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    gap: calculateRem(7);
-    flex-shrink: 0;
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   &__view-button {
+    flex: 1;
+    min-width: fit-content;
     white-space: nowrap;
   }
 }
 
-// Desktop medium (1025px - 1279px)
-@media (min-width: $breakpoint-desktop) and (max-width: #{$breakpoint-desktop-lg - 1px}) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .latest-articles-card {
     padding: calculateRem(12) calculateRem(18);
     height: 138px;
 
     &__content {
+      flex-direction: row;
+      justify-content: space-between;
       gap: calculateRem(18);
       padding: calculateRem(4);
     }
 
     &__left {
       gap: calculateRem(10);
+      width: auto;
+    }
+
+    &__title-wrapper {
+      gap: calculateRem(11);
+    }
+
+    &__pdf-icon {
+      width: calculateRem(24);
+      height: calculateRem(24);
     }
 
     &__title {
@@ -125,25 +142,43 @@ $shadow-color: rgba(188, 188, 188, 0.25);
     }
 
     &__info {
+      flex-direction: row;
       gap: calculateRem(20);
+      flex-wrap: nowrap;
+    }
+
+    &__info-item {
+      gap: calculateRem(8);
+    }
+
+    &__info-icon {
+      width: calculateRem(16);
+      height: calculateRem(16);
     }
 
     &__info-text {
       font-size: calculateRem(13);
       line-height: calculateRem(19);
     }
+
+    &__actions {
+      width: auto;
+      flex-wrap: nowrap;
+    }
+
+    &__view-button {
+      flex: none;
+    }
   }
 }
 
-// Desktop small (1025px - 1200px)
-@media (min-width: $breakpoint-desktop) and (max-width: 1200px) {
+@media (min-width: $breakpoint-desktop) {
   .latest-articles-card {
     padding: calculateRem(12) calculateRem(16);
     height: 136px;
 
     &__content {
       gap: calculateRem(16);
-      padding: calculateRem(4);
     }
 
     &__left {
@@ -160,21 +195,18 @@ $shadow-color: rgba(188, 188, 188, 0.25);
     }
 
     &__info-text {
-      font-size: calculateRem(13);
       line-height: calculateRem(18);
     }
   }
 }
 
-// Tablet (768px - 1024px)
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-desktop-lg) {
   .latest-articles-card {
     padding: calculateRem(12) calculateRem(18);
     height: 138px;
 
     &__content {
       gap: calculateRem(18);
-      padding: calculateRem(4);
     }
 
     &__left {
@@ -197,68 +229,32 @@ $shadow-color: rgba(188, 188, 188, 0.25);
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (min-width: $breakpoint-desktop-xl) {
   .latest-articles-card {
-    padding: calculateRem(12) calculateRem(16);
-    min-height: 142px;
-    height: auto;
+    padding: calculateRem(14) calculateRem(20);
+    height: 142px;
 
     &__content {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: calculateRem(16);
-      padding: 0;
+      gap: calculateRem(20);
+      padding: calculateRem(5);
     }
 
     &__left {
-      gap: calculateRem(10);
-      width: 100%;
-    }
-
-    &__title-wrapper {
-      gap: calculateRem(8);
-    }
-
-    &__pdf-icon {
-      width: calculateRem(20);
-      height: calculateRem(20);
+      gap: calculateRem(11);
     }
 
     &__title {
-      font-size: calculateRem(18);
-      line-height: calculateRem(24);
+      font-size: calculateRem(20);
+      line-height: calculateRem(26);
     }
 
     &__info {
-      flex-direction: column;
-      gap: calculateRem(8);
-      flex-wrap: wrap;
-    }
-
-    &__info-item {
-      gap: calculateRem(6);
-    }
-
-    &__info-icon {
-      width: calculateRem(14);
-      height: calculateRem(14);
+      gap: calculateRem(25);
     }
 
     &__info-text {
-      font-size: calculateRem(13);
-      line-height: calculateRem(18);
-    }
-
-    &__actions {
-      width: 100%;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    &__view-button {
-      flex: 1;
-      min-width: fit-content;
+      font-size: calculateRem(14);
+      line-height: calculateRem(20);
     }
   }
 }

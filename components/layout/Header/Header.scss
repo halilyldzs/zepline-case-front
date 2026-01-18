@@ -2,21 +2,25 @@
 
 .header {
   width: 100%;
-  background-color: $background;
+  background-color: $color-primary;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: calculateRem(135);
+  height: calculateRem(70);
 
   &__desktop-content {
-    @media (max-width: #{$breakpoint-desktop-lg - 1px}) {
-      display: none !important;
-    }
+    display: none !important;
   }
+}
 
-  @media (max-width: #{$breakpoint-desktop-lg - 1px}) {
-    height: calculateRem(70);
-    background-color: $color-primary;
+@media (min-width: $breakpoint-desktop-lg) {
+  .header {
+    background-color: $background;
+    height: calculateRem(135);
+
+    &__desktop-content {
+      display: block !important;
+    }
   }
 }

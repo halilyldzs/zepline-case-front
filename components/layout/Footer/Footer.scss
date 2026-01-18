@@ -8,9 +8,10 @@ $footer-bg: #161f3c;
 
   &__background {
     width: 100%;
-    height: calculateRem(279);
+    height: auto;
+    min-height: calculateRem(279);
     background-color: $footer-bg;
-    padding: calculateRem(55) 0 0;
+    padding: calculateRem(40) 0 calculateRem(30);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,16 +21,16 @@ $footer-bg: #161f3c;
     max-width: calculateRem(1443);
     width: 100%;
     margin: 0 auto;
-    padding: 0 calculateRem(139);
+    padding: 0 calculateRem(16);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: calculateRem(40);
+    gap: calculateRem(30);
   }
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (min-width: #{$breakpoint-mobile + 1px}) {
   .footer {
     &__content {
       padding: 0 calculateRem(20);
@@ -37,17 +38,16 @@ $footer-bg: #161f3c;
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (min-width: $breakpoint-desktop) {
   .footer {
     &__background {
-      padding: calculateRem(40) 0 calculateRem(30);
-      height: auto;
-      min-height: calculateRem(279);
+      height: calculateRem(279);
+      padding: calculateRem(55) 0 0;
     }
 
     &__content {
-      gap: calculateRem(30);
-      padding: 0 calculateRem(16);
+      gap: calculateRem(40);
+      padding: 0 calculateRem(139);
     }
   }
 }
