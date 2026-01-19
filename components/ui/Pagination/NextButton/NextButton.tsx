@@ -10,7 +10,12 @@ export default function NextButton({ onClick, disabled = false, className }: Nex
   const buttonClasses = [baseClasses, unselectedClasses, className].filter(Boolean).join(' ');
 
   return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses} aria-label="Next">
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={buttonClasses}
+      aria-label="Sonraki sayfa"
+    >
       <Icon name="right" className="pagination-button__icon" />
     </button>
   );

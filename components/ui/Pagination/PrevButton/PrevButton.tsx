@@ -10,7 +10,12 @@ export default function PrevButton({ onClick, disabled = false, className }: Pre
   const buttonClasses = [baseClasses, unselectedClasses, className].filter(Boolean).join(' ');
 
   return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses} aria-label="Previous">
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={buttonClasses}
+      aria-label="Önceki sayfa"
+    >
       <Icon name="left" className="pagination-button__icon" />
     </button>
   );
