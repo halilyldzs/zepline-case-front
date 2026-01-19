@@ -138,14 +138,14 @@
   &__icon {
     width: calculateRem(15);
     height: calculateRem(15);
-    color: $color-black;
+    color: $color-dark;
     flex-shrink: 0;
   }
 
   &__info-text {
     font-size: calculateRem(13);
     line-height: calculateRem(17);
-    color: $color-black;
+    color: $color-dark;
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
