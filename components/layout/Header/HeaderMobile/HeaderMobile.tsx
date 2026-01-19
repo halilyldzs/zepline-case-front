@@ -11,8 +11,14 @@ interface HeaderMobileProps {
 export default function HeaderMobile({ onMenuClick }: HeaderMobileProps) {
   return (
     <div className="header-mobile">
-      <IconButton icon="menu" variant="outline" color="default" onClick={onMenuClick} className="header-mobile__menu-button" />
       <HeaderLogo />
+      <IconButton
+        icon="menu"
+        variant="outline"
+        color="default"
+        onClick={onMenuClick}
+        className="header-mobile__menu-button"
+      />
     </div>
   );
 }

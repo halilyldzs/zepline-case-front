@@ -9,8 +9,7 @@ export default function HeaderLogo() {
         alt="Profuture Logo"
         width={281}
         height={91}
-        className="object-contain"
-        style={{ aspectRatio: '281 / 91' }}
+        className="header-logo__image"
         quality={100}
         priority
       />

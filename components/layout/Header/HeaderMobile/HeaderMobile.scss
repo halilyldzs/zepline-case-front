@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: calculateRem(12);
   width: 100%;
   height: 100%;
@@ -9,19 +10,6 @@
 
   &__menu-button {
     flex-shrink: 0;
-  }
-
-  > div {
-    height: calculateRem(50) !important;
-    min-width: calculateRem(120);
-    max-width: calculateRem(180);
-    flex: 1;
-
-    img {
-      width: auto !important;
-      height: calculateRem(40) !important;
-      max-width: 100%;
-    }
   }
 }
 
