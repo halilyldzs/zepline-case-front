@@ -1,175 +1,179 @@
 # Zepline Case Front
 
-Next.js tabanlı modern bir dergi/makale platformu frontend uygulaması.
+A modern journal/article platform frontend application built with Next.js.
 
-## 🚀 Teknolojiler
+## 🌐 Live Demo
+
+**Live Demo:** [https://zepline-case-front.vercel.app/home](https://zepline-case-front.vercel.app/home)
+
+## 🚀 Technologies
 
 - **Next.js** 16.1.2 - React framework (App Router)
-- **React** 19.2.3 - UI kütüphanesi
-- **TypeScript** 5.x - Tip güvenliği
-- **SCSS/Sass** 1.97.2 - Stil yönetimi
+- **React** 19.2.3 - UI library
+- **TypeScript** 5.x - Type safety
+- **SCSS/Sass** 1.97.2 - Style management
 - **Bootstrap** 5.3.3 - CSS framework
-- **React Bootstrap** 2.10.2 - Bootstrap React bileşenleri
-- **ESLint** 9.x - Kod kalitesi kontrolü
-- **Prettier** 3.4.2 - Kod formatlama
+- **React Bootstrap** 2.10.2 - Bootstrap React components
+- **ESLint** 9.x - Code quality control
+- **Prettier** 3.4.2 - Code formatting
 
-## 📋 Gereksinimler
+## 📋 Requirements
 
-- Node.js 20 veya üzeri
-- npm, yarn veya pnpm
+- Node.js 20 or higher
+- npm, yarn, or pnpm
 
-## 🛠️ Kurulum
+## 🛠️ Installation
 
-Projeyi klonlayın ve bağımlılıkları yükleyin:
+Clone the project and install dependencies:
 
 ```bash
 npm install
-# veya
+# or
 yarn install
-# veya
+# or
 pnpm install
 ```
 
-## 🏃 Geliştirme
+## 🏃 Development
 
-Geliştirme sunucusunu başlatın:
+Start the development server:
 
 ```bash
 npm run dev
-# veya
+# or
 yarn dev
-# veya
+# or
 pnpm dev
 ```
 
-Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📦 Build
 
-Production build oluşturmak için:
+To create a production build:
 
 ```bash
 npm run build
-# veya
+# or
 yarn build
-# veya
+# or
 pnpm build
 ```
 
-Build'i çalıştırmak için:
+To run the build:
 
 ```bash
 npm run start
-# veya
+# or
 yarn start
-# veya
+# or
 pnpm start
 ```
 
-## 🧹 Kod Kalitesi
+## 🧹 Code Quality
 
-Kodu formatlamak için:
+To format code:
 
 ```bash
 npm run format
-# veya
+# or
 yarn format
 ```
 
-Format kontrolü için:
+To check formatting:
 
 ```bash
 npm run format:check
-# veya
+# or
 yarn format:check
 ```
 
-Lint kontrolü için:
+To run linting:
 
 ```bash
 npm run lint
-# veya
+# or
 yarn lint
 ```
 
-## 📁 Proje Yapısı
+## 📁 Project Structure
 
 ```
 zepline-case-front/
 ├── app/                          # Next.js App Router
-│   ├── home/                     # Ana sayfa ve bileşenleri
-│   │   ├── _components/          # Sayfa özel bileşenler
-│   │   │   ├── Hero/             # Hero bölümü
-│   │   │   │   ├── HeroContent/  # Hero içerik bileşeni
-│   │   │   │   └── HeroJournal/ # Hero dergi bileşeni
-│   │   │   ├── JournalIssues/    # Dergi sayıları
+│   ├── home/                     # Home page and components
+│   │   ├── _components/          # Page-specific components
+│   │   │   ├── Hero/             # Hero section
+│   │   │   │   ├── HeroContent/  # Hero content component
+│   │   │   │   └── HeroJournal/  # Hero journal component
+│   │   │   ├── JournalIssues/    # Journal issues
 │   │   │   │   ├── JournalIssuesHeader/
 │   │   │   │   └── JournalIsuesList/
 │   │   │   │       └── JournalIssueCard/
-│   │   │   ├── LatestArticles/   # Son makaleler
+│   │   │   ├── LatestArticles/   # Latest articles
 │   │   │   │   ├── LatestArticlesList/
 │   │   │   │   │   └── LatestArticlesCard/
 │   │   │   │   └── LatestJournalCard/
-│   │   │   └── SendArticle/      # Makale gönderme
+│   │   │   └── SendArticle/      # Send article
 │   │   │       └── SendArticleContent/
 │   │   ├── Home.scss
 │   │   └── page.tsx
-│   ├── layout.tsx                # Ana layout
-│   ├── page.tsx                   # Root sayfa
-│   └── globals.scss               # Global stiller
-├── components/                    # Yeniden kullanılabilir bileşenler
-│   ├── layout/                   # Layout bileşenleri
-│   │   ├── Header/               # Header bileşeni
+│   ├── layout.tsx                # Main layout
+│   ├── page.tsx                  # Root page
+│   └── globals.scss              # Global styles
+├── components/                    # Reusable components
+│   ├── layout/                   # Layout components
+│   │   ├── Header/               # Header component
 │   │   │   ├── HeaderLogo/
 │   │   │   ├── HeaderMobile/
 │   │   │   ├── HeaderNav/
 │   │   │   ├── HeaderNavMobile/
 │   │   │   └── HeaderTop/
-│   │   └── Footer/               # Footer bileşeni
+│   │   └── Footer/               # Footer component
 │   │       ├── FooterContact/
 │   │       ├── FooterCopyright/
 │   │       └── FooterLegal/
-│   ├── shared/                   # Paylaşılan bileşenler
-│   │   └── LastIssueBadge/       # Son sayı rozeti
-│   └── ui/                       # UI bileşenleri
-│       ├── Badge/                # Rozet bileşeni
-│       ├── Button/               # Buton bileşeni
-│       ├── Drawer/               # Çekmece bileşeni
-│       ├── Icon/                 # İkon bileşeni (68+ SVG ikon)
-│       ├── IconButton/           # İkon buton bileşeni
-│       ├── Pagination/           # Sayfalama bileşeni
-│       ├── Title/                # Başlık bileşeni
-│       ├── ToggleButton/         # Toggle buton bileşeni
-│       └── ToggleButtonGroup/    # Toggle buton grubu
+│   ├── shared/                   # Shared components
+│   │   └── LastIssueBadge/       # Last issue badge
+│   └── ui/                       # UI components
+│       ├── Badge/                # Badge component
+│       ├── Button/               # Button component
+│       ├── Drawer/               # Drawer component
+│       ├── Icon/                 # Icon component (68+ SVG icons)
+│       ├── IconButton/           # Icon button component
+│       ├── Pagination/           # Pagination component
+│       ├── Title/                # Title component
+│       ├── ToggleButton/         # Toggle button component
+│       └── ToggleButtonGroup/    # Toggle button group
 ├── hooks/                        # Custom React hooks
-│   └── useMediaQuery.ts          # Medya sorgusu hook'u
-├── lib/                          # Yardımcı fonksiyonlar ve utilities
+│   └── useMediaQuery.ts          # Media query hook
+├── lib/                          # Helper functions and utilities
 │   ├── hooks/
 │   └── utils.ts
-├── styles/                       # Global SCSS dosyaları
-│   ├── _variables.scss           # SCSS değişkenleri
-│   └── _functions.scss           # SCSS fonksiyonları
-└── public/                       # Statik dosyalar
-    ├── images/                   # Görseller
-    └── svg/                      # SVG dosyaları
+├── styles/                       # Global SCSS files
+│   ├── _variables.scss           # SCSS variables
+│   └── _functions.scss           # SCSS functions
+└── public/                       # Static files
+    ├── images/                   # Images
+    └── svg/                      # SVG files
 ```
 
-## 🎨 Stil Yönetimi
+## 🎨 Style Management
 
-Proje SCSS kullanmaktadır. Global değişkenler ve fonksiyonlar `styles/` klasöründe tanımlanmıştır ve Next.js config üzerinden otomatik olarak tüm SCSS dosyalarına enjekte edilir.
+The project uses SCSS. Global variables and functions are defined in the `styles/` folder and are automatically injected into all SCSS files through the Next.js config.
 
-Her bileşen kendi `.scss` dosyasına sahiptir ve global değişkenler ile fonksiyonlar otomatik olarak kullanılabilir.
+Each component has its own `.scss` file and can automatically use global variables and functions.
 
-## 🧩 Bileşen Yapısı
+## 🧩 Component Structure
 
-Her bileşen kendi klasöründe organize edilmiştir:
+Each component is organized in its own folder:
 
-- **Ana implementasyon dosyası** (`.tsx`) - Bileşen mantığı
-- **Stil dosyası** (`.scss`) - Bileşen stilleri
-- **Tip tanımları** (`.types.ts`) - TypeScript tip tanımları
-- **Export dosyası** (`index.ts`) - Bileşen export'u
+- **Main implementation file** (`.tsx`) - Component logic
+- **Style file** (`.scss`) - Component styles
+- **Type definitions** (`.types.ts`) - TypeScript type definitions
+- **Export file** (`index.ts`) - Component export
 
-Örnek bileşen yapısı:
+Example component structure:
 
 ```
 ComponentName/
@@ -179,41 +183,41 @@ ComponentName/
 └── index.ts
 ```
 
-## 🎯 Ana Özellikler
+## 🎯 Main Features
 
-### Sayfa Bölümleri
+### Page Sections
 
-- **Hero**: Ana sayfa hero bölümü, dergi tanıtımı ve içerik
-- **Journal Issues**: Dergi sayıları listesi ve kart görünümü
-- **Latest Articles**: Son makaleler bölümü
-- **Send Article**: Makale gönderme formu ve bilgilendirme
+- **Hero**: Home page hero section, journal introduction and content
+- **Journal Issues**: Journal issues list and card view
+- **Latest Articles**: Latest articles section
+- **Send Article**: Article submission form and information
 
-### UI Bileşenleri
+### UI Components
 
-- **Badge**: Rozet bileşeni
-- **Button**: Çok amaçlı buton bileşeni
-- **Drawer**: Yan panel/çekmece bileşeni
-- **Icon**: 68+ SVG ikon içeren ikon sistemi
-- **IconButton**: İkonlu buton bileşeni
-- **Pagination**: Sayfalama bileşeni (custom hook ile)
-- **Title**: Başlık bileşeni
-- **ToggleButton**: Toggle buton bileşeni
-- **ToggleButtonGroup**: Toggle buton grubu
+- **Badge**: Badge component
+- **Button**: Multi-purpose button component
+- **Drawer**: Side panel/drawer component
+- **Icon**: Icon system with 68+ SVG icons
+- **IconButton**: Icon button component
+- **Pagination**: Pagination component (with custom hook)
+- **Title**: Title component
+- **ToggleButton**: Toggle button component
+- **ToggleButtonGroup**: Toggle button group
 
-### Layout Bileşenleri
+### Layout Components
 
-- **Header**: Responsive header (mobil ve desktop versiyonları)
-- **Footer**: Footer bileşeni (iletişim, telif, yasal bilgiler)
+- **Header**: Responsive header (mobile and desktop versions)
+- **Footer**: Footer component (contact, copyright, legal information)
 
-## 🔧 Yapılandırma
+## 🔧 Configuration
 
 ### TypeScript
 
-TypeScript yapılandırması `tsconfig.json` dosyasında tanımlanmıştır. Path alias `@/*` root dizini için kullanılabilir.
+TypeScript configuration is defined in the `tsconfig.json` file. Path alias `@/*` can be used for the root directory.
 
 ### Next.js
 
-Next.js yapılandırması `next.config.ts` dosyasında bulunur. SCSS global değişkenleri ve fonksiyonları otomatik olarak yüklenir:
+Next.js configuration is located in the `next.config.ts` file. SCSS global variables and functions are automatically loaded:
 
 ```typescript
 sassOptions: {
@@ -224,28 +228,30 @@ sassOptions: {
 
 ### ESLint
 
-ESLint yapılandırması `eslint.config.mjs` dosyasında bulunur ve Next.js ESLint config kullanır.
+ESLint configuration is located in the `eslint.config.mjs` file and uses Next.js ESLint config.
 
-## 📝 Özellikler
+## 📝 Features
 
-- ✅ Responsive tasarım (mobil, tablet, desktop)
-- ✅ Modern UI bileşenleri
-- ✅ TypeScript desteği
-- ✅ SCSS ile stil yönetimi (global değişkenler ve fonksiyonlar)
-- ✅ Component-based mimari
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Modern UI components
+- ✅ TypeScript support
+- ✅ SCSS style management (global variables and functions)
+- ✅ Component-based architecture
 - ✅ Next.js App Router
-- ✅ 68+ SVG ikon sistemi
+- ✅ 68+ SVG icon system
 - ✅ Custom React hooks
-- ✅ Bootstrap entegrasyonu
+- ✅ Bootstrap integration
 
 ## 🌐 Deployment
 
-Proje Vercel, Netlify veya benzeri platformlara deploy edilebilir. Production build için:
+The project can be deployed to Vercel, Netlify, or similar platforms. For production build:
 
 ```bash
 npm run build
 ```
 
-## 📄 Lisans
+The project is currently deployed on Vercel: [https://zepline-case-front.vercel.app/home](https://zepline-case-front.vercel.app/home)
 
-Bu proje özel bir projedir.
+## 📄 License
+
+This is a private project.
