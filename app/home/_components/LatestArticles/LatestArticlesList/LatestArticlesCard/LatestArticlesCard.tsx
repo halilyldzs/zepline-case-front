@@ -4,6 +4,7 @@ import Badge from '@/components/ui/Badge';
 import Icon from '@/components/ui/Icon';
 import IconButton from '@/components/ui/IconButton';
 import Button from '@/components/ui/Button';
+import PageInfoButton from '@/components/shared/PageInfoButton';
 import { LatestArticlesCardProps } from './LatestArticlesCard.types';
 import './LatestArticlesCard.scss';
 
@@ -30,20 +31,21 @@ export default function LatestArticlesCard({ data }: LatestArticlesCardProps) {
           </div>
 
           <div className="latest-articles-card__info">
-            <div className="latest-articles-card__info-item">
-              <Icon name="number" className="latest-articles-card__info-icon" ariaHidden={true} />
-              <span className="latest-articles-card__info-text">
-                Sayfa:{' '}
-                <strong>
-                  {data.pageRange.start}-{data.pageRange.end}
-                </strong>
-              </span>
-            </div>
+            <PageInfoButton
+              iconName="sticky-notes"
+              label="Sayfa:"
+              value={`${data.pageRange.start}-${data.pageRange.end}`}
+              className="latest-articles-card__info-item"
+              ariaLabel={`Sayfa ${data.pageRange.start}-${data.pageRange.end}`}
+            />
 
-            <div className="latest-articles-card__info-item">
-              <Icon name="author" className="latest-articles-card__info-icon" ariaHidden={true} />
-              <span className="latest-articles-card__info-text">{data.authors.join(', ')}</span>
-            </div>
+            <PageInfoButton
+              iconName="author"
+              label={data.authors.join(', ')}
+              value=""
+              className="latest-articles-card__info-item"
+              ariaLabel={`Yazarlar: ${data.authors.join(', ')}`}
+            />
           </div>
         </div>
 
