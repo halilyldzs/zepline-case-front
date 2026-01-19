@@ -1,7 +1,8 @@
-@import '../Button/Button.scss';
+@use '../Button/Button.shared' as ButtonShared;
+
+@include ButtonShared.button-styles;
 
 .icon-button {
-
   &__icon {
     width: 16px;
     height: 16px;

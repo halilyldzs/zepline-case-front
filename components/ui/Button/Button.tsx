@@ -64,7 +64,7 @@ function Button({
   const buttonClasses = [baseClasses, variantClass, className].filter(Boolean).join(' ');
 
   return (
-    <button className={buttonClasses} disabled={disabled} onClick={onClick}>
+    <button type="button" className={buttonClasses} disabled={disabled} onClick={onClick}>
       {content}
     </button>
   );

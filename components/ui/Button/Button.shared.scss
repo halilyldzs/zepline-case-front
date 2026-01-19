@@ -1,0 +1,219 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
+@mixin button-styles {
+  .btn-custom {
+    height: calculateRem(55);
+    padding: 0 1rem;
+    width: fit-content;
+    appearance: none;
+    border: none;
+    outline: none;
+    border-radius: calculateRem(50);
+    font-weight: 500;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &.btn-circle {
+      height: calculateRem(55);
+      width: calculateRem(55);
+      padding: 0;
+    }
+  }
+
+  .btn-custom {
+    &.btn-outline-default {
+      background-color: $background;
+      border: 1px solid $color-stroke;
+      color: $color-dark;
+
+      &:hover {
+        background-color: $color-stroke;
+        border-color: $color-stroke;
+        color: $color-dark;
+      }
+    }
+
+    &.btn-outline-primary {
+      background-color: $background;
+      border: 1px solid $color-stroke;
+      color: $color-primary;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $background;
+      }
+    }
+
+    &.btn-outline-primary-dark {
+      background-color: $background;
+      border: 1px solid $color-primary-dark;
+      color: $color-primary-dark;
+
+      &:hover {
+        background-color: $color-primary-dark;
+        color: $background;
+      }
+    }
+
+    &.btn-outline-success {
+      background-color: $background;
+      border: 1px solid $color-success;
+      color: $color-success;
+
+      &:hover {
+        background-color: $color-success;
+        color: $background;
+      }
+    }
+
+    &.btn-outline-success-dark {
+      background-color: $background;
+      border: 1px solid $color-success-dark;
+      color: $color-success-dark;
+
+      &:hover {
+        background-color: $color-success-dark;
+        color: $background;
+      }
+    }
+
+    &.btn-outline-danger {
+      background-color: $background;
+      border: 1px solid $color-danger;
+      color: $color-danger;
+
+      &:hover {
+        background-color: $color-danger;
+        color: $background;
+      }
+    }
+
+    &.btn-outline-danger-dark {
+      background-color: $background;
+      border: 1px solid $color-danger-dark;
+      color: $color-danger-dark;
+
+      &:hover {
+        background-color: $color-danger-dark;
+        color: $background;
+      }
+    }
+
+    &.btn-outline-warning {
+      background-color: $background;
+      border: 1px solid $color-warning;
+      color: $color-warning;
+
+      &:hover {
+        background-color: $color-warning;
+        color: $background;
+      }
+    }
+
+    &.btn-outline-info {
+      background-color: $background;
+      border: 1px solid $color-info;
+      color: $color-info;
+
+      &:hover {
+        background-color: $color-info;
+        color: $background;
+      }
+    }
+
+    &.btn-filled-primary {
+      background-color: $color-primary;
+      color: $background;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.btn-filled-primary-dark {
+      background-color: $color-primary-dark;
+      color: $background;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.btn-filled-success {
+      background-color: $color-success;
+      color: $background;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.btn-filled-success-dark {
+      background-color: $color-success-dark;
+      color: $background;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.btn-filled-danger {
+      background-color: $color-danger;
+      color: $background;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.btn-filled-danger-dark {
+      background-color: $color-danger-dark;
+      color: $background;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.btn-filled-warning {
+      background-color: $color-warning;
+      color: $background;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.btn-filled-info {
+      background-color: $color-info;
+      color: $background;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.btn-filled-default {
+      background-color: $background;
+      color: $color-dark;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .icon-size {
+    width: calculateRem(16);
+    height: calculateRem(16);
+  }
+}
