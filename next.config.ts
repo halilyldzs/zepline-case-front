@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
     loadPaths: ['./styles'],
     additionalData: ` @use "functions" as *; @use "variables" as *;`,
   },
+  images: {
+    qualities: [100, 75],
+  },
 };
 
 export default nextConfig;

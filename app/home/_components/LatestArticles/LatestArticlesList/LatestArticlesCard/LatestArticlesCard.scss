@@ -1,9 +1,8 @@
-$stroke-color: #e9f4f8;
 $shadow-color: rgba(188, 188, 188, 0.25);
 
 .latest-articles-card {
   padding: calculateRem(12) calculateRem(16);
-  border: 2px solid $stroke-color;
+  border: 2px solid $color-stroke-light;
   border-radius: calculateRem(20);
   background-color: $background;
   width: 100%;

@@ -4,7 +4,7 @@
   background-color: $background;
   padding: calculateRem(10);
   border-radius: calculateRem(20);
-  border: 1px solid #e9f4f8;
+  border: 1px solid $color-stroke-light;
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -80,6 +80,7 @@
   &__image {
     aspect-ratio: 191.32 / 285;
     width: 100%;
+    height: auto;
     max-width: calculateRem(200);
     margin: 0 auto;
     object-fit: contain;

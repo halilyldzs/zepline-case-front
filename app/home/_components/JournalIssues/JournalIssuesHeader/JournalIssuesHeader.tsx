@@ -5,13 +5,6 @@ import NextButton from '@/components/ui/Pagination/NextButton';
 import Button from '@/components/ui/Button';
 
 export default function JournalIssuesHeader() {
-  const handlePrevious = () => {
-    console.log('Previous clicked');
-  };
-
-  const handleNext = () => {
-    console.log('Next clicked');
-  };
 
   return (
     <div className="journal-issues-header">
@@ -21,8 +14,8 @@ export default function JournalIssuesHeader() {
           <p className="journal-issues-header__subtitle">Dergi Sayıları</p>
         </div>
         <div className="journal-issues-header__pagination-buttons">
-          <PrevButton onClick={handlePrevious} disabled={true} />
-          <NextButton onClick={handleNext} />
+          <PrevButton disabled={true} />
+          <NextButton />
         </div>
       </div>
 

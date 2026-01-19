@@ -88,6 +88,7 @@
     &__image2 {
       display: block;
       position: absolute;
+      top: calculateRem(-51);
       bottom: calculateRem(25);
       right: calculateRem(74);
       width: calculateRem(306);
