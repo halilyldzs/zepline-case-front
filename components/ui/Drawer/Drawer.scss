@@ -1,4 +1,10 @@
 .drawer {
+  &.offcanvas {
+    @media (max-width: $breakpoint-sm) {
+      --bs-offcanvas-width: 100vw;
+    }
+  }
+
   &__header {
     display: flex;
     align-items: center;
