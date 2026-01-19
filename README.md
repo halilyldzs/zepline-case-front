@@ -142,7 +142,6 @@ zepline-case-front/
 │       ├── Icon/                 # Icon component (68+ SVG icons)
 │       ├── IconButton/           # Icon button component
 │       ├── Pagination/           # Pagination component
-│       ├── Title/                # Title component
 │       ├── ToggleButton/         # Toggle button component
 │       └── ToggleButtonGroup/    # Toggle button group
 ├── hooks/                        # Custom React hooks
@@ -166,11 +165,11 @@ Each component has its own `.scss` file and can automatically use global variabl
 
 ## 🧩 Component Structure
 
-Each component is organized in its own folder:
+Each component is organized in its own folder following a consistent structure:
 
 - **Main implementation file** (`.tsx`) - Component logic
 - **Style file** (`.scss`) - Component styles
-- **Type definitions** (`.types.ts`) - TypeScript type definitions
+- **Type definitions** (`.types.ts`) - TypeScript type definitions (when needed)
 - **Export file** (`index.ts`) - Component export
 
 Example component structure:
@@ -182,6 +181,8 @@ ComponentName/
 ├── ComponentName.types.ts
 └── index.ts
 ```
+
+Some components may have sub-components in their own directories, maintaining the same structure.
 
 ## 🎯 Main Features
 
@@ -200,7 +201,6 @@ ComponentName/
 - **Icon**: Icon system with 68+ SVG icons
 - **IconButton**: Icon button component
 - **Pagination**: Pagination component (with custom hook)
-- **Title**: Title component
 - **ToggleButton**: Toggle button component
 - **ToggleButtonGroup**: Toggle button group
 
@@ -233,14 +233,15 @@ ESLint configuration is located in the `eslint.config.mjs` file and uses Next.js
 ## 📝 Features
 
 - ✅ Responsive design (mobile, tablet, desktop)
-- ✅ Modern UI components
-- ✅ TypeScript support
+- ✅ Modern UI components with consistent structure
+- ✅ TypeScript support with strict mode
 - ✅ SCSS style management (global variables and functions)
 - ✅ Component-based architecture
-- ✅ Next.js App Router
+- ✅ Next.js App Router (v16.1.2)
 - ✅ 68+ SVG icon system
-- ✅ Custom React hooks
-- ✅ Bootstrap integration
+- ✅ Custom React hooks (useMediaQuery, usePagination)
+- ✅ Bootstrap 5.3.3 integration
+- ✅ ESLint and Prettier for code quality
 
 ## 🌐 Deployment
 
