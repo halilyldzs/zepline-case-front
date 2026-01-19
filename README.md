@@ -14,6 +14,8 @@ A modern journal/article platform frontend application built with Next.js.
 - **SCSS/Sass** 1.97.2 - Style management
 - **Bootstrap** 5.3.3 - CSS framework
 - **React Bootstrap** 2.10.2 - Bootstrap React components
+- **Jest** 29.7.0 - Testing framework
+- **React Testing Library** 16.3.0 - Component testing utilities
 - **ESLint** 9.x - Code quality control
 - **Prettier** 3.4.2 - Code formatting
 
@@ -96,6 +98,34 @@ npm run lint
 yarn lint
 ```
 
+## 🧪 Testing
+
+To run tests:
+
+```bash
+npm run test
+# or
+yarn test
+```
+
+To run tests in watch mode:
+
+```bash
+npm run test:watch
+# or
+yarn test:watch
+```
+
+To run tests with coverage:
+
+```bash
+npm run test:coverage
+# or
+yarn test:coverage
+```
+
+The project uses Jest and React Testing Library for component testing. Test files are located alongside components with the `.test.tsx` extension.
+
 ## 📁 Project Structure
 
 ```
@@ -170,6 +200,7 @@ Each component is organized in its own folder following a consistent structure:
 - **Main implementation file** (`.tsx`) - Component logic
 - **Style file** (`.scss`) - Component styles
 - **Type definitions** (`.types.ts`) - TypeScript type definitions (when needed)
+- **Test file** (`.test.tsx`) - Component tests (when needed)
 - **Export file** (`index.ts`) - Component export
 
 Example component structure:
@@ -179,6 +210,7 @@ ComponentName/
 ├── ComponentName.tsx
 ├── ComponentName.scss
 ├── ComponentName.types.ts
+├── ComponentName.test.tsx
 └── index.ts
 ```
 
@@ -230,6 +262,14 @@ sassOptions: {
 
 ESLint configuration is located in the `eslint.config.mjs` file and uses Next.js ESLint config.
 
+### Jest
+
+Jest configuration is located in the `jest.config.mjs` file. The project uses:
+- `jest-environment-jsdom` for DOM testing
+- `identity-obj-proxy` for CSS/SCSS module mocking
+- Coverage reports in multiple formats (text, cobertura, lcov)
+- Test setup file at `jest.setup.js` for global test configuration
+
 ## 📝 Features
 
 - ✅ Responsive design (mobile, tablet, desktop)
@@ -242,6 +282,8 @@ ESLint configuration is located in the `eslint.config.mjs` file and uses Next.js
 - ✅ Custom React hooks (useMediaQuery, usePagination)
 - ✅ Bootstrap 5.3.3 integration
 - ✅ ESLint and Prettier for code quality
+- ✅ Jest and React Testing Library for component testing
+- ✅ Test coverage reporting (text, cobertura, lcov)
 
 ## 🌐 Deployment
 
