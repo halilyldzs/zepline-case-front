@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+'use client';
+
+import { useEffect, useState } from 'react';
 
 export const BREAKPOINTS = {
   sm: 576,
@@ -16,7 +18,6 @@ interface UseMediaQueryReturn {
 }
 
 export function useMediaQuery(): UseMediaQueryReturn {
-  const [mounted, setMounted] = useState(false);
   const [breakpoints, setBreakpoints] = useState<UseMediaQueryReturn>({
     isMobile: true,
     isTablet: false,
@@ -25,7 +26,6 @@ export function useMediaQuery(): UseMediaQueryReturn {
   });
 
   useEffect(() => {
-    setMounted(true);
     const updateMatches = () => {
       const width = window.innerWidth;
       setBreakpoints({
@@ -44,15 +44,6 @@ export function useMediaQuery(): UseMediaQueryReturn {
       window.removeEventListener('resize', updateMatches);
     };
   }, []);
-
-  if (!mounted) {
-    return {
-      isMobile: true,
-      isTablet: false,
-      isDesktop: false,
-      isDesktopLg: false,
-    };
-  }
 
   return breakpoints;
 }

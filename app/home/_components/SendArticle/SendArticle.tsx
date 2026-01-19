@@ -11,6 +11,7 @@ export default function SendArticle() {
         width={514}
         height={439}
         className="send-article__image"
+        data-testid="send-article-image"
         role="presentation"
       />
 
