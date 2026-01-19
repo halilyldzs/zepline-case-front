@@ -1,19 +1,16 @@
-.pagination-button {
-  height: calculateRem(40);
-  width: calculateRem(40);
+@use '../Pagination.shared.scss' as *;
+
+.pagination-button--next {
+  @include pagination-button-base;
   padding: calculateRem(15) calculateRem(13);
-  border-radius: calculateRem(15);
-  font-weight: 500;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
 
   &.selected {
     background-color: $color-primary;
     color: $background;
+
+    .pagination-button--next__icon {
+      color: $background;
+    }
   }
 
   &.unselected {
@@ -23,12 +20,11 @@
     &:hover:not(:disabled) {
       background-color: $color-primary;
       color: $background;
-    }
-  }
 
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+      .pagination-button--next__icon {
+        color: $background;
+      }
+    }
   }
 
   &__icon {

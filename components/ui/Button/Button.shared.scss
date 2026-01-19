@@ -36,9 +36,9 @@
       color: $color-dark;
 
       &:hover {
-        background-color: $color-stroke;
-        border-color: $color-stroke;
-        color: $color-dark;
+        background-color: $color-primary;
+        border-color: $color-primary;
+        color: $background;
       }
     }
 

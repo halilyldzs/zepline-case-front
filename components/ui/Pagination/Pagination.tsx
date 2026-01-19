@@ -4,9 +4,9 @@ import PrevButton from './PrevButton';
 import NextButton from './NextButton';
 import './Pagination.scss';
 
-const baseClasses = 'pagination-button';
-const selectedClasses = 'selected';
-const unselectedClasses = 'unselected';
+const baseClasses = 'pagination__button';
+const selectedClasses = 'pagination__button--selected';
+const unselectedClasses = 'pagination__button--unselected';
 
 function Pagination({
   currentPage,
@@ -18,16 +18,13 @@ function Pagination({
   const { handlePrevious, handleNext, pageNumbers, isPreviousDisabled, isNextDisabled } =
     usePagination({ currentPage, totalPages, onPageChange });
 
-  const containerClasses = ['d-flex', 'align-items-center', className].filter(Boolean).join(' ');
-
-  const buttonBaseClasses = [baseClasses, unselectedClasses].filter(Boolean).join(' ');
+  const containerClasses = ['pagination', className].filter(Boolean).join(' ');
 
   return (
-    <nav className={containerClasses} style={{ gap: '0.5rem' }} aria-label={ariaLabel}>
+    <nav className={containerClasses} aria-label={ariaLabel}>
       <PrevButton
         onClick={handlePrevious}
         disabled={isPreviousDisabled}
-        className={buttonBaseClasses}
       />
 
       {pageNumbers.map((page, index) => {
@@ -42,7 +39,10 @@ function Pagination({
         const pageNum = page as number;
         const isSelected = pageNum === currentPage;
 
-        const pageButtonClasses = [baseClasses, isSelected ? selectedClasses : unselectedClasses]
+        const pageButtonClasses = [
+          baseClasses,
+          isSelected ? selectedClasses : unselectedClasses
+        ]
           .filter(Boolean)
           .join(' ');
 
@@ -59,7 +59,7 @@ function Pagination({
         );
       })}
 
-      <NextButton onClick={handleNext} disabled={isNextDisabled} className={buttonBaseClasses} />
+      <NextButton onClick={handleNext} disabled={isNextDisabled} />
     </nav>
   );
 }

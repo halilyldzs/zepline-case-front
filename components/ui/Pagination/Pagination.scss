@@ -1,31 +1,12 @@
-.pagination-button {
-  height: calculateRem(40);
-  width: calculateRem(40);
-  border-radius: calculateRem(15);
-  font-weight: 500;
-  transition: all 0.2s;
+@use './Pagination.shared.scss' as *;
+
+.pagination {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: none;
+  gap: calculateRem(8);
 
-  &.selected {
-    background-color: $color-primary;
-    color: $background;
-  }
-
-  &.unselected {
-    background-color: $color-pagination-bg;
-    color: $color-pagination-text;
-
-    &:hover:not(:disabled) {
-      background-color: $color-primary;
-      color: $background;
-    }
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  &__button {
+    @include pagination-button-base;
+    @include pagination-button-states;
   }
 }

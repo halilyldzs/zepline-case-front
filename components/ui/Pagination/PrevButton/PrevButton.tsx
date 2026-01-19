@@ -3,7 +3,7 @@ import { PrevButtonProps } from './PrevButton.types';
 import Icon from '../../Icon';
 import './PrevButton.scss';
 
-const baseClasses = 'pagination-button';
+const baseClasses = 'pagination-button--prev';
 const unselectedClasses = 'unselected';
 
 export default function PrevButton({ onClick, disabled = false, className }: PrevButtonProps) {
@@ -16,7 +16,7 @@ export default function PrevButton({ onClick, disabled = false, className }: Pre
       className={buttonClasses}
       aria-label="Önceki sayfa"
     >
-      <Icon name="left" className="pagination-button__icon" />
+      <Icon name="left" className="pagination-button--prev__icon" />
     </button>
   );
 }

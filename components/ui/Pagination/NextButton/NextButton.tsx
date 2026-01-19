@@ -3,7 +3,7 @@ import { NextButtonProps } from './NextButton.types';
 import Icon from '../../Icon';
 import './NextButton.scss';
 
-const baseClasses = 'pagination-button';
+const baseClasses = 'pagination-button--next';
 const unselectedClasses = 'unselected';
 
 export default function NextButton({ onClick, disabled = false, className }: NextButtonProps) {
@@ -16,7 +16,7 @@ export default function NextButton({ onClick, disabled = false, className }: Nex
       className={buttonClasses}
       aria-label="Sonraki sayfa"
     >
-      <Icon name="right" className="pagination-button__icon" />
+      <Icon name="right" className="pagination-button--next__icon" />
     </button>
   );
 }

@@ -1,0 +1,37 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
+@mixin pagination-button-base {
+  height: calculateRem(40);
+  width: calculateRem(40);
+  border-radius: calculateRem(15);
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin pagination-button-states {
+  &.pagination__button--selected {
+    background-color: $color-primary;
+    color: $background;
+  }
+
+  &.pagination__button--unselected {
+    background-color: $color-pagination-bg;
+    color: $color-pagination-text;
+
+    &:hover:not(:disabled) {
+      background-color: $color-primary;
+      color: $background;
+    }
+  }
+}
