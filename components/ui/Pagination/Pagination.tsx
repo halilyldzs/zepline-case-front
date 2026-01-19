@@ -1,13 +1,20 @@
 import { PaginationProps } from './Pagination.types';
 import { usePagination } from './hooks/usePagination';
-import Icon from '../Icon';
+import PrevButton from './PrevButton';
+import NextButton from './NextButton';
 import './Pagination.scss';
 
 const baseClasses = 'pagination-button';
 const selectedClasses = 'selected';
 const unselectedClasses = 'unselected';
 
-function Pagination({ currentPage, totalPages, onPageChange, className }: PaginationProps) {
+function Pagination({
+  currentPage,
+  totalPages,
+  onPageChange,
+  className,
+  ariaLabel = 'Sayfa navigasyonu',
+}: PaginationProps) {
   const { handlePrevious, handleNext, pageNumbers, isPreviousDisabled, isNextDisabled } =
     usePagination({ currentPage, totalPages, onPageChange });
 
@@ -16,15 +23,17 @@ function Pagination({ currentPage, totalPages, onPageChange, className }: Pagina
   const buttonBaseClasses = [baseClasses, unselectedClasses].filter(Boolean).join(' ');
 
   return (
-    <div className={containerClasses} style={{ gap: '0.5rem' }}>
-      <button onClick={handlePrevious} disabled={isPreviousDisabled} className={buttonBaseClasses}>
-        <Icon name="left" style={{ width: '1.25rem', height: '1.25rem' }} />
-      </button>
+    <nav className={containerClasses} style={{ gap: '0.5rem' }} aria-label={ariaLabel}>
+      <PrevButton
+        onClick={handlePrevious}
+        disabled={isPreviousDisabled}
+        className={buttonBaseClasses}
+      />
 
       {pageNumbers.map((page, index) => {
         if (page === 'ellipsis') {
           return (
-            <span key={`ellipsis-${index}`} className="text-primary px-2">
+            <span key={`ellipsis-${index}`} className="text-primary px-2" aria-hidden="true">
               ...
             </span>
           );
@@ -38,16 +47,20 @@ function Pagination({ currentPage, totalPages, onPageChange, className }: Pagina
           .join(' ');
 
         return (
-          <button key={pageNum} onClick={() => onPageChange(pageNum)} className={pageButtonClasses}>
+          <button
+            key={pageNum}
+            onClick={() => onPageChange(pageNum)}
+            className={pageButtonClasses}
+            aria-label={`Sayfa ${pageNum}`}
+            aria-current={isSelected ? 'page' : undefined}
+          >
             {pageNum}
           </button>
         );
       })}
 
-      <button onClick={handleNext} disabled={isNextDisabled} className={buttonBaseClasses}>
-        <Icon name="right" style={{ width: '1.25rem', height: '1.25rem' }} />
-      </button>
-    </div>
+      <NextButton onClick={handleNext} disabled={isNextDisabled} className={buttonBaseClasses} />
+    </nav>
   );
 }
 

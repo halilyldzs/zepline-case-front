@@ -29,6 +29,41 @@ button {
   cursor: pointer;
 }
 
+*:focus-visible {
+  outline: 2px solid #273d89;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #273d89;
+  outline-offset: 2px;
+}
+
+// Skip link styles
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #273d89;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 0 0 4px 0;
+  font-weight: 600;
+
+  &:focus {
+    top: 0;
+    outline: 3px solid #273d89;
+    outline-offset: 2px;
+  }
+}
+
 h1 {
   font-size: calculateRem(32);
   line-height: calculateRem(38);

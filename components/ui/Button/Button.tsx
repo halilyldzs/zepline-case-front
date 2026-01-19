@@ -40,17 +40,27 @@ function Button({
   disabled = false,
   className,
   onClick,
+  ariaLabel,
+  type = 'button',
 }: ButtonProps) {
   const variantClass = variantClasses[variant][color];
 
   const iconColorClass = variant === 'filled' ? 'text-white' : '';
 
   const leftIconElement = leftIcon ? (
-    <Icon name={leftIcon} className={`${iconSizeClass} ${iconColorClass}`.trim()} />
+    <Icon
+      name={leftIcon}
+      className={`${iconSizeClass} ${iconColorClass}`.trim()}
+      ariaHidden={true}
+    />
   ) : null;
 
   const rightIconElement = rightIcon ? (
-    <Icon name={rightIcon} className={`${iconSizeClass} ${iconColorClass}`.trim()} />
+    <Icon
+      name={rightIcon}
+      className={`${iconSizeClass} ${iconColorClass}`.trim()}
+      ariaHidden={true}
+    />
   ) : null;
 
   const content = (
@@ -64,7 +74,13 @@ function Button({
   const buttonClasses = [baseClasses, variantClass, className].filter(Boolean).join(' ');
 
   return (
-    <button type="button" className={buttonClasses} disabled={disabled} onClick={onClick}>
+    <button
+      type={type}
+      className={buttonClasses}
+      disabled={disabled}
+      onClick={onClick}
+      aria-label={ariaLabel}
+    >
       {content}
     </button>
   );

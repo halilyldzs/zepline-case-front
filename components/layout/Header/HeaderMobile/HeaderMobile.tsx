@@ -6,9 +6,10 @@ import './HeaderMobile.scss';
 
 interface HeaderMobileProps {
   onMenuClick: () => void;
+  isDrawerOpen: boolean;
 }
 
-export default function HeaderMobile({ onMenuClick }: HeaderMobileProps) {
+export default function HeaderMobile({ onMenuClick, isDrawerOpen }: HeaderMobileProps) {
   return (
     <div className="header-mobile">
       <HeaderLogo />
@@ -18,6 +19,8 @@ export default function HeaderMobile({ onMenuClick }: HeaderMobileProps) {
         color="default"
         onClick={onMenuClick}
         className="header-mobile__menu-button"
+        ariaLabel="Menüyü aç"
+        ariaExpanded={isDrawerOpen}
       />
     </div>
   );

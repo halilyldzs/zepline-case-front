@@ -1,3 +1,5 @@
+'use client';
+
 import Badge from '@/components/ui/Badge';
 import Icon from '@/components/ui/Icon';
 import IconButton from '@/components/ui/IconButton';
@@ -23,13 +25,13 @@ export default function LatestArticlesCard({ data }: LatestArticlesCardProps) {
           </div>
 
           <div className="latest-articles-card__title-wrapper">
-            <Icon name="pdf" className="latest-articles-card__pdf-icon" />
+            <Icon name="pdf" className="latest-articles-card__pdf-icon" ariaHidden={true} />
             <h3 className="latest-articles-card__title">{data.title}</h3>
           </div>
 
           <div className="latest-articles-card__info">
             <div className="latest-articles-card__info-item">
-              <Icon name="number" className="latest-articles-card__info-icon" />
+              <Icon name="number" className="latest-articles-card__info-icon" ariaHidden={true} />
               <span className="latest-articles-card__info-text">
                 Sayfa:{' '}
                 <strong>
@@ -39,15 +41,15 @@ export default function LatestArticlesCard({ data }: LatestArticlesCardProps) {
             </div>
 
             <div className="latest-articles-card__info-item">
-              <Icon name="author" className="latest-articles-card__info-icon" />
+              <Icon name="author" className="latest-articles-card__info-icon" ariaHidden={true} />
               <span className="latest-articles-card__info-text">{data.authors.join(', ')}</span>
             </div>
           </div>
         </div>
 
         <div className="latest-articles-card__actions">
-          <IconButton icon="email" variant="outline" color="default" />
-          <IconButton icon="download" variant="outline" color="default" />
+          <IconButton icon="email" variant="outline" color="default" ariaLabel="E-posta gönder" />
+          <IconButton icon="download" variant="outline" color="default" ariaLabel="İndir" />
           <Button
             leftIcon="eye"
             variant="filled"

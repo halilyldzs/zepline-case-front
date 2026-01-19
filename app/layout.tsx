@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Header, Footer } from '@/components/layout';
+import SkipLink from '@/components/shared/SkipLink';
 import './globals.scss';
 
 const inter = Inter({
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={`${inter.variable} antialiased`}>
+        <SkipLink />
         <Header />
         {children}
         <Footer />

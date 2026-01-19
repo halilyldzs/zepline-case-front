@@ -6,7 +6,7 @@ import './Home.scss';
 
 export default function Home() {
   return (
-    <main className="main-content">
+    <main id="main-content" className="main-content">
       <Hero />
       <JournalIssues />
       <SendArticle />

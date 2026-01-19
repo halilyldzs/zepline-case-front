@@ -34,17 +34,38 @@ function IconButton({
   disabled = false,
   className,
   onClick,
+  ariaLabel,
+  ariaExpanded,
 }: IconButtonProps) {
   const baseClasses = 'btn-custom btn-circle icon-button';
   const variantClass = variantClasses[variant][color];
   const iconColorClass = variant === 'filled' ? 'text-white' : '';
 
-  const iconElement = <Icon name={icon} className={`icon-button__icon ${iconColorClass}`.trim()} />;
+  const iconElement = (
+    <Icon name={icon} className={`icon-button__icon ${iconColorClass}`.trim()} ariaHidden={true} />
+  );
 
   const buttonClasses = [baseClasses, variantClass, className].filter(Boolean).join(' ');
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      if (onClick && !disabled) {
+        onClick();
+      }
+    }
+  };
+
   return (
-    <button type="button" className={buttonClasses} disabled={disabled} onClick={onClick}>
+    <button
+      type="button"
+      className={buttonClasses}
+      disabled={disabled}
+      onClick={onClick}
+      aria-label={ariaLabel}
+      aria-expanded={ariaExpanded}
+      onKeyDown={handleKeyDown}
+    >
       {iconElement}
     </button>
   );

@@ -7,10 +7,11 @@ export default function SendArticle() {
     <section className="send-article container">
       <Image
         src="/images/article-journals.png"
-        alt="Send Article"
+        alt="Makale gönderme bölümü dekoratif görsel"
         width={514}
         height={439}
         className="send-article__image"
+        role="presentation"
       />
 
       <div className="send-article__content-wrapper">
@@ -19,10 +20,11 @@ export default function SendArticle() {
 
       <Image
         src="/images/send-article2.png"
-        alt="Send Article 2"
+        alt="Makale gönderme bölümü dekoratif görsel"
         width={306}
         height={465}
         className="send-article__image2"
+        role="presentation"
       />
     </section>
   );

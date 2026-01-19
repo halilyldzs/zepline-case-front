@@ -19,4 +19,6 @@ export interface IconButtonProps {
   disabled?: boolean;
   className?: string;
   onClick?: () => void;
+  ariaLabel: string;
+  ariaExpanded?: boolean;
 }

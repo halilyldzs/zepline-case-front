@@ -72,4 +72,6 @@ export interface IconProps {
   name: IconName;
   className?: string;
   style?: React.CSSProperties;
+  ariaHidden?: boolean;
+  ariaLabel?: string;
 }

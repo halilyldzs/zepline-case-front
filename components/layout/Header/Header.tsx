@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import HeaderLogo from './HeaderLogo';
 import HeaderTop from './HeaderTop';
 import HeaderNav from './HeaderNav';
@@ -13,6 +13,11 @@ import './Header.scss';
 export default function Header() {
   const { isMobile, isTablet, isDesktopLg } = useMediaQuery();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleMenuClick = () => {
     setIsDrawerOpen(true);
@@ -22,7 +27,7 @@ export default function Header() {
     setIsDrawerOpen(false);
   };
 
-  const showDesktopHeader = isDesktopLg;
+  const showDesktopHeader = isMounted ? isDesktopLg : false;
 
   return (
     <>
@@ -39,7 +44,7 @@ export default function Header() {
             </div>
           </div>
         ) : (
-          <HeaderMobile onMenuClick={handleMenuClick} />
+          <HeaderMobile onMenuClick={handleMenuClick} isDrawerOpen={isDrawerOpen} />
         )}
       </header>
 

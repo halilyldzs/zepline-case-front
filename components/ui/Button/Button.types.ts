@@ -21,4 +21,6 @@ export interface ButtonProps {
   disabled?: boolean;
   className?: string;
   onClick?: () => void;
+  ariaLabel?: string;
+  type?: 'button' | 'submit' | 'reset';
 }

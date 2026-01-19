@@ -7,11 +7,11 @@ import './HeaderNav.scss';
 export default function HeaderNav() {
   return (
     <div className="header-nav flex-grow-1 d-flex align-items-center justify-content-between h-100 px-4">
-      <Link href="/" className="d-flex align-items-center justify-content-center">
-        <Icon name="home" className="home-icon" />
+      <Link href="/" className="d-flex align-items-center justify-content-center" aria-label="Ana sayfaya git">
+        <Icon name="home" className="home-icon" aria-hidden={true} />
       </Link>
 
-      <nav className="header-nav__links d-flex align-items-center">
+      <nav className="header-nav__links d-flex align-items-center" aria-label="Ana navigasyon">
         <Link href="#" className="header-nav-link">
           Amaç ve Kapsam
         </Link>
@@ -36,7 +36,7 @@ export default function HeaderNav() {
         <Button variant="filled" color="success" leftIcon="author">
           Yazar Rehberi
         </Button>
-        <IconButton icon="search" variant="outline" color="primary" />
+        <IconButton icon="search" variant="outline" color="primary" ariaLabel="Ara" />
       </div>
     </div>
   );
