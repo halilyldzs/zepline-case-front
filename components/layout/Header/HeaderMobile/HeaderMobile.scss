@@ -10,7 +10,39 @@
 
   &__menu-button {
     flex-shrink: 0;
+
+    &.btn-outline-default {
+      background-color: white;
+      border-color: $color-stroke;
+      color: $color-dark;
+
+      &:hover {
+        background-color: white;
+        border-color: $color-stroke;
+        color: $color-dark;
+      }
+
+      &:active {
+        background-color: white;
+        border-color: $color-stroke;
+        color: $color-dark;
+      }
+
+      &:focus {
+        background-color: white;
+        border-color: $color-stroke;
+        color: $color-dark;
+      }
+
+      &:focus-visible {
+        background-color: white;
+        border-color: $color-stroke;
+        color: $color-dark;
+      }
+    }
   }
+
+
 }
 
 @media (min-width: $breakpoint-xxl) {
