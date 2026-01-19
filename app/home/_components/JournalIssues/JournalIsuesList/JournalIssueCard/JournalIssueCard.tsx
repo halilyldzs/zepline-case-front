@@ -10,7 +10,7 @@ import LastIssueBadge from '@/components/shared/LastIssueBadge';
 
 export default function JournalIssueCard({ data }: JournalIssueCardProps) {
   return (
-    <article className="journal-issue-card">
+    <article className="journal-issue-card" data-testid="journal-issue-card">
       {data.isLast && <LastIssueBadge />}
       <div className="journal-issue-card__wrapper">
         <Image
