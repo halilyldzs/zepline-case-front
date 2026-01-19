@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: calculateRem(20);
+    padding: calculateRem(16);
     border-bottom: 1px solid $color-stroke;
   }
 
@@ -26,5 +26,9 @@
 
   &__body {
     padding: calculateRem(20);
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    max-height: calc(100vh - 80px);
   }
 }

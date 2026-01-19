@@ -1,9 +1,26 @@
+// Color variables
+$home-link-green: rgba(168, 185, 94, 1);
+$home-link-bg-start: rgba(168, 185, 94, 0.08);
+$home-link-bg-end: rgba(168, 185, 94, 0.03);
+$home-link-border: rgba(168, 185, 94, 0.2);
+$home-link-border-hover: rgba(168, 185, 94, 0.4);
+$home-link-bg-hover-start: rgba(168, 185, 94, 0.12);
+$home-link-bg-hover-end: rgba(168, 185, 94, 0.06);
+$home-link-shadow: rgba(168, 185, 94, 0.15);
+$home-link-icon-bg: rgba(168, 185, 94, 0.15);
+$home-link-icon-bg-hover: rgba(168, 185, 94, 0.25);
+$home-link-shine: rgba(255, 255, 255, 0.3);
+$link-hover-bg: rgba(39, 61, 137, 0.05);
+$actions-border: rgba(172, 177, 198, 0.2);
+$button-shadow: rgba(0, 0, 0, 0.1);
+
 .header-nav-mobile {
   display: flex;
   flex-direction: column;
   gap: calculateRem(32);
   width: 100%;
-  padding: calculateRem(24) calculateRem(20);
+ 
+  min-height: fit-content;
 
   &__home-link {
     display: flex;
@@ -15,8 +32,8 @@
     font-weight: 600;
     padding: calculateRem(16) calculateRem(20);
     border-radius: calculateRem(12);
-    background: linear-gradient(135deg, rgba(168, 185, 94, 0.08) 0%, rgba(168, 185, 94, 0.03) 100%);
-    border: 1px solid rgba(168, 185, 94, 0.2);
+    background: linear-gradient(135deg, $home-link-bg-start 0%, $home-link-bg-end 100%);
+    border: 1px solid $home-link-border;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -28,19 +45,15 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, $home-link-shine, transparent);
       transition: left 0.5s;
     }
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 calculateRem(8) calculateRem(24) rgba(168, 185, 94, 0.15);
-      border-color: rgba(168, 185, 94, 0.4);
-      background: linear-gradient(
-        135deg,
-        rgba(168, 185, 94, 0.12) 0%,
-        rgba(168, 185, 94, 0.06) 100%
-      );
+      box-shadow: 0 calculateRem(8) calculateRem(24) $home-link-shadow;
+      border-color: $home-link-border-hover;
+      background: linear-gradient(135deg, $home-link-bg-hover-start 0%, $home-link-bg-hover-end 100%);
 
       &::before {
         left: 100%;
@@ -59,12 +72,12 @@
     width: calculateRem(40);
     height: calculateRem(40);
     border-radius: calculateRem(10);
-    background: rgba(168, 185, 94, 0.15);
+    background: $home-link-icon-bg;
     transition: all 0.3s ease;
   }
 
   &__home-link:hover &__home-icon-wrapper {
-    background: rgba(168, 185, 94, 0.25);
+    background: $home-link-icon-bg-hover;
     transform: scale(1.05);
   }
 
@@ -126,7 +139,7 @@
     }
 
     &:hover {
-      background: rgba(39, 61, 137, 0.05);
+      background: $link-hover-bg;
       color: $color-primary;
       padding-left: calculateRem(24);
       transform: translateX(calculateRem(4));
@@ -167,7 +180,7 @@
     flex-direction: column;
     gap: calculateRem(12);
     padding-top: calculateRem(24);
-    border-top: 2px solid rgba(172, 177, 198, 0.2);
+    border-top: 2px solid $actions-border;
   }
 
   &__actions-title {
@@ -186,7 +199,7 @@
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 calculateRem(8) calculateRem(20) rgba(0, 0, 0, 0.1);
+      box-shadow: 0 calculateRem(8) calculateRem(20) $button-shadow;
     }
 
     &:active {

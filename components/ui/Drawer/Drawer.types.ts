@@ -1,6 +1,15 @@
+import { Ref } from 'react';
+
 export interface DrawerProps {
-  isOpen: boolean;
-  onClose: () => void;
   children: React.ReactNode;
   title?: string;
+  onShowChange?: (isOpen: boolean) => void;
+  ref?: Ref<DrawerHandle>;
+}
+
+export interface DrawerHandle {
+  open: () => void;
+  close: () => void;
+  toggle: () => void;
+  isOpen: boolean;
 }

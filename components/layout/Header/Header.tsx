@@ -1,41 +1,35 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import HeaderLogo from './HeaderLogo';
 import HeaderTop from './HeaderTop';
 import HeaderNav from './HeaderNav';
 import HeaderMobile from './HeaderMobile';
 import HeaderNavMobile from './HeaderNavMobile';
-import Drawer from '@/components/ui/Drawer';
+import Drawer, { DrawerHandle } from '@/components/ui/Drawer';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import './Header.scss';
 
 export default function Header() {
-  const { isMobile, isTablet, isDesktopLg } = useMediaQuery();
+  const { isDesktopLg } = useMediaQuery();
+  const drawerRef = useRef<DrawerHandle>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const handleMenuClick = () => {
-    setIsDrawerOpen(true);
+    drawerRef.current?.open();
   };
 
-  const handleDrawerClose = () => {
-    setIsDrawerOpen(false);
+  const handleDrawerShowChange = (isOpen: boolean) => {
+    setIsDrawerOpen(isOpen);
   };
-
-  const showDesktopHeader = isMounted ? isDesktopLg : false;
 
   return (
     <>
       <header
-        className={`header ${showDesktopHeader ? 'header--desktop' : 'header--mobile'}`}
+        className={`header ${isDesktopLg ? 'header--desktop' : 'header--mobile'}`}
         style={{ zIndex: 50 }}
       >
-        {showDesktopHeader ? (
+        {isDesktopLg ? (
           <div className="header__desktop-content d-flex flex-row h-100">
             <HeaderLogo />
             <div className="d-flex flex-column w-100 h-100">
@@ -48,8 +42,8 @@ export default function Header() {
         )}
       </header>
 
-      {!showDesktopHeader && (
-        <Drawer isOpen={isDrawerOpen} onClose={handleDrawerClose} title="Menü">
+      {!isDesktopLg && (
+        <Drawer ref={drawerRef} title="Menü" onShowChange={handleDrawerShowChange}>
           <HeaderNavMobile />
         </Drawer>
       )}
